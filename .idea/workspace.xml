@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="55babb1a-8e4c-450e-b73e-4375d306dba0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Celestial-Images/Moon png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/Celestial-Images/Planet png.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/12-31-24 Daily Standup.md" beforeDir="false" afterPath="$PROJECT_DIR$/Daily Standups/12-31-24 Daily Standup.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pom/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pom/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/MoonAdditionSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/MoonAdditionSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/steps/PlanetAdditionSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/PlanetAdditionSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/MoonAddition.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/MoonAddition.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/PlanetAddition.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/PlanetAddition.feature" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ahmed-Alagbari&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/temmunk/VN-Planetarium.git&quot;,
+    &quot;accountId&quot;: &quot;c2cbfe29-7d5b-44fe-ab2c-2aa6d6eb134b&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2qxCVpwtQDsHStTwMdyWsCNdxcy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "ahmed",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Ahmed/Documents/GitHub/VN-Planetarium/src/test/resources/Celestial-Images"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ahmed\Documents\GitHub\VN-Planetarium\src\test\resources\Celestial-Images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ahmed\Documents\GitHub\VN-Planetarium\Daily Standups" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="55babb1a-8e4c-450e-b73e-4375d306dba0" name="Changes" comment="" />
+      <created>1735594867568</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1735594867568</updated>
+    </task>
+    <servers />
+  </component>
+</project>

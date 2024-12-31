@@ -8,11 +8,21 @@ Feature: Moon addition
     When user clicks moon creation input
 
     # in this scenario we use positive test data with adding an image
-  Scenario:provided valid moon name, owner planet and image type, new moon should be added
+  Scenario:provided valid moon name, owner planet and jpg image type, new moon should be added
     And the user provides valid moon name
     And the user provides valid owner planet
     When the user decides to upload an image
-    And the user provides a valid filetype
+    And the user provides a jpg filetype
+    And the user clicks submit
+    Then the table should refresh after moon added
+    And the user should be able to see the new moon added
+
+   # in this scenario we use positive test data with adding an image
+  Scenario:provided valid moon name, owner planet and png image type, new moon should be added
+    And the user provides valid moon name
+    And the user provides valid owner planet
+    When the user decides to upload an image
+    And the user provides a png filetype
     And the user clicks submit
     Then the table should refresh after moon added
     And the user should be able to see the new moon added

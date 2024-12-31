@@ -24,8 +24,8 @@ public class PlanetAdditionSteps {
         //this method doesn't need to do anything, it's here for implementation purposes
     }
 
-    @And ("the user provides a valid planet image filetype")
-    public void user_provides_valid_planet_image_filetype(){
+    @And ("the user provides a valid planet image jpg filetype")
+    public void user_provides_valid_planet_image_jpg_filetype(){
         TestRunner.homePage.inputValidPlanetImage();
     }
 
@@ -54,6 +54,12 @@ public class PlanetAdditionSteps {
     public void user_doesnt_upload_image(){
         //this method doesn't need to do anything, it's here for implementation purposes
     }
+
+    @And ("the user provides a valid planet image png filetype")
+    public void user_provides_valid_planet_image_png_filetype(){
+        TestRunner.homePage.inputpngPlanetImage();
+    }
+
 
     @And ("the user uploads invalid planet image file type")
     public void user_uploads_invalid_filetype(){

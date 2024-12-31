@@ -120,6 +120,14 @@ public class HomePage {
         planetImageInput.sendKeys("C:\\Users\\Ahmed\\IdeaProjects\\Ahmed_Planetarium\\src\\test\\resources\\Celestial-Images\\InvalidPlanet.gif");
     }
 
+    public void inputpngPlanetImage(){
+        planetImageInput.sendKeys("C:\\Users\\Ahmed\\Documents\\GitHub\\VN-Planetarium\\src\\test\\resources\\Celestial-Images\\Planet png.png")
+    }
+
+    public void inputpngMoonImage(){
+        moonImageInput.sendKeys("C:\\Users\\Ahmed\\Documents\\GitHub\\VN-Planetarium\\src\\test\\resources\\Celestial-Images\\Moon png.png")
+    }
+
     public void inputInvalidMoonImageType(){
         moonImageInput.sendKeys("C:\\Users\\Ahmed\\IdeaProjects\\Ahmed_Planetarium\\src\\test\\resources\\Celestial-Images\\InvalidPlanet.gif");
     }
