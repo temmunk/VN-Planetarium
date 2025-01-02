@@ -8,10 +8,19 @@
       When user clicks planet creation input
 
     # in this scenario we use positive test data with adding an image
-    Scenario: provided valid name and image, planet should be added
+    Scenario: provided valid name and jpg image, planet should be added
       And the user provides valid planet name
       When the user decides to upload an image
-      And the user provides a valid planet image filetype
+      And the user provides a valid planet image jpg filetype
+      And the user clicks submit
+      Then the table should refresh after planet added
+      And the user should be able to see the new planet added
+
+    # in this scenario we use positive test data with adding an image
+    Scenario: provided valid name and png image, planet should be added
+      And the user provides valid planet name
+      When the user decides to upload an image
+      And the user provides a valid planet image png filetype
       And the user clicks submit
       Then the table should refresh after planet added
       And the user should be able to see the new planet added

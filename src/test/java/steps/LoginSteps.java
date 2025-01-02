@@ -58,7 +58,7 @@ public class LoginSteps {
     public void user_should_see_invalid_credentials_alert(){
         TestRunner.registerPage.waitForAlert();
 
-        Assert.assertEquals("Invalid credentials", TestRunner.registerPage.getAlertText());
+        Assert.assertEquals("Invalid Credentials", TestRunner.registerPage.getAlertText());
     }
 
     @And("the user should be redirected to the Login page")

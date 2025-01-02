@@ -24,9 +24,14 @@ public class MoonAdditionSteps {
         TestRunner.homePage.ownerPlanetInput();
     }
 
-    @And ("the user provides a valid filetype")
+    @And ("the user provides a jpg filetype")
     public void user_provides_valid_moon_image(){
         TestRunner.homePage.inputValidMoonImage();
+    }
+
+    @And ("the user provides a png filetype")
+    public void user_provides_png_moon_image(){
+        TestRunner.homePage.inputpngMoonImage();
     }
 
     @Then ("the table should refresh after moon added")
