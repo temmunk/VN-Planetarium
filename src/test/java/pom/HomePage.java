@@ -121,15 +121,15 @@ public class HomePage {
     }
 
     public void inputpngPlanetImage(){
-        planetImageInput.sendKeys("C:\\Users\\Ahmed\\Documents\\GitHub\\VN-Planetarium\\src\\test\\resources\\Celestial-Images\\Planet png.png")
+        planetImageInput.sendKeys("C:\\Users\\Ahmed\\Documents\\GitHub\\VN-Planetarium\\src\\test\\resources\\Celestial-Images\\Planet png.png");
     }
 
     public void inputpngMoonImage(){
-        moonImageInput.sendKeys("C:\\Users\\Ahmed\\Documents\\GitHub\\VN-Planetarium\\src\\test\\resources\\Celestial-Images\\Moon png.png")
+        moonImageInput.sendKeys("C:\\Users\\Ahmed\\Documents\\GitHub\\VN-Planetarium\\src\\test\\resources\\Celestial-Images\\Moon png.png");
     }
 
     public void inputInvalidMoonImageType(){
-        moonImageInput.sendKeys("C:\\Users\\Ahmed\\IdeaProjects\\Ahmed_Planetarium\\src\\test\\resources\\Celestial-Images\\InvalidPlanet.gif");
+        moonImageInput.sendKeys("src/test/resources/Celestial-Images/Moon png.png");
     }
 
     public void clickDelete(){
