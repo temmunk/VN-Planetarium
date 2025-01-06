@@ -20,7 +20,7 @@ import java.util.Optional;
 @RunWith(Parameterized.class)
 public class PlanetDAOCreatePlanetNegativeTest extends PlanetDAOTest {
 
-    private String planetFailMessage;
+    private String planetNameFailMessage;
 
     @Parameter
     public int planetId;
@@ -44,11 +44,10 @@ public class PlanetDAOCreatePlanetNegativeTest extends PlanetDAOTest {
     }
 
     @Before
-    public void setup() {
+    public void createPlanetNegativeSetup() {
         Setup.resetTestDatabase();
 
-        planetDao = new PlanetDaoImp();
-        planetFailMessage = "Invalid planet name";
+        planetNameFailMessage = "Invalid planet name";
     }
 
     @Test
@@ -62,7 +61,7 @@ public class PlanetDAOCreatePlanetNegativeTest extends PlanetDAOTest {
             Optional<Planet> response = planetDao.createPlanet(invalidPlanet);
             Assert.fail("Expected PlanetFail exception, but no exception was thrown");
         } catch (PlanetFail e) {
-            Assert.assertEquals(planetFailMessage, e.getMessage());
+            Assert.assertEquals(planetNameFailMessage, e.getMessage());
         }
     }
 
