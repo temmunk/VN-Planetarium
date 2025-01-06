@@ -41,6 +41,11 @@ public class LoginPage {
         loginButton.click();
     }
 
+    public void enterSecondUserCredentials(){
+        usernameInput.sendKeys("Superman");
+        passwordInput.sendKeys("Krypton123");
+    }
+
     public void enterValidLogin(){
         usernameInput.sendKeys("Batman");
         passwordInput.sendKeys("Iamthenight1939");
@@ -58,6 +63,10 @@ public class LoginPage {
     public void waitForPageChange(){
       wait.until(ExpectedConditions.titleIs("Home"));
     }
+    public void waitForPageChangeToLogin(){
+        wait.until(ExpectedConditions.titleIs("Planetarium Login"));
+    }
+
 
     public void enterUsername(String username){
         usernameInput.sendKeys(username);
