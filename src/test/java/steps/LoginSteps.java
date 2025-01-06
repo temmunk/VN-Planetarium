@@ -21,6 +21,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.junit.Test;
 import testrunner.TestRunner;
 
 
@@ -63,12 +64,26 @@ public class LoginSteps {
 
     @And("the user should be redirected to the Login page")
     public void user_should_redirected_to_login_page(){
-       Assert.assertEquals("Planetarium Login", TestRunner.registerPage.getPageTitle());
+        TestRunner.loginPage.waitForPageChangeToLogin();
+        Assert.assertEquals("Planetarium Login", TestRunner.registerPage.getPageTitle());
     }
 
 
+    @When("the user logs out")
+    public void theUserLogsOut() {
+        TestRunner.homePage.logout();
+    }
+
+    @And("provides new credentials for a second user")
+    public void providesNewCredentialsForASecondUser() {
+        TestRunner.registerPage.setUpSecondUser();
+        TestRunner.registerPage.waitForAlert();
+        TestRunner.registerPage.acceptAlert();
+    }
 
 
-
-
+    @When("the second user provides their credentials")
+    public void theSecondUserProvidesTheirCredentials() {
+        TestRunner.loginPage.enterSecondUserCredentials();
+    }
 }

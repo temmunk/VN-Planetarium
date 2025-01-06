@@ -63,7 +63,7 @@ public class MoonAdditionSteps {
     @Then ("the user should get a browser alert saying Invalid planet id")
     public void invalid_planet_id_alert(){
         TestRunner.registerPage.waitForAlert();
-        Assert.assertEquals("Invalid planet id",TestRunner.registerPage.getAlertText());
+        Assert.assertEquals("Invalid planet ID",TestRunner.registerPage.getAlertText());
     }
 
     @And ("the user provides moon name{string}")

@@ -38,10 +38,9 @@ public class RegisterPage {
         loginLink.click();
     }
 
-    public void setUpLoggedInUser(){
-        driver.get("http://localhost:8080/");
-        usernameInput.sendKeys("Batman");
-        passwordInput.sendKeys("Iamthenight1939");
+    public void setUpSecondUser(){
+        usernameInput.sendKeys("Superman");
+        passwordInput.sendKeys("Krypton123");
         clickCreateButton();
     }
 
@@ -58,6 +57,11 @@ public class RegisterPage {
         String message= alert.getText();
         alert.accept();
         return message;
+    }
+
+    public void acceptAlert(){
+        Alert alert=driver.switchTo().alert();
+        alert.accept();
     }
 
     public String getPageTitle(){
