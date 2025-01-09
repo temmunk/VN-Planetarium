@@ -7,6 +7,7 @@ import utility.Setup;
 
 public class MoonDAOTest {
 
+
     protected MoonDao moonDao;
 
     @Before
@@ -14,4 +15,5 @@ public class MoonDAOTest {
         moonDao = new MoonDaoImp();
         Setup.resetTestDatabase();
     }
+
 }
