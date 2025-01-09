@@ -6,11 +6,12 @@ import org.junit.Before;
 import utility.Setup;
 
 public class MoonDAOTest {
-    private MoonDao moonDao;
+
+
+    protected MoonDao moonDao;
 
     @Before
-    public void setup()
-    {
+    public void setup(){
         moonDao = new MoonDaoImp();
         Setup.resetTestDatabase();
     }
