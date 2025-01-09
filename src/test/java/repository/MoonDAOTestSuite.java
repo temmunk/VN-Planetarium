@@ -7,7 +7,9 @@ import static org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({
-        MoonDAOCreationNegativeTest.class
+        MoonDAOCreationNegativeTest.class,
+        MoonDAORetrievalNegativeTest.class,
+        MoonDAODeletionNegativeTest.class
 })
 public class MoonDAOTestSuite {
 
