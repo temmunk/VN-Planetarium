@@ -15,7 +15,7 @@ import java.util.Arrays;
 import java.util.Collection;
 
 @RunWith(Parameterized.class)
-public class UserServiceNegativeTest extends UserServiceTest {
+public class UserServiceCreateUserNegativeTest extends UserServiceTest {
 
     private User negativeUser;
 
