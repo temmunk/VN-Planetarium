@@ -16,7 +16,7 @@ import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
 
-public class MoonDAOPositiveTest {
+public class MoonDAOPositiveTest extends MoonDAOTest{
     private MoonDao moonDao;
     private Moon positiveMoon;
     private String jpgData;
@@ -26,7 +26,6 @@ public class MoonDAOPositiveTest {
     @Before
     public void positiveSetup()
     {
-        //Setup.resetTestDatabase();
         moonDao = new MoonDaoImp();
         positiveMoon = new Moon(0, "Mo-on 6_16", 1);
         jpgData = getData("src/test/resources/Celestial-Images/moon-1.jpg");
