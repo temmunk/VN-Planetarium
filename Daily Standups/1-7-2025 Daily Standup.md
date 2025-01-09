@@ -1,4 +1,4 @@
-# 1/6/25 Daily Standup
+# 1/7/25 Daily Standup
 
 ## What did you do yesterday?
 - Temuulen worked on updating some RTM data and entered test data to Jira, Nafeisha finished up API Moon endpoints, Kevin finished up planet DAO testing, and Ahmed worked on User DAO testing.
