@@ -14,6 +14,7 @@ import utility.Setup;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
@@ -29,10 +30,8 @@ public class PlanetServiceTest {
     private List<Planet> ownerOnePlanetList;
     private Planet earth;
     private Planet mars;
-    private File marsImageFile;
     private byte[] marsImage;
     private String encodedMarsImage;
-    private File earthImageFile;
     private byte[] earthImage;
     private String encodedEarthImage;
 
@@ -56,21 +55,19 @@ public class PlanetServiceTest {
         mockReturnedPlanet.setPlanetId(3);
         mockReturnedPlanet.setOwnerId(1);
         mockReturnedPlanet.setImageData("");
-//        marsImageFile= new File("src/test/resources/Celestial-Images/planet-2.jpg");
-//        marsImage= Files.readAllBytes(marsImageFile.toPath());
-//        encodedMarsImage= Base64.getEncoder().encodeToString(earthImage);
-//        earthImageFile= new File("src/test/resources/Celestial-Images/planet-1.jpg");
-//        earthImage= Files.readAllBytes(earthImageFile.toPath());
-//        encodedEarthImage= Base64.getEncoder().encodeToString(earthImage);
+        marsImage= Files.readAllBytes(Paths.get("src/test/resources/Celestial-Images/planet-2.jpg"));
+        encodedMarsImage= Base64.getEncoder().encodeToString(marsImage);
+        earthImage= Files.readAllBytes(Paths.get("src/test/resources/Celestial-Images/planet-1.jpg"));
+        encodedEarthImage= Base64.getEncoder().encodeToString(earthImage);
         mockOptional= Optional.of(mockReturnedPlanet);
         mars.setOwnerId(1);
         mars.setPlanetId(2);
         mars.setPlanetName("Mars");
-     //   mars.setImageData(encodedMarsImage);
+        mars.setImageData(encodedMarsImage);
         earth.setOwnerId(1);
         earth.setPlanetId(1);
         earth.setPlanetName("Earth");
-      //  earth.setImageData(encodedEarthImage);
+        earth.setImageData(encodedEarthImage);
         ownerOnePlanetList=new ArrayList<>();
         ownerOnePlanetList.add(earth);
         ownerOnePlanetList.add(mars);
@@ -82,6 +79,7 @@ public class PlanetServiceTest {
     public void positiveCreatePlanet(){
         Mockito.when(planetDao.createPlanet(positivePlanet)).thenReturn(mockOptional);
        // Assert.assertTrue(planetService.createPlanet(positivePlanet));
+        Assert.fail("Expected true boolean but got Planet object");
     }
 
     @Test
