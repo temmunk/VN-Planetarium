@@ -55,6 +55,7 @@ public class UserDAOInvalidPasswordTest {
         try {
             User userToCreate = new User(0, username, password);
             Optional<User> storedUser = userDao.createUser(userToCreate);
+            Assert.fail("Expected UserFail to be thrown but it was not. If test reaches here, password "+password+" possibly worked");
         }catch(UserFail e){
             Assert.assertEquals((invalidPasswordExceptionMessage),e.getMessage());
         }
