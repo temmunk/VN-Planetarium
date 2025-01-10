@@ -53,6 +53,8 @@ public class UserDAOInvalidUsernameTest {
         try {
             User userToCreate = new User(0, username, password);
             Optional<User> storedUser = userDao.createUser(userToCreate);
+            Assert.fail("Expected UserFail to be thrown but it was not. If test reaches here, username "+username+" possibly worked");
+
         }catch(UserFail e){
             Assert.assertEquals((invalidUsernameExceptionMessage),e.getMessage());
 
