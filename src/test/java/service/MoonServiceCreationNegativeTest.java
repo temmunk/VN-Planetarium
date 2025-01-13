@@ -7,9 +7,14 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.Base64;
 import java.util.Collection;
 import java.util.Optional;
 
@@ -20,6 +25,11 @@ public class MoonServiceCreationNegativeTest extends MoonServiceTest{
     private Optional<Moon> optionalMoon;
     private Moon uniqueNameMoon;
     private Optional<Moon> optionalUniqueMoon;
+    private byte[] pdfImageData;
+    private static String encodedPdfImage;
+    private Moon invalidImageMoon;
+    private Optional<Moon> optionalInvalidImageMoon;
+    private String invalidFileTypeMessage;
 
     @Parameterized.Parameter
     public int moonId;
@@ -39,7 +49,7 @@ public class MoonServiceCreationNegativeTest extends MoonServiceTest{
     @Parameterized.Parameters
     public static Collection<Object> inputs(){
         return Arrays.asList(new Object[][]{
-                {0,1, "Mo-on 6_16", "JVBERi0xLjQKJdPr6eEKMSAwIG9iago8PC9UaXRsZSAoVW50aXRsZWQgZG9jdW1lbnQpCi9Qcm9kdWNlciAoU2tpYS9QREYgbTEzMyBHb29nbGUgRG9jcyBSZW5kZXJlcik+PgplbmRvYmoKMyAwIG9iago8PC9jYSAxCi9CTSAvTm9ybWFsPj4KZW5kb2JqCjQgMCBvYmoKPDwvTGVuZ3RoIDg0Pj4gc3RyZWFtCjEgMCAwIC0xIDAgNzkyIGNtCnEKLjc1IDAgMCAuNzUgMCAwIGNtCjEgMSAxIFJHIDEgMSAxIHJnCi9HMyBncwowIDAgODE2IDEwNTYgcmUKZgpRCgplbmRzdHJlYW0KZW5kb2JqCjIgMCBvYmoKPDwvVHlwZSAvUGFnZQovUmVzb3VyY2VzIDw8L1Byb2NTZXQgWy9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUldCi9FeHRHU3RhdGUgPDwvRzMgMyAwIFI+Pj4+Ci9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA0IDAgUgovU3RydWN0UGFyZW50cyAwCi9UYWJzIC9TCi9QYXJlbnQgNSAwIFI+PgplbmRvYmoKNSAwIG9iago8PC9UeXBlIC9QYWdlcwovQ291bnQgMQovS2lkcyBbMiAwIFJdPj4KZW5kb2JqCjYgMCBvYmoKPDwvVHlwZSAvQ2F0YWxvZwovUGFnZXMgNSAwIFIKL1ZpZXdlclByZWZlcmVuY2VzIDw8L1R5cGUgL1ZpZXdlclByZWZlcmVuY2VzCi9EaXNwbGF5RG9jVGl0bGUgdHJ1ZT4+Pj4KZW5kb2JqCnhyZWYKMCA3CjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwMjc3IDAwMDAwIG4gCjAwMDAwMDAxMDggMDAwMDAgbiAKMDAwMDAwMDE0NSAwMDAwMCBuIAowMDAwMDAwNDc0IDAwMDAwIG4gCjAwMDAwMDA1MjkgMDAwMDAgbiAKdHJhaWxlcgo8PC9TaXplIDcKL1Jvb3QgNiAwIFIKL0luZm8gMSAwIFI+PgpzdGFydHhyZWYKNjQ2CiUlRU9GCg==","Invalid file type"},
+                //{0,1, "Mo-on 6_16", encodedPdfImage,"Invalid file type"},
                 {0,1, "", "","Invalid moon name"},
                 {0,1, "iDontKnowWhatToNameThisMoon1234", "","Invalid moon name"},
                 {0,1, "M##n","", "Invalid moon name"},
@@ -51,13 +61,21 @@ public class MoonServiceCreationNegativeTest extends MoonServiceTest{
     }
 
     @Before
-    public void negativeSetup(){
+    public void negativeSetup() throws IOException {
         negativeMoon = new Moon(moonId, moonName, ownerId);
         negativeMoon.setImageData(imageData);
         optionalMoon = Optional.of(negativeMoon);
         uniqueNameMoon = new Moon(0,"Luna", 1);
         optionalUniqueMoon = Optional.of(uniqueNameMoon);
-        
+
+        pdfImageData = Files.readAllBytes(Paths.get("src/test/resources/Celestial-Images/test.pdf"));
+        encodedPdfImage = Base64.getEncoder().encodeToString(pdfImageData);
+        invalidImageMoon = new Moon(0, "Mo-on 6_16", 1);
+        invalidImageMoon.setImageData(encodedPdfImage);
+        optionalInvalidImageMoon = Optional.of(invalidImageMoon);
+        invalidFileTypeMessage = "Invalid file type";
+
+
     }
 
     @Test
@@ -72,5 +90,19 @@ public class MoonServiceCreationNegativeTest extends MoonServiceTest{
             Assert.assertEquals(exceptionMessage, e.getMessage());
         }
     }
+
+    @Test
+    public void createMoonInvalidFileNegativeTest(){
+        try{
+            Mockito.when(moonDao.readMoon(invalidImageMoon.getMoonName())).thenReturn(Optional.empty());
+            Mockito.when(moonDao.createMoon(invalidImageMoon)).thenReturn(optionalInvalidImageMoon);
+            moonService.createMoon(invalidImageMoon);
+            Assert.fail("Expected MoonFail to be thrown, but it was not");
+        } catch (MoonFail e){
+            Assert.assertEquals(invalidFileTypeMessage, e.getMessage());
+        }
+    }
+
+
 
 }
