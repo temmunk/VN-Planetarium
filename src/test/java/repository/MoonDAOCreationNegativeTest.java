@@ -38,8 +38,8 @@ public class MoonDAOCreationNegativeTest extends MoonDAOTest {
                 {0,1, "", "","Invalid moon name"},
                 {0,1, "iDontKnowWhatToNameThisMoon1234", "","Invalid moon name"},
                 {0,1, "M##n","", "Invalid moon name"},
-                {0,5, "Luna","","Invalid moon name"},
-                {0,1, "TestMoon","","Invalid planet ID"}
+                {0,1, "Luna","","Invalid moon name"},
+                {0,5, "TestMoon","","Invalid planet ID"}
         });
 
 
