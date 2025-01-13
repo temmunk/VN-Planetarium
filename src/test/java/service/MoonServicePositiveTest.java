@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Base64;
+import java.util.List;
 import java.util.Optional;
 
 public class MoonServicePositiveTest extends MoonServiceTest{
@@ -101,9 +102,9 @@ public class MoonServicePositiveTest extends MoonServiceTest{
     public void selectByPlanetServicePositiveTest()
     {
         Mockito.when(moonDao.readMoonsByPlanet(planetId)).thenReturn(mockReturnedMoonsList);
-//        ArrayList<Moon> result = moonService.selectByPlanet(planetId);
-//        Assert.assertEquals(mockReturnedMoonsList, result);
-        Assert.fail("selectByPlanet() in MoonService returns List object, where we expect it to return ArrayList.");
+        List result = moonService.selectByPlanet(planetId);
+        Assert.assertEquals(mockReturnedMoonsList, result);
+//        Assert.fail("selectByPlanet() in MoonService returns List object, where we expect it to return ArrayList.");
     }
 
     @Test

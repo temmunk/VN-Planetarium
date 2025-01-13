@@ -6,7 +6,10 @@ import static org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({
-        MoonServicePositiveTest.class
+        MoonServicePositiveTest.class,
+        MoonServiceCreationNegativeTest.class,
+        MoonServiceDeletionNegativeTest.class,
+        MoonServiceRetrievalNegativeTest.class
 })
 public class MoonServiceTestSuite {
 }
