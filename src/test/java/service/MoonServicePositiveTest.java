@@ -36,8 +36,6 @@ public class MoonServicePositiveTest extends MoonServiceTest{
     @Before
     public void positiveSetup()
     {
-        moonDao = Mockito.mock(MoonDao.class);
-        moonService = new MoonServiceImp(moonDao);
         positiveMoon = new Moon(0, "Mo-on 6_16", 1);
         jpgData = getData("src/test/resources/Celestial-Images/moon-1.jpg");
         pngData = getData("src/test/resources/Celestial-Images/Moon png.png");
