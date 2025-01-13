@@ -41,7 +41,7 @@ public class PlanetServiceNegativeRetrievalTest {
         planetDao= Mockito.mock(PlanetDaoImp.class);
         planetService=new PlanetServiceImp(planetDao);
         Setup.resetTestDatabase();
-        mars = new Planet();
+        mars=new Planet();
         earth=new Planet();
         marsImage= Files.readAllBytes(Paths.get("src/test/resources/Celestial-Images/planet-2.jpg"));
         encodedMarsImage= Base64.getEncoder().encodeToString(marsImage);

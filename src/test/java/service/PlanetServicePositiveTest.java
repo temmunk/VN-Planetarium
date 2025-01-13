@@ -19,7 +19,7 @@ import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
 
-public class PlanetServiceTest {
+public class PlanetServicePositiveTest {
 
     private PlanetDao planetDao;
     private PlanetService planetService;
