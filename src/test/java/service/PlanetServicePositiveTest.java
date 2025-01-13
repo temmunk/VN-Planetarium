@@ -19,11 +19,10 @@ import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
 
-public class PlanetServicePositiveTest {
+public class PlanetServicePositiveTest extends PlanetServiceTest {
 
-    private PlanetDao planetDao;
-    private PlanetService planetService;
     private Planet positivePlanet;
+    private String positivePlanetNameToDelete;
     private Planet mockReturnedPlanet;
     private Optional<Planet> mockOptional;
     private List<Planet> ownerOnePlanetList;
@@ -34,19 +33,13 @@ public class PlanetServicePositiveTest {
     private byte[] earthImage;
     private String encodedEarthImage;
 
-
-
-
-
     @Before
-    public void setup() throws IOException {
-        planetDao= Mockito.mock(PlanetDaoImp.class);
-        planetService=new PlanetServiceImp(planetDao);
-        Setup.resetTestDatabase();
-        positivePlanet=new Planet();
-        mockReturnedPlanet=new Planet();
+    public void positiveSetup() throws IOException {
+        positivePlanet = new Planet();
+        positivePlanetNameToDelete = "Earth";
+        mockReturnedPlanet = new Planet();
         mars = new Planet();
-        earth=new Planet();
+        earth = new Planet();
         positivePlanet.setPlanetId(0);
         positivePlanet.setPlanetName("E-arth 6_16");
         positivePlanet.setOwnerId(1);
@@ -84,8 +77,15 @@ public class PlanetServicePositiveTest {
     @Test
     public void positiveSelectByOwner(){
         Mockito.when(planetDao.readPlanetsByOwner(1)).thenReturn(ownerOnePlanetList);
-        List result =planetService.selectByOwner(1);
+        List result = planetService.selectByOwner(1);
         Assert.assertEquals(ownerOnePlanetList,result);
+    }
+
+    @Test
+    public void positiveDeletePlanet() {
+        Mockito.when(planetDao.deletePlanet(positivePlanetNameToDelete)).thenReturn(true);
+        // Assert.assertTrue(planetService.deletePlanet(positivePlanetToDelete));
+        Assert.fail("Expected true boolean but got String");
     }
 
 

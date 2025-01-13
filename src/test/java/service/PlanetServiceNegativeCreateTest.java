@@ -18,10 +18,8 @@ import java.nio.file.Paths;
 import java.util.*;
 
 
-public class PlanetServiceNegativeCreateTest {
+public class PlanetServiceNegativeCreateTest extends PlanetServiceTest {
 
-    private PlanetDao planetDao;
-    private PlanetService planetService;
     private byte[] invalidImage;
     private static String encodedInvalidImage;
     private byte[] validImage;
@@ -49,10 +47,7 @@ public class PlanetServiceNegativeCreateTest {
 //    public String exceptionMessage;
 
     @Before
-    public void setup() throws IOException {
-        planetDao= Mockito.mock(PlanetDaoImp.class);
-        planetService=new PlanetServiceImp(planetDao);
-        Setup.resetTestDatabase();
+    public void negativeSetup() throws IOException {
         invalidImage = Files.readAllBytes(Paths.get("src/test/resources/Celestial-Images/InvalidPlanet.gif"));
         encodedInvalidImage = Base64.getEncoder().encodeToString(invalidImage);
         validImage = Files.readAllBytes(Paths.get("src/test/resources/Celestial-Images/planet-1.jpg"));

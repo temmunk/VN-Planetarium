@@ -18,10 +18,8 @@ import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
 
-public class PlanetServiceNegativeRetrievalTest {
+public class PlanetServiceNegativeRetrievalTest extends PlanetServiceTest {
 
-    private PlanetDao planetDao;
-    private PlanetService planetService;
     private List<Planet> ownerOnePlanetList;
     private Planet earth;
     private Planet mars;
@@ -31,22 +29,14 @@ public class PlanetServiceNegativeRetrievalTest {
     private String encodedEarthImage;
     private List<Planet> list = new ArrayList<>();
 
-
-
-
-
-
     @Before
-    public void setup() throws IOException {
-        planetDao= Mockito.mock(PlanetDaoImp.class);
-        planetService=new PlanetServiceImp(planetDao);
-        Setup.resetTestDatabase();
-        mars=new Planet();
-        earth=new Planet();
-        marsImage= Files.readAllBytes(Paths.get("src/test/resources/Celestial-Images/planet-2.jpg"));
-        encodedMarsImage= Base64.getEncoder().encodeToString(marsImage);
-        earthImage= Files.readAllBytes(Paths.get("src/test/resources/Celestial-Images/planet-1.jpg"));
-        encodedEarthImage= Base64.getEncoder().encodeToString(earthImage);
+    public void negativeSetup() throws IOException {
+        mars = new Planet();
+        earth = new Planet();
+        marsImage = Files.readAllBytes(Paths.get("src/test/resources/Celestial-Images/planet-2.jpg"));
+        encodedMarsImage = Base64.getEncoder().encodeToString(marsImage);
+        earthImage = Files.readAllBytes(Paths.get("src/test/resources/Celestial-Images/planet-1.jpg"));
+        encodedEarthImage = Base64.getEncoder().encodeToString(earthImage);
         mars.setOwnerId(1);
         mars.setPlanetId(2);
         mars.setPlanetName("Mars");
@@ -60,11 +50,10 @@ public class PlanetServiceNegativeRetrievalTest {
         ownerOnePlanetList.add(mars);
     }
 
-
     @Test
-    public void positiveSelectByOwner(){
+    public void negativeSelectByOwner(){
         Mockito.when(planetDao.readPlanetsByOwner(0)).thenReturn(list);
-        List result =planetService.selectByOwner(0);
+        List result = planetService.selectByOwner(0);
         Assert.assertEquals(list,result);
     }
 
