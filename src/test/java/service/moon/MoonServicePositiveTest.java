@@ -18,9 +18,6 @@ import java.util.Optional;
 
 public class MoonServicePositiveTest extends MoonServiceTest{
 
-    private MoonDao moonDao;
-    private MoonService moonService;
-
     private Moon positiveMoon;
     private String jpgData;
     private String pngData;
