@@ -16,7 +16,7 @@ public class PlanetServiceImp<T> implements PlanetService<T> {
     }
 
     @Override
-    public Planet createPlanet(Planet planet) {
+    public boolean createPlanet(Planet planet) {
         if (planet.getPlanetName().length() < 1 || planet.getPlanetName().length() > 30) {
             throw new PlanetFail("character length fail");
         }
@@ -26,7 +26,7 @@ public class PlanetServiceImp<T> implements PlanetService<T> {
         }
         Optional<Planet> createdPlanet = planetDao.createPlanet(planet);
         if (createdPlanet.isPresent()) {
-            return createdPlanet.get();
+            return true;
         } else {
             throw new PlanetFail("Could not create planet");
         }

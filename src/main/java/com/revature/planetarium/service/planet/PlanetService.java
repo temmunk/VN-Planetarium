@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface PlanetService<T> {
 
-    Planet createPlanet(Planet planet);
+    boolean createPlanet(Planet planet);
     Planet selectPlanet(T idOrName);
     List<Planet> selectAllPlanets();
     List<Planet> selectByOwner(int ownerId);
