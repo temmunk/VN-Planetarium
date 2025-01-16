@@ -30,7 +30,7 @@ create table users(
 		password GLOB '*[A-Z]*' and 
 		password GLOB '*[0-9]*' and
 		password GLOB '[a-zA-Z]*' AND 
-		username not glob '*[^a-zA-Z0-9_-]*'
+		password not glob '*[^a-zA-Z0-9_-]*'
 	)
 );
 
