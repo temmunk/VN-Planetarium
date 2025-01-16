@@ -59,7 +59,7 @@ public class PlanetServiceNegativeCreateTest extends PlanetServiceTest {
 
     @Test
     public void negativeCreatePlanetTest(){
-        Mockito.when(planetDao.readPlanet("Earth")).thenThrow(new PlanetFail("unique name fail"));
+        Mockito.when(planetDao.readPlanet("Earth")).thenThrow(new PlanetFail("Invalid planet name"));
         Mockito.when(planetDao.createPlanet(negativePlanet)).thenThrow(new AssertionError("planetFail exception expected, but it was not thrown when it should have been"));
         PlanetFail planetFail = Assert.assertThrows(PlanetFail.class, ()->{planetService.createPlanet(negativePlanet);});
         Assert.assertEquals("Invalid planet name", planetFail.getMessage());
@@ -67,7 +67,7 @@ public class PlanetServiceNegativeCreateTest extends PlanetServiceTest {
 
     @Test
     public void negativeCreatePlanet1Test(){
-        Mockito.when(planetDao.readPlanet("Earth")).thenThrow(new PlanetFail("unique name fail"));
+        Mockito.when(planetDao.readPlanet("Earth")).thenThrow(new PlanetFail("Invalid planet name"));
         Mockito.when(planetDao.createPlanet(negativePlanet1)).thenThrow(new AssertionError("planetFail exception expected, but it was not thrown when it should have been"));
         PlanetFail planetFail = Assert.assertThrows(PlanetFail.class, ()->{planetService.createPlanet(negativePlanet1);});
         Assert.assertEquals("Invalid planet name", planetFail.getMessage());
@@ -75,7 +75,7 @@ public class PlanetServiceNegativeCreateTest extends PlanetServiceTest {
 
     @Test
     public void negativeCreatePlanet2Test(){
-        Mockito.when(planetDao.readPlanet("Earth")).thenThrow(new PlanetFail("unique name fail"));
+        Mockito.when(planetDao.readPlanet("Earth")).thenThrow(new PlanetFail("Invalid planet name"));
         Mockito.when(planetDao.createPlanet(negativePlanet2)).thenThrow(new AssertionError("planetFail exception expected, but it was not thrown when it should have been"));
         PlanetFail planetFail = Assert.assertThrows(PlanetFail.class, ()->{planetService.createPlanet(negativePlanet2);});
         Assert.assertEquals("Invalid planet name", planetFail.getMessage());
@@ -83,7 +83,7 @@ public class PlanetServiceNegativeCreateTest extends PlanetServiceTest {
 
     @Test
     public void negativeCreatePlanet3Test(){
-        Mockito.when(planetDao.readPlanet("Earth")).thenThrow(new PlanetFail("unique name fail"));
+        Mockito.when(planetDao.readPlanet("Earth")).thenThrow(new PlanetFail("Invalid planet name"));
         Mockito.when(planetDao.createPlanet(negativePlanet3)).thenThrow(new AssertionError("planetFail exception expected, but it was not thrown when it should have been"));
         PlanetFail planetFail = Assert.assertThrows(PlanetFail.class, ()->{planetService.createPlanet(negativePlanet3);});
         Assert.assertEquals("Invalid planet name", planetFail.getMessage());
@@ -91,7 +91,7 @@ public class PlanetServiceNegativeCreateTest extends PlanetServiceTest {
 
     @Test
     public void negativeCreatePlanet4Test(){
-        Mockito.when(planetDao.readPlanet("Earth")).thenThrow(new PlanetFail("unique name fail"));
+        Mockito.when(planetDao.readPlanet("Earth")).thenThrow(new PlanetFail("Invalid planet name"));
         Mockito.when(planetDao.createPlanet(negativePlanet4)).thenThrow(new AssertionError("planetFail exception expected, but it was not thrown when it should have been"));
         PlanetFail planetFail = Assert.assertThrows(PlanetFail.class, ()->{planetService.createPlanet(negativePlanet4);});
         Assert.assertEquals("Invalid file type", planetFail.getMessage());

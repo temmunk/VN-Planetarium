@@ -82,10 +82,10 @@ public class PlanetController {
                 responseMessage = String.valueOf(planetService.deletePlanet(identifier));
             }
             ctx.json(responseMessage);
-            ctx.status(200);
+            ctx.status(204);
         } catch (PlanetFail e) {
             ctx.result(e.getMessage());
-            ctx.status(400);
+            ctx.status(404);
         }
     }
 
