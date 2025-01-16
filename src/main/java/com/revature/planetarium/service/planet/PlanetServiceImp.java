@@ -18,11 +18,11 @@ public class PlanetServiceImp<T> implements PlanetService<T> {
     @Override
     public boolean createPlanet(Planet planet) {
         if (planet.getPlanetName().length() < 1 || planet.getPlanetName().length() > 30) {
-            throw new PlanetFail("character length fail");
+            throw new PlanetFail("Invalid planet name");
         }
         Optional<Planet> existingPlanet = planetDao.readPlanet(planet.getPlanetName());
         if (existingPlanet.isPresent()) {
-            throw new PlanetFail("unique name fail");
+            throw new PlanetFail("Invalid planet name");
         }
         Optional<Planet> createdPlanet = planetDao.createPlanet(planet);
         if (createdPlanet.isPresent()) {
@@ -82,7 +82,7 @@ public class PlanetServiceImp<T> implements PlanetService<T> {
     }
 
     @Override
-    public String deletePlanet(T idOrName) {
+    public boolean deletePlanet(T idOrName) {
         boolean deleted;
         if (idOrName instanceof Integer) {
             deleted = planetDao.deletePlanet((int) idOrName);
@@ -92,7 +92,7 @@ public class PlanetServiceImp<T> implements PlanetService<T> {
             throw new PlanetFail("identifier must be an Integer or String");
         }
         if (deleted) {
-            return "Planet deleted successfully";
+            return true;
         } else {
             throw new PlanetFail("Planet delete failed, please try again");
         }

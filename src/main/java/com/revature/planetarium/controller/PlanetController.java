@@ -77,9 +77,9 @@ public class PlanetController {
             String identifier = ctx.pathParam("identifier");
             String responseMessage;
             if(identifier.matches("^[0-9]+$")) {
-                responseMessage = planetService.deletePlanet(Integer.parseInt(identifier));
+                responseMessage = String.valueOf(planetService.deletePlanet(Integer.parseInt(identifier)));
             } else {
-                responseMessage = planetService.deletePlanet(identifier);
+                responseMessage = String.valueOf(planetService.deletePlanet(identifier));
             }
             ctx.json(responseMessage);
             ctx.status(200);

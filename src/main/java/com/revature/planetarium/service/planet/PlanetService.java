@@ -11,6 +11,6 @@ public interface PlanetService<T> {
     List<Planet> selectAllPlanets();
     List<Planet> selectByOwner(int ownerId);
     Planet updatePlanet(Planet planet);
-    String deletePlanet(T idOrName);
+    boolean deletePlanet(T idOrName);
     
 }
