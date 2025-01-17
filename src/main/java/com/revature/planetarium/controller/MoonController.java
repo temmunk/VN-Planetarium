@@ -49,7 +49,10 @@ public class MoonController {
     public void createMoon(Context ctx) {
         try {
             Moon moon = ctx.bodyAsClass(Moon.class);
-            Moon createdMoon = moonService.createMoon(moon);
+            Moon createdMoon = null;
+            if(moonService.createMoon(moon))
+                createdMoon = moonService.selectMoon(moon.getMoonName());
+            assert createdMoon != null;
             ctx.json(createdMoon);
             ctx.status(201);
         } catch (MoonFail e) {
@@ -63,9 +66,11 @@ public class MoonController {
             String identifier = ctx.pathParam("identifier");
             String responseMessage;
             if(identifier.matches("^[0-9]+$")) {
-                responseMessage = moonService.deleteMoon(Integer.parseInt(identifier));
+                moonService.deleteMoon(Integer.parseInt(identifier));
+                responseMessage = "Moon deleted successfully!";
             } else {
-                responseMessage = moonService.deleteMoon(identifier);
+                moonService.deleteMoon(identifier);
+                responseMessage = "Moon deleted successfully!";
             }
             ctx.json(responseMessage);
             ctx.status(200);

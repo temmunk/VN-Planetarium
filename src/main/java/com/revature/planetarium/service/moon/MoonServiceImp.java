@@ -16,7 +16,7 @@ public class MoonServiceImp<T> implements MoonService<T> {
     }
 
     @Override
-    public Moon createMoon(Moon moon) {
+    public boolean createMoon(Moon moon) {
         if (moon.getMoonName().length() < 1 || moon.getMoonName().length() > 30) {
             throw new MoonFail("character length fail");
         }
@@ -28,7 +28,7 @@ public class MoonServiceImp<T> implements MoonService<T> {
         if (newMoon.isEmpty()) {
             throw new MoonFail("Could not create new moon");
         }
-        return newMoon.get();
+        return true;
     }
 
 
@@ -81,7 +81,7 @@ public class MoonServiceImp<T> implements MoonService<T> {
     }
 
     @Override
-    public String deleteMoon(T idOrName) {
+    public boolean deleteMoon(T idOrName) {
         boolean deleted;
         if (idOrName instanceof Integer) {
             deleted = moonDao.deleteMoon((int) idOrName);
@@ -91,7 +91,7 @@ public class MoonServiceImp<T> implements MoonService<T> {
             throw new MoonFail("Identifier must be an Integer or String");
         }
         if (deleted) {
-            return "Moon deleted successfully";
+            return true;
         } else {
             throw new MoonFail("Moon delete failed, please try again");
         }

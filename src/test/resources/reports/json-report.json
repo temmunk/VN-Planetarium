@@ -3,11 +3,11 @@
     "line": 4,
     "elements": [
       {
-        "start_timestamp": "2025-01-10T20:45:12.343Z",
+        "start_timestamp": "2025-01-14T18:40:23.983Z",
         "before": [
           {
             "result": {
-              "duration": 39088900,
+              "duration": 19823600,
               "status": "passed"
             },
             "match": {
@@ -24,8 +24,9 @@
         "steps": [
           {
             "result": {
-              "duration": 89146900,
-              "status": "passed"
+              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d131.0.6778.205)\nBuild info: version: \u00274.25.0\u0027, revision: \u00278a8aea2337\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.25\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [9de1bdc5d8bee955f5f148135c29fda3, get {url\u003dhttp://localhost:8080}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\\Users\\nafis\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53049}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53049/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 9de1bdc5d8bee955f5f148135c29fda3\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)\r\n\tat pom.LoginPage.goToLogin(LoginPage.java:34)\r\n\tat steps.ViewSteps.the_user_not_logged_in(ViewSteps.java:39)\r\n\tat ✽.the user is not logged in(classpath:features/HomePage.feature:7)\r\n",
+              "duration": 4877380900,
+              "status": "failed"
             },
             "line": 7,
             "name": "the user is not logged in",
@@ -36,8 +37,7 @@
           },
           {
             "result": {
-              "duration": 155183000,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 8,
             "name": "the user tries to directly access the home page",
@@ -48,8 +48,7 @@
           },
           {
             "result": {
-              "duration": 21671100,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 9,
             "name": "the user should be denied access",
@@ -61,11 +60,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-10T20:45:12.785Z",
+        "start_timestamp": "2025-01-14T18:40:29.016Z",
         "before": [
           {
             "result": {
-              "duration": 133982800,
+              "duration": 13838300,
               "status": "passed"
             },
             "match": {
@@ -82,8 +81,9 @@
         "steps": [
           {
             "result": {
-              "duration": 950911800,
-              "status": "passed"
+              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d131.0.6778.205)\nBuild info: version: \u00274.25.0\u0027, revision: \u00278a8aea2337\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.25\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [9de1bdc5d8bee955f5f148135c29fda3, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\\Users\\nafis\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53049}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53049/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 9de1bdc5d8bee955f5f148135c29fda3\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)\r\n\tat pom.LoginPage.setUpLoggedInUser(LoginPage.java:38)\r\n\tat steps.ViewSteps.the_user_is_logged_in(ViewSteps.java:15)\r\n\tat ✽.the user is properly logged in on the home page(classpath:features/HomePage.feature:13)\r\n",
+              "duration": 2506954700,
+              "status": "failed"
             },
             "line": 13,
             "name": "the user is properly logged in on the home page",
@@ -94,8 +94,7 @@
           },
           {
             "result": {
-              "duration": 1310410700,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 14,
             "name": "the planets and moons they added should be visible",
@@ -106,8 +105,8 @@
           },
           {
             "result": {
-              "duration": 893080000,
-              "status": "passed"
+              "duration": 1003300,
+              "status": "skipped"
             },
             "line": 15,
             "name": "a greeting message should be present for the user",
@@ -119,11 +118,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-10T20:45:16.130Z",
+        "start_timestamp": "2025-01-14T18:40:31.559Z",
         "before": [
           {
             "result": {
-              "duration": 60523100,
+              "duration": 30225100,
               "status": "passed"
             },
             "match": {
@@ -140,8 +139,9 @@
         "steps": [
           {
             "result": {
-              "duration": 1062241900,
-              "status": "passed"
+              "error_message": "org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED\n  (Session info: chrome\u003d131.0.6778.205)\nBuild info: version: \u00274.25.0\u0027, revision: \u00278a8aea2337\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.25\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [9de1bdc5d8bee955f5f148135c29fda3, get {url\u003dhttp://localhost:8080/}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.205, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\\Users\\nafis\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53049}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53049/devtoo..., se:cdpVersion: 131.0.6778.205, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 9de1bdc5d8bee955f5f148135c29fda3\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)\r\n\tat pom.LoginPage.setUpLoggedInUser(LoginPage.java:38)\r\n\tat steps.ViewSteps.the_user_is_logged_in(ViewSteps.java:15)\r\n\tat ✽.the user is properly logged in on the home page(classpath:features/HomePage.feature:20)\r\n",
+              "duration": 4599527200,
+              "status": "failed"
             },
             "line": 20,
             "name": "the user is properly logged in on the home page",
@@ -152,8 +152,7 @@
           },
           {
             "result": {
-              "duration": 710762200,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 21,
             "name": "the user logs out",
@@ -164,8 +163,8 @@
           },
           {
             "result": {
-              "duration": 55008100,
-              "status": "passed"
+              "duration": 975900,
+              "status": "skipped"
             },
             "line": 22,
             "name": "the user should be redirected to the Login page",
@@ -176,8 +175,7 @@
           },
           {
             "result": {
-              "duration": 198139100,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 23,
             "name": "the user clicks the register link",
@@ -188,8 +186,8 @@
           },
           {
             "result": {
-              "duration": 508369800,
-              "status": "passed"
+              "duration": 1007900,
+              "status": "skipped"
             },
             "line": 24,
             "name": "provides new credentials for a second user",
@@ -200,8 +198,8 @@
           },
           {
             "result": {
-              "duration": 49992200,
-              "status": "passed"
+              "duration": 1006100,
+              "status": "skipped"
             },
             "line": 25,
             "name": "the user should be redirected to the Login page",
@@ -212,8 +210,8 @@
           },
           {
             "result": {
-              "duration": 234899100,
-              "status": "passed"
+              "duration": 1004300,
+              "status": "skipped"
             },
             "line": 26,
             "name": "the second user provides their credentials",
@@ -224,8 +222,7 @@
           },
           {
             "result": {
-              "duration": 30362000,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 27,
             "name": "the user clicks login",
@@ -236,8 +233,7 @@
           },
           {
             "result": {
-              "duration": 552885600,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 28,
             "name": "the user should be redirected to the Home page",
@@ -248,9 +244,7 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: expected:\u003c0\u003e but was:\u003c2\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat steps.ViewSteps.theTableShouldBeEmpty(ViewSteps.java:55)\r\n\tat ✽.the table should be empty(classpath:features/HomePage.feature:29)\r\n",
-              "duration": 22227800,
-              "status": "failed"
+              "status": "skipped"
             },
             "line": 29,
             "name": "the table should be empty",
