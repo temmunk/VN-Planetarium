@@ -49,7 +49,7 @@ public class PlanetController {
     public void createPlanet(Context ctx) {
         try {
             Planet planet = ctx.bodyAsClass(Planet.class);
-            Planet createdPlanet = planetService.createPlanet(planet);
+            boolean createdPlanet = planetService.createPlanet(planet);
             ctx.json(createdPlanet);
             ctx.status(201);            
         } catch (PlanetFail e) {
@@ -77,15 +77,15 @@ public class PlanetController {
             String identifier = ctx.pathParam("identifier");
             String responseMessage;
             if(identifier.matches("^[0-9]+$")) {
-                responseMessage = planetService.deletePlanet(Integer.parseInt(identifier));
+                responseMessage = String.valueOf(planetService.deletePlanet(Integer.parseInt(identifier)));
             } else {
-                responseMessage = planetService.deletePlanet(identifier);
+                responseMessage = String.valueOf(planetService.deletePlanet(identifier));
             }
             ctx.json(responseMessage);
-            ctx.status(200);
+            ctx.status(204);
         } catch (PlanetFail e) {
             ctx.result(e.getMessage());
-            ctx.status(400);
+            ctx.status(404);
         }
     }
 

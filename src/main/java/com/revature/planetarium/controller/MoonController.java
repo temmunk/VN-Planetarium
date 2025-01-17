@@ -73,10 +73,10 @@ public class MoonController {
                 responseMessage = "Moon deleted successfully!";
             }
             ctx.json(responseMessage);
-            ctx.status(200);
+            ctx.status(204);
         } catch (MoonFail e) {
             ctx.result(e.getMessage());
-            ctx.status(400);
+            ctx.status(404);
         }
     }
 
