@@ -30,6 +30,7 @@ public class UserServiceImp implements UserService {
         Optional<User> foundUser = userDao.findUserByUsername(credentials.getUsername());
         if (foundUser.isPresent()) {
             if (foundUser.get().getPassword().equals(credentials.getPassword())) {
+                foundUser.get().setPassword(null);
                 return foundUser.get();
             }
         }
