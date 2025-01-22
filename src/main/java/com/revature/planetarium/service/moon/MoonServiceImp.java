@@ -17,13 +17,21 @@ public class MoonServiceImp<T> implements MoonService<T> {
 
     @Override
     public boolean createMoon(Moon moon) {
+        if(! moon.getMoonName().matches("^[a-zA-Z0-9_\\-\\s]*$"))
+            throw new MoonFail("Invalid moon name");
         if (moon.getMoonName().length() < 1 || moon.getMoonName().length() > 30) {
-            throw new MoonFail("character length fail");
+            throw new MoonFail("Invalid moon name");
         }
         Optional<Moon> existingMoon = moonDao.readMoon(moon.getMoonName());
         if (existingMoon.isPresent()) {
-            throw new MoonFail("unique name fail");
+            throw new MoonFail("Invalid moon name");
         }
+        if (moon.getImageData() != null && !moon.getImageData().startsWith("/9j/") && !moon.getImageData().startsWith("iVBORw0KGgo"))
+        {
+            throw new MoonFail("Invalid file type");
+        }
+        if(moonDao.readMoonsByPlanet(moon.getOwnerId()).isEmpty())
+
         Optional<Moon> newMoon = moonDao.createMoon(moon);
         if (newMoon.isEmpty()) {
             throw new MoonFail("Could not create new moon");
@@ -88,12 +96,12 @@ public class MoonServiceImp<T> implements MoonService<T> {
         } else if (idOrName instanceof String) {
             deleted = moonDao.deleteMoon((String) idOrName);
         } else {
-            throw new MoonFail("Identifier must be an Integer or String");
+            throw new MoonFail("Invalid moon name");
         }
         if (deleted) {
             return true;
         } else {
-            throw new MoonFail("Moon delete failed, please try again");
+            throw new MoonFail("Invalid moon name");
         }
     }
 
