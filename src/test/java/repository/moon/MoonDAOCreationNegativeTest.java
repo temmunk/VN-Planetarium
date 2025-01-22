@@ -48,7 +48,11 @@ public class MoonDAOCreationNegativeTest extends MoonDAOTest {
     @Test
     public void createMoonNegativeTest(){
         Moon testMoon = new Moon(moonId,moonName,ownerId);
-        testMoon.setImageData(imageData);
+
+        if (imageData != ""){
+            testMoon.setImageData(imageData);
+        }
+
         MoonFail exception = Assert.assertThrows(MoonFail.class, ()-> moonDao.createMoon(testMoon));
         Assert.assertEquals(exceptionMessage, exception.getMessage());
 

@@ -24,6 +24,7 @@ public class MoonServiceCreationNegativeTest extends MoonServiceTest{
     private Optional<Moon> optionalMoon;
     private Moon uniqueNameMoon;
     private Optional<Moon> optionalUniqueMoon;
+    private Moon invalidPlanetIdMoon;
 
     @Parameterized.Parameter
     public int moonId;
@@ -57,18 +58,24 @@ public class MoonServiceCreationNegativeTest extends MoonServiceTest{
     @Before
     public void negativeSetup() throws IOException {
         negativeMoon = new Moon(moonId, moonName, ownerId);
-        negativeMoon.setImageData(imageData);
+        if (imageData != ""){
+            negativeMoon.setImageData(imageData);
+        }
         optionalMoon = Optional.of(negativeMoon);
         uniqueNameMoon = new Moon(0,"Luna", 1);
         optionalUniqueMoon = Optional.of(uniqueNameMoon);
+        invalidPlanetIdMoon = new Moon(0, "TestMoon", 5);
     }
 
     @Test
     public void createMoonNegativeTest(){
         try{
-            Mockito.when(moonDao.readMoon(uniqueNameMoon.getMoonName())).thenReturn(optionalUniqueMoon);
+            Mockito.when(moonDao.readMoon(uniqueNameMoon.getMoonName())).thenThrow(new MoonFail("Invalid moon name"));
+            Mockito.when(moonDao.readMoon(invalidPlanetIdMoon.getMoonName())).thenReturn(Optional.empty());
             Mockito.when(moonDao.readMoon(negativeMoon.getMoonName())).thenReturn(Optional.empty());
             Mockito.when(moonDao.createMoon(negativeMoon)).thenReturn(optionalMoon);
+            Mockito.when(moonDao.createMoon(invalidPlanetIdMoon)).thenThrow(new MoonFail("Invalid planet ID"));
+
             moonService.createMoon(negativeMoon);
             Assert.fail("Expected MoonFail to be thrown, but it was not");
         } catch (MoonFail e){
