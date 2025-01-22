@@ -1,7 +1,6 @@
 package service.user;
 
 import com.revature.planetarium.entities.User;
-import com.revature.planetarium.exceptions.PlanetFail;
 import com.revature.planetarium.exceptions.UserFail;
 import org.junit.Assert;
 import org.junit.Before;
