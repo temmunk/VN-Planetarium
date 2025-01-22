@@ -6,6 +6,8 @@ import com.revature.planetarium.repository.moon.MoonDao;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class MoonServiceImp<T> implements MoonService<T> {
     
@@ -17,17 +19,41 @@ public class MoonServiceImp<T> implements MoonService<T> {
 
     @Override
     public Moon createMoon(Moon moon) {
+
+        Pattern p = Pattern.compile(
+                "^[\\w\\-\\s]+$", Pattern.CASE_INSENSITIVE);
+        //this regex pattern allows alphanumeric characters, dashes, underscores and spaces
+        Matcher m=p.matcher(moon.getMoonName());
+        boolean b=m.matches();
+
         if (moon.getMoonName().length() < 1 || moon.getMoonName().length() > 30) {
-            throw new MoonFail("character length fail");
+            throw new MoonFail("Invalid moon name");
         }
+        if (!b) {
+            throw new MoonFail("Invalid moon name");
+        }
+
         Optional<Moon> existingMoon = moonDao.readMoon(moon.getMoonName());
-        if (existingMoon.isPresent()) {
-            throw new MoonFail("unique name fail");
+        if(existingMoon.isPresent()) {
+            throw new MoonFail("Invalid moon name");
         }
+
+        if (moon.getImageData() != null ) {
+            if (!moon.getImageData().startsWith("/9j/") || !moon.getImageData().startsWith("iVBORw0KGgo")) {
+                //Jpg images encoded in base64 usually start with "/9j/" and png start with "iVBORw0KGgo"
+                throw new MoonFail("Invalid file type");
+            }
+        }
+
+
+
+
         Optional<Moon> newMoon = moonDao.createMoon(moon);
         if (newMoon.isEmpty()) {
             throw new MoonFail("Could not create new moon");
         }
+
+
         return newMoon.get();
     }
 

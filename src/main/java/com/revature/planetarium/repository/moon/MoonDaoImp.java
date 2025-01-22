@@ -32,6 +32,13 @@ public class MoonDaoImp implements MoonDao {
             Matcher m=p.matcher(moon.getMoonName());
             boolean b=m.matches();
 
+            if (moon.getImageData() != null) {
+                if (!moon.getImageData().startsWith("/9j/") && !moon.getImageData().startsWith("iVBORw0KGgo")) {
+                    //Jpg images encoded in base64 usually start with "/9j/" and png start with "iVBORw0KGgo"
+                    throw new MoonFail("Invalid file type");
+                }
+            }
+
             if (moon.getMoonName().length() < 1 || moon.getMoonName().length() > 30) {
                 throw new MoonFail("Invalid moon name");
             }
@@ -43,12 +50,7 @@ public class MoonDaoImp implements MoonDao {
                 throw new MoonFail("Invalid moon name");
             }
 
-            if (moon.getImageData() != null) {
-                if (!moon.getImageData().startsWith("/9j/") || !moon.getImageData().startsWith("iVBORwOKGgo")) {
-                    //Jpg images encoded in base64 usually start with "/9j/" and png start with "iVBORw0KGgo"
-                    throw new MoonFail("Invalid file type");
-                }
-            }
+
 
             stmt.executeUpdate();
             try (ResultSet rs = stmt.getGeneratedKeys()){
@@ -60,6 +62,9 @@ public class MoonDaoImp implements MoonDao {
             }
         } catch (Exception e) {
             System.out.println(e);
+            if (e.getMessage().contains("FOREIGN KEY")){
+                throw new MoonFail("Invalid planet ID");
+            }
             throw new MoonFail(e.getMessage());
         }
         return Optional.empty();
@@ -186,9 +191,14 @@ public class MoonDaoImp implements MoonDao {
         try (Connection conn = DatabaseConnector.getConnection();
              PreparedStatement stmt = conn.prepareStatement("DELETE FROM moons WHERE id = ?")) {
             stmt.setInt(1, id);
+            Optional<Moon> existingMoon = readMoon(id);
+            if(existingMoon.isEmpty()) {
+                throw new MoonFail("Invalid moon name");
+            }
+
             int rowsDeleted = stmt.executeUpdate();
             return rowsDeleted > 0;
-        } catch (SQLException e) {
+        } catch (Exception e) {
             System.out.println(e);
             throw new MoonFail(e.getMessage());
         }
@@ -199,9 +209,13 @@ public class MoonDaoImp implements MoonDao {
         try (Connection conn = DatabaseConnector.getConnection();
              PreparedStatement stmt = conn.prepareStatement("DELETE FROM moons WHERE name = ?")) {
             stmt.setString(1, name);
+            Optional<Moon> existingMoon = readMoon(name);
+            if(existingMoon.isEmpty()) {
+                throw new MoonFail("Invalid moon name");
+            }
             int rowsDeleted = stmt.executeUpdate();
             return rowsDeleted > 0;
-        } catch (SQLException e) {
+        } catch (Exception e) {
             System.out.println(e);
             throw new MoonFail(e.getMessage());
         }
