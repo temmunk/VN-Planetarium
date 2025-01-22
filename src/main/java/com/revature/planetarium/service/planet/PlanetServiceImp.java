@@ -6,6 +6,8 @@ import com.revature.planetarium.repository.planet.PlanetDao;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class PlanetServiceImp<T> implements PlanetService<T> {
 
@@ -17,12 +19,26 @@ public class PlanetServiceImp<T> implements PlanetService<T> {
 
     @Override
     public boolean createPlanet(Planet planet) {
+        Pattern p = Pattern.compile(
+                "^[\\w\\-\\s]+$", Pattern.CASE_INSENSITIVE);
+        //this regex pattern allows alphanumeric characters, dashes, underscores and spaces
+        Matcher m=p.matcher(planet.getPlanetName());
+        boolean b=m.matches();
         if (planet.getPlanetName().length() < 1 || planet.getPlanetName().length() > 30) {
+            throw new PlanetFail("Invalid planet name");
+        }
+        if (!b) {
             throw new PlanetFail("Invalid planet name");
         }
         Optional<Planet> existingPlanet = planetDao.readPlanet(planet.getPlanetName());
         if (existingPlanet.isPresent()) {
             throw new PlanetFail("Invalid planet name");
+        }
+        if (planet.getImageData() != null) {
+            if (!planet.getImageData().startsWith("/9j/") || !planet.getImageData().startsWith("iVBORwOKGgo")) {
+                //Jpg images encoded in base64 usually start with "/9j/" and png start with "iVBORw0KGgo"
+                throw new PlanetFail("Invalid file type");
+            }
         }
         Optional<Planet> createdPlanet = planetDao.createPlanet(planet);
         if (createdPlanet.isPresent()) {
@@ -89,12 +105,12 @@ public class PlanetServiceImp<T> implements PlanetService<T> {
         } else if (idOrName instanceof String) {
             deleted = planetDao.deletePlanet((String) idOrName);
         } else {
-            throw new PlanetFail("identifier must be an Integer or String");
+            throw new PlanetFail("Invalid planet name");
         }
         if (deleted) {
             return true;
         } else {
-            throw new PlanetFail("Planet delete failed, please try again");
+            throw new PlanetFail("Invalid planet name");
         }
     }
 
