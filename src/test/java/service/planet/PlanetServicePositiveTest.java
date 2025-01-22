@@ -1,6 +1,7 @@
 package service.planet;
 
 import com.revature.planetarium.entities.Planet;
+import com.revature.planetarium.exceptions.PlanetFail;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -64,9 +65,10 @@ public class PlanetServicePositiveTest extends PlanetServiceTest {
 
     @Test
     public void positiveCreatePlanet(){
+        Mockito.when(planetDao.readPlanet("Earth")).thenThrow(new PlanetFail("unique name fail"));
         Mockito.when(planetDao.createPlanet(positivePlanet)).thenReturn(mockOptional);
-       // Assert.assertTrue(planetService.createPlanet(positivePlanet));
-        Assert.fail("Expected true boolean but got Planet object");
+        Assert.assertTrue(planetService.createPlanet(positivePlanet));
+        //Assert.fail("Expected true boolean but got Planet object");
     }
 
     @Test
@@ -79,8 +81,8 @@ public class PlanetServicePositiveTest extends PlanetServiceTest {
     @Test
     public void positiveDeletePlanet() {
         Mockito.when(planetDao.deletePlanet(positivePlanetNameToDelete)).thenReturn(true);
-        // Assert.assertTrue(planetService.deletePlanet(positivePlanetToDelete));
-        Assert.fail("Expected true boolean but got String");
+        Assert.assertTrue(planetService.deletePlanet(positivePlanetNameToDelete));
+        //Assert.fail("Expected true boolean but got String");
     }
 
 
