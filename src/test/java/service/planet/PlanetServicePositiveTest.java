@@ -18,9 +18,12 @@ import java.util.Optional;
 public class PlanetServicePositiveTest extends PlanetServiceTest {
 
     private Planet positivePlanet;
+    private Planet positivePlanet2;
     private String positivePlanetNameToDelete;
     private Planet mockReturnedPlanet;
+    private Planet mockReturnedPlanet2;
     private Optional<Planet> mockOptional;
+    private Optional<Planet> mockOptional2;
     private List<Planet> ownerOnePlanetList;
     private Planet earth;
     private Planet mars;
@@ -28,12 +31,16 @@ public class PlanetServicePositiveTest extends PlanetServiceTest {
     private String encodedMarsImage;
     private byte[] earthImage;
     private String encodedEarthImage;
+    private byte[] pngImage;
+    private String encodedPNGImage;
 
     @Before
     public void positiveSetup() throws IOException {
         positivePlanet = new Planet();
+        positivePlanet2 = new Planet();
         positivePlanetNameToDelete = "Earth";
         mockReturnedPlanet = new Planet();
+        mockReturnedPlanet2 = new Planet();
         mars = new Planet();
         earth = new Planet();
         positivePlanet.setPlanetId(0);
@@ -43,11 +50,22 @@ public class PlanetServicePositiveTest extends PlanetServiceTest {
         mockReturnedPlanet.setPlanetId(3);
         mockReturnedPlanet.setOwnerId(1);
         mockReturnedPlanet.setImageData("");
+        pngImage=Files.readAllBytes(Paths.get("src/test/resources/Celestial-Images/Planet png.png"));
+        encodedPNGImage=Base64.getEncoder().encodeToString(pngImage);
+        positivePlanet2.setPlanetId(0);
+        positivePlanet2.setPlanetName("Mars 6_16");
+        positivePlanet2.setOwnerId(1);
+        positivePlanet2.setImageData(encodedPNGImage);
+        mockReturnedPlanet2.setPlanetName("Mars 6_16");
+        mockReturnedPlanet2.setPlanetId(3);
+        mockReturnedPlanet2.setOwnerId(1);
+        mockReturnedPlanet2.setImageData(encodedPNGImage);
         marsImage= Files.readAllBytes(Paths.get("src/test/resources/Celestial-Images/planet-2.jpg"));
         encodedMarsImage= Base64.getEncoder().encodeToString(marsImage);
         earthImage= Files.readAllBytes(Paths.get("src/test/resources/Celestial-Images/planet-1.jpg"));
         encodedEarthImage= Base64.getEncoder().encodeToString(earthImage);
         mockOptional= Optional.of(mockReturnedPlanet);
+        mockOptional2= Optional.of(mockReturnedPlanet2);
         mars.setOwnerId(1);
         mars.setPlanetId(2);
         mars.setPlanetName("Mars");
@@ -70,6 +88,15 @@ public class PlanetServicePositiveTest extends PlanetServiceTest {
         Assert.assertTrue(planetService.createPlanet(positivePlanet));
         //Assert.fail("Expected true boolean but got Planet object");
     }
+
+    @Test
+    public void positiveCreatePlanetWithImage(){
+        Mockito.when(planetDao.readPlanet("Earth")).thenThrow(new PlanetFail("unique name fail"));
+        Mockito.when(planetDao.createPlanet(positivePlanet2)).thenReturn(mockOptional2);
+        Assert.assertTrue(planetService.createPlanet(positivePlanet2));
+        //Assert.fail("Expected true boolean but got Planet object");
+    }
+
 
     @Test
     public void positiveSelectByOwner(){
