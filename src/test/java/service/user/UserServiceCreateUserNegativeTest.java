@@ -56,6 +56,7 @@ public class UserServiceCreateUserNegativeTest extends UserServiceTest {
 
     @Test
     public void createUserNegativeTest() {
+        Mockito.when(userDao.findUserByUsername("Batman")).thenThrow(new UserFail("Invalid username"));
         Mockito.when(userDao.createUser(negativeUser))
                 .thenThrow(new AssertionError("UserFail exception expected, but it was not thrown when it should have been"));
 
