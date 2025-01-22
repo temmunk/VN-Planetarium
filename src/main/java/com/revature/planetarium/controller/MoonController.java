@@ -24,10 +24,17 @@ public class MoonController {
     }
 
     public void findAllByPlanet(Context ctx) {
-        int ownerId = Integer.parseInt(ctx.pathParam("planetId"));
-        List<Moon> moons = moonService.selectByPlanet(ownerId);
-        ctx.json(moons);
-        ctx.status(200);
+        String planetId = ctx.pathParam("planetId");
+        if(planetId.matches("^[0-9]+$"))
+        {
+            int ownerId = Integer.parseInt(planetId);
+            List<Moon> moons = moonService.selectByPlanet(ownerId);
+            ctx.json(moons);
+            ctx.status(200);
+        }
+        else
+            ctx.status(400);
+
     }
 
     public void findByIdentifier(Context ctx) {
@@ -76,7 +83,7 @@ public class MoonController {
             ctx.json(responseMessage);
             ctx.status(204);
         } catch (MoonFail e) {
-            ctx.result(e.getMessage());
+            ctx.json(Map.of("message",e.getMessage()));
             ctx.status(404);
         }
     }
