@@ -1,6 +1,7 @@
 package com.revature.planetarium.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.PlanetFail;
@@ -53,7 +54,8 @@ public class PlanetController {
             ctx.json(createdPlanet);
             ctx.status(201);            
         } catch (PlanetFail e) {
-            ctx.result(e.getMessage());
+            ctx.json(Map.of("message",e.getMessage()));
+            //ctx.result(e.getMessage());
             ctx.status(400);
         }
 

@@ -35,7 +35,7 @@ public class PlanetServiceImp<T> implements PlanetService<T> {
             throw new PlanetFail("Invalid planet name");
         }
         if (planet.getImageData() != null) {
-            if (!planet.getImageData().startsWith("/9j/") || !planet.getImageData().startsWith("iVBORwOKGgo")) {
+            if (!planet.getImageData().startsWith("/9j/") && !planet.getImageData().startsWith("iVBORwOKGgo")) {
                 //Jpg images encoded in base64 usually start with "/9j/" and png start with "iVBORw0KGgo"
                 throw new PlanetFail("Invalid file type");
             }
