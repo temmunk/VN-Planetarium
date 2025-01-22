@@ -51,7 +51,7 @@ public class UserServiceCreateUserNegativeTest extends UserServiceTest {
 
     @Before
     public void negativeSetup() {
-        User negativeUser = new User(userId, username, password);
+        negativeUser = new User(userId, username, password);
     }
 
     @Test
