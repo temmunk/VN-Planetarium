@@ -18,7 +18,7 @@ public class MoonServiceImp<T> implements MoonService<T> {
     }
 
     @Override
-    public Moon createMoon(Moon moon) {
+    public boolean createMoon(Moon moon) {
 
         Pattern p = Pattern.compile(
                 "^[\\w\\-\\s]+$", Pattern.CASE_INSENSITIVE);
@@ -39,7 +39,7 @@ public class MoonServiceImp<T> implements MoonService<T> {
         }
 
         if (moon.getImageData() != null ) {
-            if (!moon.getImageData().startsWith("/9j/") || !moon.getImageData().startsWith("iVBORw0KGgo")) {
+            if (!moon.getImageData().startsWith("/9j/") && !moon.getImageData().startsWith("iVBORw0KGgo")) {
                 //Jpg images encoded in base64 usually start with "/9j/" and png start with "iVBORw0KGgo"
                 throw new MoonFail("Invalid file type");
             }
@@ -54,7 +54,7 @@ public class MoonServiceImp<T> implements MoonService<T> {
         }
 
 
-        return newMoon.get();
+        return true;
     }
 
 
@@ -107,19 +107,19 @@ public class MoonServiceImp<T> implements MoonService<T> {
     }
 
     @Override
-    public String deleteMoon(T idOrName) {
+    public boolean deleteMoon(T idOrName) {
         boolean deleted;
         if (idOrName instanceof Integer) {
             deleted = moonDao.deleteMoon((int) idOrName);
         } else if (idOrName instanceof String) {
             deleted = moonDao.deleteMoon((String) idOrName);
         } else {
-            throw new MoonFail("Identifier must be an Integer or String");
+            throw new MoonFail("Invalid moon name");
         }
         if (deleted) {
-            return "Moon deleted successfully";
+            return true;
         } else {
-            throw new MoonFail("Moon delete failed, please try again");
+            throw new MoonFail("Invalid moon name");
         }
     }
 

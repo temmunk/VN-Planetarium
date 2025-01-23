@@ -1,6 +1,7 @@
 package com.revature.planetarium.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import com.revature.planetarium.entities.Moon;
 import com.revature.planetarium.exceptions.MoonFail;
@@ -23,10 +24,17 @@ public class MoonController {
     }
 
     public void findAllByPlanet(Context ctx) {
-        int ownerId = Integer.parseInt(ctx.pathParam("planetId"));
-        List<Moon> moons = moonService.selectByPlanet(ownerId);
-        ctx.json(moons);
-        ctx.status(200);
+        String planetId = ctx.pathParam("planetId");
+        if(planetId.matches("^[0-9]+$"))
+        {
+            int ownerId = Integer.parseInt(planetId);
+            List<Moon> moons = moonService.selectByPlanet(ownerId);
+            ctx.json(moons);
+            ctx.status(200);
+        }
+        else
+            ctx.status(400);
+
     }
 
     public void findByIdentifier(Context ctx) {
@@ -49,11 +57,14 @@ public class MoonController {
     public void createMoon(Context ctx) {
         try {
             Moon moon = ctx.bodyAsClass(Moon.class);
-            Moon createdMoon = moonService.createMoon(moon);
+            Moon createdMoon = null;
+            if(moonService.createMoon(moon))
+                createdMoon = moonService.selectMoon(moon.getMoonName());
+            assert createdMoon != null;
             ctx.json(createdMoon);
             ctx.status(201);
         } catch (MoonFail e) {
-            ctx.result(e.getMessage());
+            ctx.json(Map.of("message",e.getMessage()));
             ctx.status(400);
         }
     }
@@ -63,14 +74,16 @@ public class MoonController {
             String identifier = ctx.pathParam("identifier");
             String responseMessage;
             if(identifier.matches("^[0-9]+$")) {
-                responseMessage = moonService.deleteMoon(Integer.parseInt(identifier));
+                moonService.deleteMoon(Integer.parseInt(identifier));
+                responseMessage = "Moon deleted successfully!";
             } else {
-                responseMessage = moonService.deleteMoon(identifier);
+                moonService.deleteMoon(identifier);
+                responseMessage = "Moon deleted successfully!";
             }
             ctx.json(responseMessage);
             ctx.status(204);
         } catch (MoonFail e) {
-            ctx.result(e.getMessage());
+            ctx.json(Map.of("message",e.getMessage()));
             ctx.status(404);
         }
     }

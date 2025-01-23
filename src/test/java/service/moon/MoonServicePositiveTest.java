@@ -60,37 +60,38 @@ public class MoonServicePositiveTest extends MoonServiceTest{
     {
         Mockito.when(moonDao.readMoon(moonName)).thenReturn(Optional.empty());
         Mockito.when(moonDao.createMoon(positiveMoon)).thenReturn(mockOptional);
-//        boolean result = moonService.createMoon(positiveMoon);
-        Assert.fail("createMoon() in MoonService returns Moon object, where we expect it to return boolean.");
+        boolean result = moonService.createMoon(positiveMoon);
+        Assert.assertTrue(result);
+//        Assert.fail("createMoon() in MoonService returns Moon object, where we expect it to return boolean.");
     }
 
     //Below two tests are not meaningful since we have createMoon() failing without the image, testing with the image should also be failing
 
-//    @Test
-//    public void createMoonWithJpgServicePositiveTest()
-//    {
-//        positiveMoon.setImageData(jpgData);
-//        mockReturnedMoon.setMoonId(4);
-//        mockReturnedMoon.setImageData(jpgData);
-//        mockOptional = Optional.of(mockReturnedMoon);
-//        Mockito.when(moonDao.readMoon(moonName)).thenReturn(Optional.empty());
-//        Mockito.when(moonDao.createMoon(positiveMoon)).thenReturn(mockOptional);
-////        boolean result = moonService.createMoon(positiveMoon);
+    @Test
+    public void createMoonWithJpgServicePositiveTest()
+    {
+        positiveMoon.setImageData(jpgData);
+        mockReturnedMoon.setImageData(jpgData);
+        mockOptional = Optional.of(mockReturnedMoon);
+        Mockito.when(moonDao.readMoon(moonName)).thenReturn(Optional.empty());
+        Mockito.when(moonDao.createMoon(positiveMoon)).thenReturn(mockOptional);
+        boolean result = moonService.createMoon(positiveMoon);
+        Assert.assertTrue(result);
 //        Assert.fail("createMoon() in MoonService returns Moon object, where we expect it to return boolean.");
-//    }
-//
-//    @Test
-//    public void createMoonWithPngServicePositiveTest()
-//    {
-//        positiveMoon.setImageData(pngData);
-//        mockReturnedMoon.setMoonId(5);
-//        mockReturnedMoon.setImageData(pngData);
-//        mockOptional = Optional.of(mockReturnedMoon);
-//        Mockito.when(moonDao.readMoon(moonName)).thenReturn(Optional.empty());
-//        Mockito.when(moonDao.createMoon(positiveMoon)).thenReturn(mockOptional);
-////        boolean result = moonService.createMoon(positiveMoon);
+    }
+
+    @Test
+    public void createMoonWithPngServicePositiveTest()
+    {
+        positiveMoon.setImageData(pngData);
+        mockReturnedMoon.setImageData(pngData);
+        mockOptional = Optional.of(mockReturnedMoon);
+        Mockito.when(moonDao.readMoon(moonName)).thenReturn(Optional.empty());
+        Mockito.when(moonDao.createMoon(positiveMoon)).thenReturn(mockOptional);
+        boolean result = moonService.createMoon(positiveMoon);
+        Assert.assertTrue(result);
 //        Assert.fail("createMoon() in MoonService returns Moon object, where we expect it to return boolean.");
-//    }
+    }
 
     @Test
     public void selectByPlanetServicePositiveTest()
@@ -105,9 +106,9 @@ public class MoonServicePositiveTest extends MoonServiceTest{
     public void deleteMoonServicePositiveTest()
     {
         Mockito.when(moonDao.deleteMoon(deleteName)).thenReturn(true);
-//        boolean result = moonService.deleteMoon(deleteName);
-//        Assert.assertTrue(result);
-        Assert.fail("deleteMoon() in MoonService returns String message, where we expect it to return boolean.");
+        boolean result = moonService.deleteMoon(deleteName);
+        Assert.assertTrue(result);
+//        Assert.fail("deleteMoon() in MoonService returns String message, where we expect it to return boolean.");
     }
 
 }
