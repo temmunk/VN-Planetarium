@@ -23,6 +23,13 @@ public class PlanetDaoImp implements PlanetDao {
             stmt.setString(1, planet.getPlanetName());
             stmt.setInt(2, planet.getOwnerId());
             stmt.setBytes(3, planet.imageDataAsByteArray());
+
+            if (planet.getImageData() != null) {
+                if (!planet.getImageData().startsWith("/9j/") && !planet.getImageData().startsWith("iVBORw0KGgo")) {
+                    throw new PlanetFail("Invalid file type");
+                }
+            }
+
             stmt.executeUpdate();
             try (ResultSet rs = stmt.getGeneratedKeys()){
                 if (rs.next()) {
@@ -33,7 +40,7 @@ public class PlanetDaoImp implements PlanetDao {
             }
         } catch (SQLException e) {
             System.out.println(e);
-            throw new PlanetFail(e.getMessage());
+            throw new PlanetFail("Invalid planet name");
         }
         return Optional.empty();
     }
@@ -172,6 +179,7 @@ public class PlanetDaoImp implements PlanetDao {
              PreparedStatement stmt = conn.prepareStatement("DELETE FROM planets WHERE name = ?")) {
             stmt.setString(1, name);
             int rowsDeleted = stmt.executeUpdate();
+            if (rowsDeleted == 0) throw new PlanetFail("Invalid planet name");
             return rowsDeleted > 0;
         } catch (SQLException e) {
             System.out.println(e);
