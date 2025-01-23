@@ -39,7 +39,7 @@ public class PlanetDaoImp implements PlanetDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new PlanetFail("Invalid planet name");
         }
         return Optional.empty();
@@ -61,7 +61,7 @@ public class PlanetDaoImp implements PlanetDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new PlanetFail(e.getMessage());
         }
         return Optional.empty();
@@ -83,7 +83,7 @@ public class PlanetDaoImp implements PlanetDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new PlanetFail(e.getMessage());
         }
         return Optional.empty();
@@ -108,7 +108,7 @@ public class PlanetDaoImp implements PlanetDao {
                     planets.add(planet);
                 }
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new PlanetFail(e.getMessage());
         }
         return planets;
@@ -135,7 +135,7 @@ public class PlanetDaoImp implements PlanetDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new PlanetFail(e.getMessage());
         }
         return planets;
@@ -151,7 +151,7 @@ public class PlanetDaoImp implements PlanetDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0 ? Optional.of(planet) : Optional.empty();
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new PlanetFail(e.getMessage());
         }
     }
@@ -168,7 +168,7 @@ public class PlanetDaoImp implements PlanetDao {
             int rowsDeleted = stmt.executeUpdate();
             return rowsDeleted > 0;
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new PlanetFail(e.getMessage());
         }
     }
@@ -182,7 +182,7 @@ public class PlanetDaoImp implements PlanetDao {
             if (rowsDeleted == 0) throw new PlanetFail("Invalid planet name");
             return rowsDeleted > 0;
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new PlanetFail(e.getMessage());
         }
     }

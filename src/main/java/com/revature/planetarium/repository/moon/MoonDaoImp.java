@@ -61,7 +61,7 @@ public class MoonDaoImp implements MoonDao {
                 }
             }
         } catch (Exception e) {
-            System.out.println(e);
+
             if (e.getMessage().contains("FOREIGN KEY")){
                 throw new MoonFail("Invalid planet ID");
             }
@@ -89,7 +89,7 @@ public class MoonDaoImp implements MoonDao {
                 return Optional.of(moon);
             }
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new MoonFail(e.getMessage());
         }
         return Optional.empty();
@@ -114,7 +114,7 @@ public class MoonDaoImp implements MoonDao {
                 return Optional.of(moon);
             }
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new MoonFail(e.getMessage());
         }
         return Optional.empty();
@@ -139,7 +139,7 @@ public class MoonDaoImp implements MoonDao {
                 moons.add(moon);
             }
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new MoonFail(e.getMessage());
         }
         return moons;
@@ -165,7 +165,7 @@ public class MoonDaoImp implements MoonDao {
                 moons.add(moon);
             }
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new MoonFail(e.getMessage());
         }
         return moons;
@@ -181,7 +181,7 @@ public class MoonDaoImp implements MoonDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0 ? Optional.of(moon) : Optional.empty();
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new MoonFail(e.getMessage());
         }
     }
@@ -199,7 +199,7 @@ public class MoonDaoImp implements MoonDao {
             int rowsDeleted = stmt.executeUpdate();
             return rowsDeleted > 0;
         } catch (Exception e) {
-            System.out.println(e);
+
             throw new MoonFail(e.getMessage());
         }
     }
@@ -216,7 +216,6 @@ public class MoonDaoImp implements MoonDao {
             int rowsDeleted = stmt.executeUpdate();
             return rowsDeleted > 0;
         } catch (Exception e) {
-            System.out.println(e);
             throw new MoonFail(e.getMessage());
         }
     }

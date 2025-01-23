@@ -52,7 +52,7 @@ public class UserDaoImp implements UserDao {
             }
             return Optional.empty();
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new UserFail(e.getMessage());
         }
     }
