@@ -8,6 +8,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Stream;
 
 public class Setup {
@@ -23,12 +25,16 @@ public class Setup {
              Stream<String> lines = Files.lines(sql)) {
 
             conn.setAutoCommit(false);
+
+            // First, collect all SQL statements
             lines.forEach(sqlBuilder::append);
-            String sqlString = sqlBuilder.toString();
-            String[] sqlStatements = sqlString.split(";");
+            String fullSql = sqlBuilder.toString();
+
+            // Split statements more carefully to handle parameterized queries
+            List<String> statements = splitSqlStatements(fullSql);
 
             int imageCount = 1;
-            for (String sqlStatement : sqlStatements) {
+            for (String sqlStatement : statements) {
                 sqlStatement = sqlStatement.trim();
                 if (sqlStatement.isEmpty()) {
                     continue;
@@ -58,6 +64,40 @@ public class Setup {
             System.err.println("Error during database setup: " + e.getMessage());
             e.printStackTrace();
         }
+    }
+
+    private static List<String> splitSqlStatements(String sql) {
+        List<String> statements = new ArrayList<>();
+        StringBuilder currentStatement = new StringBuilder();
+        boolean inString = false;
+        char[] chars = sql.toCharArray();
+
+        for (int i = 0; i < chars.length; i++) {
+            char c = chars[i];
+            currentStatement.append(c);
+
+            if (c == '\'') {
+                // Handle string literals
+                if (i == 0 || chars[i-1] != '\\') {
+                    inString = !inString;
+                }
+            } else if (c == ';' && !inString) {
+                // Only split on semicolons that are not inside string literals
+                String stmt = currentStatement.toString().trim();
+                if (!stmt.isEmpty()) {
+                    statements.add(stmt);
+                }
+                currentStatement = new StringBuilder();
+            }
+        }
+
+        // Add the last statement if it doesn't end with a semicolon
+        String lastStmt = currentStatement.toString().trim();
+        if (!lastStmt.isEmpty()) {
+            statements.add(lastStmt);
+        }
+
+        return statements;
     }
 
     public static byte[] convertImgToByteArray(String filePath) throws IOException {
