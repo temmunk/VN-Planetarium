@@ -14,6 +14,7 @@ public class Setup {
     public static void main(String[] args) {
         resetTestDatabase();
     }
+
     public static void resetTestDatabase() {
         Path sql = Path.of("src/test/resources/setup-reset.sql");
         StringBuilder sqlBuilder = new StringBuilder();
@@ -21,23 +22,18 @@ public class Setup {
             conn.setAutoCommit(false);
             lines.forEach(sqlBuilder::append);
             String sqlString = sqlBuilder.toString();
-            String [] sqlStatements = sqlString.split(";");
-            int imageCount = 1;
+            String[] sqlStatements = sqlString.split(";");
+
             for (String sqlStatement : sqlStatements) {
-                if (sqlStatement.contains("?")){
-                    String type = sqlStatement.contains("moons") ? "moon" : "planet";
-                    try(PreparedStatement ps = conn.prepareStatement(sqlStatement)){
-                        byte[] imageData = convertImgToByteArray(String.format("src/test/resources/Celestial-Images/%s-%d.jpg", type, imageCount));
-                        ps.setBytes(1, imageData);
-                        ps.executeUpdate();
-                        imageCount = imageCount == 2 ? 1 : 2;
-                    }
+                if (sqlStatement.trim().isEmpty()) continue;
+
+                if (sqlStatement.toLowerCase().contains("insert into planets") || sqlStatement.toLowerCase().contains("insert into moons")) {
+                    handleInsertWithImages(sqlStatement.trim(), conn);
                 } else {
                     try (Statement stmt = conn.createStatement()) {
-                        stmt.executeUpdate(sqlStatement);
+                        stmt.executeUpdate(sqlStatement.trim());
                     }
                 }
-
             }
             conn.commit();
             System.out.println("Database setup complete");
@@ -46,8 +42,28 @@ public class Setup {
         }
     }
 
+    private static void handleInsertWithImages(String sqlStatement, Connection conn) throws SQLException {
+        String type = sqlStatement.toLowerCase().contains("moons") ? "moon" : "planet";
+
+        // Replace placeholders with positional parameters for PostgreSQL
+        String preparedSql = sqlStatement.replace("?", "$1");
+
+        int imageCount = 1;
+        for (int i = 0; i < 2; i++) {
+            String imagePath = String.format("src/test/resources/Celestial-Images/%s-%d.jpg", type, imageCount);
+            try (PreparedStatement ps = conn.prepareStatement(preparedSql)) {
+                byte[] imageData = convertImgToByteArray(imagePath);
+                ps.setBytes(1, imageData);
+                ps.executeUpdate();
+                imageCount = imageCount == 2 ? 1 : 2;
+            } catch (IOException e) {
+                System.err.println("Failed to load image: " + imagePath);
+                throw new SQLException("Image conversion failed", e);
+            }
+        }
+    }
+
     public static byte[] convertImgToByteArray(String filePath) throws IOException {
-        byte[] imageBytes = Files.readAllBytes(Paths.get(filePath));
-        return imageBytes;
+        return Files.readAllBytes(Paths.get(filePath));
     }
 }
