@@ -6,7 +6,6 @@ import java.nio.file.Path;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.stream.Stream;
 
 public class Setup {
     public static void main(String[] args) {
@@ -15,14 +14,22 @@ public class Setup {
 
     public static void resetTestDatabase() {
         Path sql = Path.of("src/test/resources/setup-reset.sql");
-        StringBuilder sqlBuilder = new StringBuilder();
 
-        try (Connection conn = DatabaseConnector.getConnection();
-             Stream<String> lines = Files.lines(sql)) {
-
+        try (Connection conn = DatabaseConnector.getConnection()) {
             conn.setAutoCommit(false);
-            lines.forEach(sqlBuilder::append);
-            String sqlString = sqlBuilder.toString();
+
+            // First, execute DROP statements separately
+            try (Statement stmt = conn.createStatement()) {
+                stmt.executeUpdate("DROP TABLE IF EXISTS moons CASCADE");
+                stmt.executeUpdate("DROP TABLE IF EXISTS planets CASCADE");
+                stmt.executeUpdate("DROP TABLE IF EXISTS users CASCADE");
+            }
+
+            // Then read and execute the rest of the script
+            String sqlString = Files.readString(sql);
+
+            // Remove the DROP statements from the script (including any potential comments before them)
+            sqlString = sqlString.replaceAll("(?s)--[^\n]*\n?|DROP.*?CASCADE;", "");
 
             try (Statement stmt = conn.createStatement()) {
                 for (String sqlStatement : sqlString.split(";")) {
