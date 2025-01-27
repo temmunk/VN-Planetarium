@@ -9,10 +9,9 @@ import org.sqlite.SQLiteConfig;
 public class DatabaseConnector {
 
     public static Connection getConnection() throws SQLException {
-        SQLiteConfig config = new SQLiteConfig();
-        config.enforceForeignKeys(true);
-        String url = AppConfig.DATABASE_URL;
-        return DriverManager.getConnection(url, config.toProperties());
+
+        String url = System.getenv("DATABASE_URL");
+        return DriverManager.getConnection(url);
     }
 
 }

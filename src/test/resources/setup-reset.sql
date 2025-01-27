@@ -1,69 +1,61 @@
 -- Use this script to set up your Planetarium database: do not edit the script
 
--- needed for referential integrity enforcement if executing the queries manually
-PRAGMA foreign_keys = ON;
+-- Enable foreign key enforcement
+SET CONSTRAINTS ALL IMMEDIATE;
 
-drop table if exists moons;
+-- Drop tables if they exist
+DROP TABLE IF EXISTS moons CASCADE;
+DROP TABLE IF EXISTS planets CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
 
-drop table if exists planets;
-
-drop table if exists users;
-
-create table users(
-	id integer primary key,
-	username text unique not null,
-	password text not null,
-	constraint username_length_check check (
-		length(username) >= 5 and 
-		length(username) <= 30
-	),
-	constraint password_length_check check (
-		length(password) >= 5 and 
-		length(password) <= 30
-	),
-	constraint username_character_check check (
-		username GLOB '[a-zA-Z]*' AND 
-		username not glob '*[^a-zA-Z0-9_-]*'
-	),
-	constraint password_character_check check (
-		password GLOB '*[a-z]*' and
-		password GLOB '*[A-Z]*' and 
-		password GLOB '*[0-9]*' and
-		password GLOB '[a-zA-Z]*' AND 
-		password not glob '*[^a-zA-Z0-9_-]*'
-	)
+-- Create the users table
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(30) UNIQUE NOT NULL,
+    password VARCHAR(30) NOT NULL,
+    CONSTRAINT username_length_check CHECK (char_length(username) >= 5 AND char_length(username) <= 30),
+    CONSTRAINT password_length_check CHECK (char_length(password) >= 5 AND char_length(password) <= 30),
+    CONSTRAINT username_character_check CHECK (
+        username ~ '^[a-zA-Z][a-zA-Z0-9_-]*$'
+    ),
+    CONSTRAINT password_character_check CHECK (
+        password ~ '(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])^[a-zA-Z0-9_-]+$'
+    )
 );
 
-insert into users (username, password) values ('Batman', 'Iamthenight1939');
+-- Insert a default user
+INSERT INTO users (username, password) VALUES ('Batman', 'Iamthenight1939');
 
-create table planets(
-	id integer primary key,
-	name text unique not null,
-	ownerId integer not null,
-	image blob,
-	foreign key(ownerId) references users(id) on delete restrict,
-	constraint name_length_check check (length(name) <= 30),
-	constraint name_character_check check (
-		name GLOB '[a-zA-Z]*' and
-		name not GLOB '*[^a-zA-Z0-9_ -]*'
-	)
+-- Create the planets table
+CREATE TABLE planets (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(30) UNIQUE NOT NULL,
+    ownerId INT NOT NULL,
+    image BYTEA,
+    CONSTRAINT fk_owner FOREIGN KEY (ownerId) REFERENCES users(id) ON DELETE RESTRICT,
+    CONSTRAINT name_length_check CHECK (char_length(name) <= 30),
+    CONSTRAINT name_character_check CHECK (
+        name ~ '^[a-zA-Z][a-zA-Z0-9_ -]*$'
+    )
 );
 
-insert into planets (name, ownerId, image) values ('Earth', 1, ?);
-insert into planets (name, ownerId, image) values ('Mars', 1, ?);
+-- Insert sample planets
+INSERT INTO planets (name, ownerId, image) VALUES ('Earth', 1, NULL);
+INSERT INTO planets (name, ownerId, image) VALUES ('Mars', 1, NULL);
 
-create table moons(
-	id integer primary key,
-	name text not null,
-	myPlanetId integer not null,
-	image blob,
-	foreign key(myPlanetId) references planets(id) on delete cascade,
-	constraint name_length_check check (length(name) <= 30),
-	constraint name_character_check check (
-		name GLOB '[a-zA-Z]*' AND
-		name not GLOB '*[^a-zA-Z0-9_ -]*'
-	)
+-- Create the moons table
+CREATE TABLE moons (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(30) NOT NULL,
+    myPlanetId INT NOT NULL,
+    image BYTEA,
+    CONSTRAINT fk_planet FOREIGN KEY (myPlanetId) REFERENCES planets(id) ON DELETE CASCADE,
+    CONSTRAINT name_length_check CHECK (char_length(name) <= 30),
+    CONSTRAINT name_character_check CHECK (
+        name ~ '^[a-zA-Z][a-zA-Z0-9_ -]*$'
+    )
 );
 
-insert into moons (name, myPlanetId, image) values ('Luna', 1, ?);
-insert into moons (name, myPlanetId, image) values ('Titan', 2, ?);
+-- Insert sample moons
+INSERT INTO moons (name, myPlanetId, image) VALUES ('Luna', 1, NULL);
+INSERT INTO moons (name, myPlanetId, image) VALUES ('Titan', 2, NULL);
