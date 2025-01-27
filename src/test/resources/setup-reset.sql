@@ -43,8 +43,8 @@ CREATE TABLE planets (
     )
 );
 
-INSERT INTO planets (name, ownerId, image) VALUES ('Earth', 1, $1);
-INSERT INTO planets (name, ownerId, image) VALUES ('Mars', 1, $1);
+INSERT INTO planets (name, ownerId, image) VALUES ('Earth', 1, NULL);
+INSERT INTO planets (name, ownerId, image) VALUES ('Mars', 1, NULL);
 
 CREATE TABLE moons (
     id SERIAL PRIMARY KEY,
@@ -59,5 +59,5 @@ CREATE TABLE moons (
     )
 );
 
-INSERT INTO moons (name, myPlanetId, image) VALUES ('Luna', 1, $1);
-INSERT INTO moons (name, myPlanetId, image) VALUES ('Titan', 2, $1);
+INSERT INTO moons (name, myPlanetId, image) VALUES ('Luna', 1, NULL);
+INSERT INTO moons (name, myPlanetId, image) VALUES ('Titan', 2, NULL);
