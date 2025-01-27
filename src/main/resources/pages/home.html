@@ -112,52 +112,91 @@
         });
 
         async function populateCelestialTable() {
-        document.getElementById('celestialTable').innerHTML = '<tr><th>Type</th><th>ID</th><th>Name</th><th>Owner</th></tr>';
-        const response = await fetch(`http://{URL}:{PORT}/planetarium/planet/owner/${sessionStorage.getItem("userId")}`, {credentials: 'include'});
-        if (response.ok) {
-            const data = await response.json();
-            console.log(data);
-            const table = document.getElementById('celestialTable');
-            data.forEach(planet => {
-                const row = table.insertRow();
-                const typeCell = row.insertCell(0);
-                const idCell = row.insertCell(1);
-                const nameCell = row.insertCell(2);
-                const ownerCell = row.insertCell(3);
-                const imageCell = row.insertCell(4);
-                typeCell.textContent = 'planet';
-                idCell.textContent = planet.planetId;
-                nameCell.textContent = planet.planetName;
-                ownerCell.textContent = planet.ownerId;
+    // Reset the table and add headers
+    const table = document.getElementById('celestialTable');
+    table.innerHTML = '<tr><th>Type</th><th>ID</th><th>Name</th><th>Owner</th><th>Image</th></tr>';
+
+    try {
+        // Step 1: Fetch planets owned by the user
+        const userId = sessionStorage.getItem("userId");
+        const planetResponse = await fetch(`http://{URL}:{PORT}/planetarium/planet/owner/${userId}`, {
+            credentials: 'include',
+        });
+
+        if (!planetResponse.ok) {
+            throw new Error("Failed to fetch planets");
+        }
+
+        const planets = await planetResponse.json(); // Assuming this is an array of planet objects
+        console.log("Planets:", planets);
+
+        // Populate the table with planets
+        planets.forEach(planet => {
+            const row = table.insertRow();
+            const typeCell = row.insertCell(0);
+            const idCell = row.insertCell(1);
+            const nameCell = row.insertCell(2);
+            const ownerCell = row.insertCell(3);
+            const imageCell = row.insertCell(4);
+
+            typeCell.textContent = 'Planet';
+            idCell.textContent = planet.planetId;
+            nameCell.textContent = planet.planetName;
+            ownerCell.textContent = planet.ownerId;
+
+            if (planet.imageData) {
                 const planetImageElement = document.createElement('img');
                 planetImageElement.src = `data:image/jpeg;base64,${planet.imageData}`;
                 imageCell.appendChild(planetImageElement);
+            }
+        });
 
-            });
-        }
-        const moonResponse = await fetch('http://{URL}:{PORT}/planetarium/moon', {credentials: 'include'});
+        // Step 2: Fetch moons for each planet
+        const moonPromises = planets.map(planet =>
+            fetch(`http://{URL}:{PORT}/planetarium/moon/owner/${planet.planetId}`, {
+                credentials: 'include',
+            })
+        );
+
+        const moonResponses = await Promise.all(moonPromises);
+
+        for (let i = 0; i < moonResponses.length; i++) {
+            const moonResponse = moonResponses[i];
+
             if (moonResponse.ok) {
-                const moonData = await moonResponse.json();
-                console.log(moonData);
-                const table = document.getElementById('celestialTable');
-                moonData.forEach(moon => {
+                const moons = await moonResponse.json(); // Assuming this is an array of moon objects
+                console.log(`Moons for planet ${planets[i].planetId}:`, moons);
+
+                // Populate the table with moons
+                moons.forEach(moon => {
                     const row = table.insertRow();
                     const typeCell = row.insertCell(0);
                     const idCell = row.insertCell(1);
                     const nameCell = row.insertCell(2);
                     const ownerCell = row.insertCell(3);
                     const imageCell = row.insertCell(4);
-                    typeCell.textContent = 'moon';
+
+                    typeCell.textContent = 'Moon';
                     idCell.textContent = moon.moonId;
                     nameCell.textContent = moon.moonName;
                     ownerCell.textContent = moon.ownerId;
-                    const moonImageElement = document.createElement('img');
-                    moonImageElement.src = `data:image/jpeg;base64,${moon.imageData}`;
-                    imageCell.appendChild(moonImageElement);
+
+                    if (moon.imageData) {
+                        const moonImageElement = document.createElement('img');
+                        moonImageElement.src = `data:image/jpeg;base64,${moon.imageData}`;
+                        imageCell.appendChild(moonImageElement);
+                    }
                 });
+            } else {
+                console.error(`Failed to fetch moons for planet ID: ${planets[i].planetId}`);
             }
         }
-        
+    } catch (error) {
+        console.error("Error populating celestial table:", error);
+    }
+}
+
+
         async function deleteCelestial() {
             const selectedOption = document.getElementById('locationSelect').value;
             const identifier = document.getElementById('deleteInput').value;
@@ -184,7 +223,7 @@
 
         async function logout() {
             const response = await fetch('http://{URL}:{PORT}/logout', {method: "POST", credentials: 'include'});
-            if (response.status === 401) {
+            if (response.status === 200) {
                 sessionStorage.removeItem("user");
                 sessionStorage.removeItem("userId");
                 window.location.replace("http://{URL}:{PORT}");            
@@ -304,19 +343,20 @@
             if (response.status === 201) {
                 populateCelestialTable();
             } else {
-                alert(`Invalid planet name`);
+                alert(`Something went wrong, please try again`);
             }  
         }
 
         async function createMoon(){
             let moonName = document.getElementById('moonNameInput').value;
-            if(!checkCelestialName(moonName)){
-                alert("Invalid moon name");
-                return;
+            if (!checkCelestialName(moonName) || validateMoonName(moonName)) {
+                 alert("Invalid moon name");
+                 return;
             }
+
             let orbitedPlanet = document.getElementById('orbitedPlanetInput').value;
             if(!validatePlanetId(orbitedPlanet)){
-                alert("Invalid planet id");
+                alert("Invalid planet ID");
                 return;
             }
             let moonImageInput = document.getElementById('moonImageInput');
@@ -412,7 +452,25 @@
             const regex = /^[a-zA-Z0-9\s_-]{1,30}$/;
             return regex.test(name);
         }
-        
+
+        function validateMoonName(moonName) {
+    const body = document.getElementById('celestialTable').getElementsByTagName("tbody")[0];
+    const rows = body.getElementsByTagName("tr");
+    let first = true;
+
+    for (let row of rows) {
+        if (first) {
+            first = false; // Skip the header row
+            continue;
+        }
+        if (row.getElementsByTagName("td")[0].textContent === "moon" &&
+            row.getElementsByTagName("td")[2].textContent === moonName) {
+            return true; // Moon name already exists
+        }
+    }
+
+    return false;
+}
         setBackgroundImage('http://{URL}:{PORT}/background');
     </script>
 </body>
