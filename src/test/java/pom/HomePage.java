@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
 import testrunner.TestRunner;
 
+import java.io.File;
 import java.util.List;
 
 public class HomePage {
@@ -109,27 +110,33 @@ public class HomePage {
     }
 
     public void inputValidPlanetImage(){
-        planetImageInput.sendKeys("src/test/resources/Celestial-Images/planet-3.jpg");
+        File file = new File("src/test/resources/Celestial-Images/planet-3.jpg");
+        planetImageInput.sendKeys(file.getAbsolutePath());
     }
 
     public void inputValidMoonImage(){
-        moonImageInput.sendKeys("src/test/resources/Celestial-Images/moon-3.jpg");
+        File file = new File("src/test/resources/Celestial-Images/moon-3.jpg");
+        moonImageInput.sendKeys(file.getAbsolutePath());
     }
 
     public void inputInvalidPlanetImageType(){
-        planetImageInput.sendKeys("src/test/resources/Celestial-Images/InvalidPlanet.gif");
+        File file = new File("src/test/resources/Celestial-Images/InvalidPlanet.gif");
+        planetImageInput.sendKeys(file.getAbsolutePath());
     }
 
     public void inputpngPlanetImage(){
-        planetImageInput.sendKeys("src/test/resources/Celestial-Images/Planet png.png");
+        File file = new File("src/test/resources/Celestial-Images/Planet png.png");
+        planetImageInput.sendKeys(file.getAbsolutePath());
     }
 
     public void inputpngMoonImage(){
-        moonImageInput.sendKeys("src/test/resources/Celestial-Images/Moon png.png");
+        File file = new File("src/test/resources/Celestial-Images/Moon png.png");
+        moonImageInput.sendKeys(file.getAbsolutePath());
     }
 
     public void inputInvalidMoonImageType(){
-        moonImageInput.sendKeys("src/test/resources/Celestial-Images/Moon png.png");
+        File file = new File("src/test/resources/Celestial-Images/Moon png.png");
+        moonImageInput.sendKeys(file.getAbsolutePath());
     }
 
     public void clickDelete(){

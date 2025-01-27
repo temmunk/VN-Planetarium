@@ -3,11 +3,11 @@
     "line": 4,
     "elements": [
       {
-        "start_timestamp": "2025-01-14T19:15:51.016Z",
+        "start_timestamp": "2025-01-27T16:05:52.168Z",
         "before": [
           {
             "result": {
-              "duration": 39829400,
+              "duration": 594514700,
               "status": "passed"
             },
             "match": {
@@ -24,7 +24,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1114867100,
+              "duration": 468027200,
               "status": "passed"
             },
             "line": 7,
@@ -36,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 921561800,
+              "duration": 92658300,
               "status": "passed"
             },
             "line": 8,
@@ -48,7 +48,7 @@
           },
           {
             "result": {
-              "duration": 602157600,
+              "duration": 42247300,
               "status": "passed"
             },
             "line": 9,
@@ -61,11 +61,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-14T19:15:53.913Z",
+        "start_timestamp": "2025-01-27T16:05:53.533Z",
         "before": [
           {
             "result": {
-              "duration": 58999500,
+              "duration": 30374100,
               "status": "passed"
             },
             "match": {
@@ -82,7 +82,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3286864700,
+              "duration": 625854200,
               "status": "passed"
             },
             "line": 13,
@@ -94,7 +94,7 @@
           },
           {
             "result": {
-              "duration": 1511916600,
+              "duration": 1083050100,
               "status": "passed"
             },
             "line": 14,
@@ -106,7 +106,7 @@
           },
           {
             "result": {
-              "duration": 476438500,
+              "duration": 145068400,
               "status": "passed"
             },
             "line": 15,
@@ -119,11 +119,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-14T19:15:59.288Z",
+        "start_timestamp": "2025-01-27T16:05:55.443Z",
         "before": [
           {
             "result": {
-              "duration": 24503700,
+              "duration": 22248500,
               "status": "passed"
             },
             "match": {
@@ -140,7 +140,7 @@
         "steps": [
           {
             "result": {
-              "duration": 381176900,
+              "duration": 510593300,
               "status": "passed"
             },
             "line": 20,
@@ -152,7 +152,7 @@
           },
           {
             "result": {
-              "duration": 202905100,
+              "duration": 328733000,
               "status": "passed"
             },
             "line": 21,
@@ -164,7 +164,7 @@
           },
           {
             "result": {
-              "duration": 77507300,
+              "duration": 46527700,
               "status": "passed"
             },
             "line": 22,
@@ -176,7 +176,7 @@
           },
           {
             "result": {
-              "duration": 464852500,
+              "duration": 192381300,
               "status": "passed"
             },
             "line": 23,
@@ -188,7 +188,7 @@
           },
           {
             "result": {
-              "duration": 861819700,
+              "duration": 940005900,
               "status": "passed"
             },
             "line": 24,
@@ -200,7 +200,7 @@
           },
           {
             "result": {
-              "duration": 81146400,
+              "duration": 33274900,
               "status": "passed"
             },
             "line": 25,
@@ -212,7 +212,7 @@
           },
           {
             "result": {
-              "duration": 893556100,
+              "duration": 250179100,
               "status": "passed"
             },
             "line": 26,
@@ -224,7 +224,7 @@
           },
           {
             "result": {
-              "duration": 48329000,
+              "duration": 23777200,
               "status": "passed"
             },
             "line": 27,
@@ -236,7 +236,7 @@
           },
           {
             "result": {
-              "duration": 572974600,
+              "duration": 534961500,
               "status": "passed"
             },
             "line": 28,
@@ -248,9 +248,8 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: expected:\u003c0\u003e but was:\u003c2\u003e\r\n\tat org.junit.Assert.fail(Assert.java:89)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:835)\r\n\tat org.junit.Assert.assertEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:633)\r\n\tat steps.ViewSteps.theTableShouldBeEmpty(ViewSteps.java:55)\r\n\tat ✽.the table should be empty(classpath:features/HomePage.feature:29)\r\n",
-              "duration": 50093200,
-              "status": "failed"
+              "duration": 14927700,
+              "status": "passed"
             },
             "line": 29,
             "name": "the table should be empty",
@@ -267,6 +266,4608 @@
     "id": "home-page",
     "keyword": "Feature",
     "uri": "classpath:features/HomePage.feature",
+    "tags": []
+  },
+  {
+    "line": 4,
+    "elements": [
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 381014800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 225790300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks moon creation input",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:05:58.360Z",
+        "before": [
+          {
+            "result": {
+              "duration": 18470600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "provided valid moon name, owner planet and jpg image type, new moon should be added",
+        "description": "",
+        "id": "moon-addition;provided-valid-moon-name--owner-planet-and-jpg-image-type--new-moon-should-be-added",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 133840200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user provides valid moon name",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_provides_valid_moon_name()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 107916100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user provides valid owner planet",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_provides_valid_owner_planet()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user decides to upload an image",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_decides_to_upload_image()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 45751300,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user provides a jpg filetype",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_provides_valid_moon_image()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 75855100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user clicks submit",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 533048900,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the table should refresh after moon added",
+            "match": {
+              "location": "steps.MoonAdditionSteps.table_should_refresh()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 105737200,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user should be able to see the new moon added",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_should_see_new_moon()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 379541600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 237593200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks moon creation input",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:00.020Z",
+        "before": [
+          {
+            "result": {
+              "duration": 42713700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 21,
+        "name": "provided valid moon name, owner planet and png image type, new moon should be added",
+        "description": "",
+        "id": "moon-addition;provided-valid-moon-name--owner-planet-and-png-image-type--new-moon-should-be-added",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 157686900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user provides valid moon name",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_provides_valid_moon_name()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 117730200,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user provides valid owner planet",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_provides_valid_owner_planet()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user decides to upload an image",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_decides_to_upload_image()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 40525200,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user provides a png filetype",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_provides_png_moon_image()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 79354900,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user clicks submit",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for pom.HomePage$$Lambda$683/0x00000001003f1840@210308d5 (tried for 2 second(s) with 500 milliseconds interval)\nBuild info: version: \u00274.25.0\u0027, revision: \u00278a8aea2337\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.25\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\\Users\\Ahmed\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37170}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:37170/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 501a94c81d4f5314262f773ee84aa63e\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)\r\n\tat pom.HomePage.waitUntilTableChanges(HomePage.java:78)\r\n\tat steps.MoonAdditionSteps.table_should_refresh(MoonAdditionSteps.java:39)\r\n\tat ✽.the table should refresh after moon added(classpath:features/MoonAddition.feature:27)\r\n",
+              "duration": 2094060600,
+              "status": "failed"
+            },
+            "line": 27,
+            "name": "the table should refresh after moon added",
+            "match": {
+              "location": "steps.MoonAdditionSteps.table_should_refresh()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "the user should be able to see the new moon added",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_should_see_new_moon()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 416400400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 233811700,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks moon creation input",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:03.205Z",
+        "before": [
+          {
+            "result": {
+              "duration": 15107700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "provided valid moon name and owner planet without image, moon should be added",
+        "description": "",
+        "id": "moon-addition;provided-valid-moon-name-and-owner-planet-without-image--moon-should-be-added",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 161400900,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the user provides valid moon name",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_provides_valid_moon_name()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 97978000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the user provides valid owner planet",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_provides_valid_owner_planet()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "the user decides not to upload an image",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_doesnt_upload_image()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 75952300,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "the user clicks submit",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 545968400,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "the table should refresh after moon added",
+            "match": {
+              "location": "steps.MoonAdditionSteps.table_should_refresh()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 118256300,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "the user should be able to see the new moon added",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_should_see_new_moon()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 423469900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 193001200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks moon creation input",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:04.889Z",
+        "before": [
+          {
+            "result": {
+              "duration": 17767200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 41,
+        "name": "provided valid moon name and owner planet but wrong image format, alert should pop up",
+        "description": "",
+        "id": "moon-addition;provided-valid-moon-name-and-owner-planet-but-wrong-image-format--alert-should-pop-up",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 165636200,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "the user provides valid moon name",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_provides_valid_moon_name()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 141911000,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "the user provides valid owner planet",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_provides_valid_owner_planet()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "the user decides to upload an image",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_decides_to_upload_image()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 315148000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "the user uploads invalid file type",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_uploads_invalid_moon_image()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 148316100,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "the user clicks submit",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 2 second(s) with 500 milliseconds interval)\nBuild info: version: \u00274.25.0\u0027, revision: \u00278a8aea2337\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.25\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\\Users\\Ahmed\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37170}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:37170/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 501a94c81d4f5314262f773ee84aa63e\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)\r\n\tat pom.RegisterPage.waitForAlert(RegisterPage.java:72)\r\n\tat steps.PlanetAdditionSteps.user_gets_invalid_filetype_browser_alert(PlanetAdditionSteps.java:71)\r\n\tat ✽.the user should get a browser alert saying Invalid filetype(classpath:features/MoonAddition.feature:47)\r\n",
+              "duration": 2062998700,
+              "status": "failed"
+            },
+            "line": 47,
+            "name": "the user should get a browser alert saying Invalid filetype",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_gets_invalid_filetype_browser_alert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1002500,
+              "status": "skipped"
+            },
+            "line": 48,
+            "name": "the user should stay on the home page",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1087426500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 405625200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks moon creation input",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:08.401Z",
+        "before": [
+          {
+            "result": {
+              "duration": 57690900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 51,
+        "name": "provided invalid owner planet, alert should pop up",
+        "description": "",
+        "id": "moon-addition;provided-invalid-owner-planet--alert-should-pop-up",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 246482000,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "the user provides valid moon name",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_provides_valid_moon_name()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 131829800,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "the user provides invalid owner planet",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_provides_invalid_owner_planet()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 101486300,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "the user clicks submit",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003cInvalid planet [ID]\u003e but was:\u003cInvalid planet [id]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat steps.MoonAdditionSteps.invalid_planet_id_alert(MoonAdditionSteps.java:66)\r\n\tat ✽.the user should get a browser alert saying Invalid planet id(classpath:features/MoonAddition.feature:55)\r\n",
+              "duration": 47600000,
+              "status": "failed"
+            },
+            "line": 55,
+            "name": "the user should get a browser alert saying Invalid planet id",
+            "match": {
+              "location": "steps.MoonAdditionSteps.invalid_planet_id_alert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 56,
+            "name": "the user should stay on the home page",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 482117000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 210245800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks moon creation input",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:10.524Z",
+        "before": [
+          {
+            "result": {
+              "duration": 22093000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 69,
+        "name": "provided invalid moon name, alert should pop up",
+        "description": "",
+        "id": "moon-addition;provided-invalid-moon-name--alert-should-pop-up;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 444199900,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 195617400,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "user clicks moon creation input",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 70770600,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "the user provides moon name\"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.MoonAdditionSteps.user_provides_moon_name(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 118456800,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "the user clicks submit",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13090800,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "the user should get a browser alert saying Invalid moon name",
+            "match": {
+              "location": "steps.MoonAdditionSteps.invalid_moon_name_alert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 71339700,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "the user should stay on the home page",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 476011100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 243138600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks moon creation input",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:12.167Z",
+        "before": [
+          {
+            "result": {
+              "duration": 15822000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 70,
+        "name": "provided invalid moon name, alert should pop up",
+        "description": "",
+        "id": "moon-addition;provided-invalid-moon-name--alert-should-pop-up;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 477442700,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 203039000,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "user clicks moon creation input",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 287847400,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "the user provides moon name\"iDontKnowWhatToNameThisMoon1234\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"iDontKnowWhatToNameThisMoon1234\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.MoonAdditionSteps.user_provides_moon_name(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 83083700,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "the user clicks submit",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13158100,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "the user should get a browser alert saying Invalid moon name",
+            "match": {
+              "location": "steps.MoonAdditionSteps.invalid_moon_name_alert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10553900,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "the user should stay on the home page",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 409699300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 190882300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks moon creation input",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:13.990Z",
+        "before": [
+          {
+            "result": {
+              "duration": 19211800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 71,
+        "name": "provided invalid moon name, alert should pop up",
+        "description": "",
+        "id": "moon-addition;provided-invalid-moon-name--alert-should-pop-up;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 439068600,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 209959700,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "user clicks moon creation input",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 164186100,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "the user provides moon name\"M##n\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"M##n\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.MoonAdditionSteps.user_provides_moon_name(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 90428000,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "the user clicks submit",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14964800,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "the user should get a browser alert saying Invalid moon name",
+            "match": {
+              "location": "steps.MoonAdditionSteps.invalid_moon_name_alert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 41301500,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "the user should stay on the home page",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 395034000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 167223000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks moon creation input",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:15.583Z",
+        "before": [
+          {
+            "result": {
+              "duration": 20979600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 72,
+        "name": "provided invalid moon name, alert should pop up",
+        "description": "",
+        "id": "moon-addition;provided-invalid-moon-name--alert-should-pop-up;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 393943500,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 210637600,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "user clicks moon creation input",
+            "match": {
+              "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 114975300,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "the user provides moon name\"Luna\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Luna\"",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.MoonAdditionSteps.user_provides_moon_name(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 128900200,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "the user clicks submit",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003cInvalid [moon name]\u003e but was:\u003cInvalid [planet id]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat steps.MoonAdditionSteps.invalid_moon_name_alert(MoonAdditionSteps.java:77)\r\n\tat ✽.the user should get a browser alert saying Invalid moon name(classpath:features/MoonAddition.feature:64)\r\n",
+              "duration": 13038000,
+              "status": "failed"
+            },
+            "line": 64,
+            "name": "the user should get a browser alert saying Invalid moon name",
+            "match": {
+              "location": "steps.MoonAdditionSteps.invalid_moon_name_alert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1358800,
+              "status": "skipped"
+            },
+            "line": 65,
+            "name": "the user should stay on the home page",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Moon addition",
+    "description": "",
+    "id": "moon-addition",
+    "keyword": "Feature",
+    "uri": "classpath:features/MoonAddition.feature",
+    "tags": []
+  },
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2025-01-27T16:06:17.041Z",
+        "before": [
+          {
+            "result": {
+              "duration": 19038800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "provided valid moon name to delete, moon should be deleted",
+        "description": "",
+        "id": "moon-deletion;provided-valid-moon-name-to-delete--moon-should-be-deleted",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 446333900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 188130500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user clicks the moon deletion input",
+            "match": {
+              "location": "steps.MoonDeletionSteps.user_clicks_moon_deletion_input()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 252975800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user provides valid moon name to be deleted",
+            "match": {
+              "location": "steps.MoonDeletionSteps.user_provides_valid_moon_to_be_deleted()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Invalid moon name}\n  (Session info: chrome\u003d131.0.6778.265): Invalid moon name\nBuild info: version: \u00274.25.0\u0027, revision: \u00278a8aea2337\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.25\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [501a94c81d4f5314262f773ee84aa63e, findElements {using\u003dtag name, value\u003dtr}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\\Users\\Ahmed\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37170}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:37170/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 501a94c81d4f5314262f773ee84aa63e\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:381)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:375)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)\r\n\tat com.sun.proxy.$Proxy16.size(Unknown Source)\r\n\tat pom.HomePage.getNumberOfCelestialRows(HomePage.java:74)\r\n\tat pom.HomePage.lambda$waitUntilTableChanges$0(HomePage.java:79)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)\r\n\tat pom.HomePage.waitUntilTableChanges(HomePage.java:78)\r\n\tat steps.MoonDeletionSteps.table_should_refresh(MoonDeletionSteps.java:24)\r\n\tat ✽.the table should refresh after moon removed(classpath:features/MoonDeletion.feature:11)\r\n",
+              "duration": 7393400,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "the table should refresh after moon removed",
+            "match": {
+              "location": "steps.MoonDeletionSteps.table_should_refresh()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "the user should be able to see the named moon removed",
+            "match": {
+              "location": "steps.MoonDeletionSteps.user_should_see_moon_removed()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:17.968Z",
+        "before": [
+          {
+            "result": {
+              "duration": 16755100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "provided invalid moon name to delete, alert should pop up",
+        "description": "",
+        "id": "moon-deletion;provided-invalid-moon-name-to-delete--alert-should-pop-up",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 401373700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 180765300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user clicks the moon deletion input",
+            "match": {
+              "location": "steps.MoonDeletionSteps.user_clicks_moon_deletion_input()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 239960000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the use provides invalid moon name to be deleted",
+            "match": {
+              "location": "steps.MoonDeletionSteps.user_provides_invalid_moon_name_to_be_deleted()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 515917200,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user should get a browser alert saying Invalid moon name",
+            "match": {
+              "location": "steps.MoonAdditionSteps.invalid_moon_name_alert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9359700,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user should stay on the home page",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Moon deletion",
+    "description": "",
+    "id": "moon-deletion",
+    "keyword": "Feature",
+    "uri": "classpath:features/MoonDeletion.feature",
+    "tags": []
+  },
+  {
+    "line": 4,
+    "elements": [
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 361770700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 229683600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks planet creation input",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_planet_creation_input()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:19.340Z",
+        "before": [
+          {
+            "result": {
+              "duration": 11974600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "provided valid name and jpg image, planet should be added",
+        "description": "",
+        "id": "planet-addition;provided-valid-name-and-jpg-image--planet-should-be-added",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 231430700,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user provides valid planet name",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_provides_valid_planet_name()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user decides to upload an image",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_decides_to_upload_image()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 34495500,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user provides a valid planet image jpg filetype",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_provides_valid_planet_image_jpg_filetype()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 74782300,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user clicks submit",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 531215900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the table should refresh after planet added",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.table_should_refresh()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 109579300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user should be able to see the new planet added",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_should_see_new_planet()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 665161800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 330956000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks planet creation input",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_planet_creation_input()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:20.943Z",
+        "before": [
+          {
+            "result": {
+              "duration": 22095200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "provided valid name and png image, planet should be added",
+        "description": "",
+        "id": "planet-addition;provided-valid-name-and-png-image--planet-should-be-added",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 191985200,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user provides valid planet name",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_provides_valid_planet_name()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user decides to upload an image",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_decides_to_upload_image()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 38220000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user provides a valid planet image png filetype",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_provides_valid_planet_image_png_filetype()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 93831800,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user clicks submit",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for pom.HomePage$$Lambda$683/0x00000001003f1840@7c950b3b (tried for 2 second(s) with 500 milliseconds interval)\nBuild info: version: \u00274.25.0\u0027, revision: \u00278a8aea2337\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.25\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\\Users\\Ahmed\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37170}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:37170/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 501a94c81d4f5314262f773ee84aa63e\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)\r\n\tat pom.HomePage.waitUntilTableChanges(HomePage.java:78)\r\n\tat steps.PlanetAdditionSteps.table_should_refresh(PlanetAdditionSteps.java:39)\r\n\tat ✽.the table should refresh after planet added(classpath:features/PlanetAddition.feature:25)\r\n",
+              "duration": 2072510600,
+              "status": "failed"
+            },
+            "line": 25,
+            "name": "the table should refresh after planet added",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.table_should_refresh()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1024300,
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "the user should be able to see the new planet added",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_should_see_new_planet()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 371296700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 210754300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks planet creation input",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_planet_creation_input()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:24.373Z",
+        "before": [
+          {
+            "result": {
+              "duration": 12551400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 29,
+        "name": "provided valid name and no image, planet should be added",
+        "description": "",
+        "id": "planet-addition;provided-valid-name-and-no-image--planet-should-be-added",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 242629300,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "the user provides valid planet name",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_provides_valid_planet_name()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "the user decides not to upload an image",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_doesnt_upload_image()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 71583100,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "the user clicks submit",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 540003400,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "the table should refresh after planet added",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.table_should_refresh()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 83474200,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "the user should be able to see the new planet added",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_should_see_new_planet()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 368843600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 212604000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks planet creation input",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_planet_creation_input()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:25.915Z",
+        "before": [
+          {
+            "result": {
+              "duration": 17158400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 37,
+        "name": "provided valid name but invalid image, browser alert should appear",
+        "description": "",
+        "id": "planet-addition;provided-valid-name-but-invalid-image--browser-alert-should-appear",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 173538200,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "the user provides valid planet name",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_provides_valid_planet_name()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 505000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "the user decides to upload an image",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_decides_to_upload_image()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 34090100,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "the user uploads invalid planet image file type",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_uploads_invalid_filetype()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 80853500,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "the user clicks submit",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 2 second(s) with 500 milliseconds interval)\nBuild info: version: \u00274.25.0\u0027, revision: \u00278a8aea2337\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.25\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\\Users\\Ahmed\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37170}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:37170/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 501a94c81d4f5314262f773ee84aa63e\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)\r\n\tat pom.RegisterPage.waitForAlert(RegisterPage.java:72)\r\n\tat steps.PlanetAdditionSteps.user_gets_invalid_filetype_browser_alert(PlanetAdditionSteps.java:71)\r\n\tat ✽.the user should get a browser alert saying Invalid filetype(classpath:features/PlanetAddition.feature:42)\r\n",
+              "duration": 2037348400,
+              "status": "failed"
+            },
+            "line": 42,
+            "name": "the user should get a browser alert saying Invalid filetype",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_gets_invalid_filetype_browser_alert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 43,
+            "name": "the user should stay on the home page",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 312671100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 219537400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks planet creation input",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_planet_creation_input()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:28.847Z",
+        "before": [
+          {
+            "result": {
+              "duration": 12272600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 54,
+        "name": "provided invalid name, browser alert should appear",
+        "description": "",
+        "id": "planet-addition;provided-invalid-name--browser-alert-should-appear;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 113268200,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "the user provides planet name \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlanetAdditionSteps.user_provides_invalid_planet_name(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 112775200,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "the user clicks submit",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11906800,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "the user should get a browser alert saying Invalid planet name",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_gets_invalid_planet_name_alert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8532000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "the user should stay on the home page",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 470777100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 239703300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks planet creation input",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_planet_creation_input()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:29.652Z",
+        "before": [
+          {
+            "result": {
+              "duration": 20755000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 55,
+        "name": "provided invalid name, browser alert should appear",
+        "description": "",
+        "id": "planet-addition;provided-invalid-name--browser-alert-should-appear;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 300689700,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "the user provides planet name \"iDontKnowWhatToNameThisPlanet11\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"iDontKnowWhatToNameThisPlanet11\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlanetAdditionSteps.user_provides_invalid_planet_name(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 66286300,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "the user clicks submit",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12880100,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "the user should get a browser alert saying Invalid planet name",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_gets_invalid_planet_name_alert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7156700,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "the user should stay on the home page",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 443877300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 213187800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks planet creation input",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_planet_creation_input()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:30.799Z",
+        "before": [
+          {
+            "result": {
+              "duration": 19059000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 56,
+        "name": "provided invalid name, browser alert should appear",
+        "description": "",
+        "id": "planet-addition;provided-invalid-name--browser-alert-should-appear;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 227138400,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "the user provides planet name \"M@r$\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"M@r$\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlanetAdditionSteps.user_provides_invalid_planet_name(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 64919100,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "the user clicks submit",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10904100,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "the user should get a browser alert saying Invalid planet name",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_gets_invalid_planet_name_alert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7157700,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "the user should stay on the home page",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 6,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 486609300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 268392500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user clicks planet creation input",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_planet_creation_input()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:31.796Z",
+        "before": [
+          {
+            "result": {
+              "duration": 16189100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 57,
+        "name": "provided invalid name, browser alert should appear",
+        "description": "",
+        "id": "planet-addition;provided-invalid-name--browser-alert-should-appear;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 148475700,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "the user provides planet name \"Earth\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Earth\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlanetAdditionSteps.user_provides_invalid_planet_name(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 128811900,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "the user clicks submit",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15584300,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "the user should get a browser alert saying Invalid planet name",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_gets_invalid_planet_name_alert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7670500,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "the user should stay on the home page",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Planet addition",
+    "description": "",
+    "id": "planet-addition",
+    "keyword": "Feature",
+    "uri": "classpath:features/PlanetAddition.feature",
+    "tags": []
+  },
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2025-01-27T16:06:32.879Z",
+        "before": [
+          {
+            "result": {
+              "duration": 19099700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "provided valid planet name, it should be deleted along with owned moons",
+        "description": "",
+        "id": "planet-deletion;provided-valid-planet-name--it-should-be-deleted-along-with-owned-moons",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 466004800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 224436900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user clicks the planet deletion input",
+            "match": {
+              "location": "steps.PlanetDeletionSteps.user_clicks_planet_deletion_input()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 235397100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user provides valid planet name to delete",
+            "match": {
+              "location": "steps.PlanetDeletionSteps.user_provides_valid_planet_to_delete()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Invalid planet name}\n  (Session info: chrome\u003d131.0.6778.265): Invalid planet name\nBuild info: version: \u00274.25.0\u0027, revision: \u00278a8aea2337\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.25\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [501a94c81d4f5314262f773ee84aa63e, findElements {using\u003dtag name, value\u003dtr}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\\Users\\Ahmed\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37170}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:37170/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 501a94c81d4f5314262f773ee84aa63e\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:381)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:375)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElements(DefaultElementLocator.java:83)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:36)\r\n\tat com.sun.proxy.$Proxy16.size(Unknown Source)\r\n\tat pom.HomePage.getNumberOfCelestialRows(HomePage.java:74)\r\n\tat pom.HomePage.lambda$waitUntilTableChanges$0(HomePage.java:79)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)\r\n\tat pom.HomePage.waitUntilTableChanges(HomePage.java:78)\r\n\tat steps.PlanetDeletionSteps.table_should_refresh(PlanetDeletionSteps.java:24)\r\n\tat ✽.the table should refresh after planet removed(classpath:features/PlanetDeletion.feature:11)\r\n",
+              "duration": 8290700,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "the table should refresh after planet removed",
+            "match": {
+              "location": "steps.PlanetDeletionSteps.table_should_refresh()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "the user should be able to see the named planet removed",
+            "match": {
+              "location": "steps.PlanetDeletionSteps.user_should_see_named_planet_removed()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "the moons owned by that planet should be removed",
+            "match": {
+              "location": "steps.PlanetDeletionSteps.moons_owned_by_planet_should_be_deleted()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:33.844Z",
+        "before": [
+          {
+            "result": {
+              "duration": 18546400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "provided invalid planet name, browser alert appears",
+        "description": "",
+        "id": "planet-deletion;provided-invalid-planet-name--browser-alert-appears",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 407177600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 201023700,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user clicks the planet deletion input",
+            "match": {
+              "location": "steps.PlanetDeletionSteps.user_clicks_planet_deletion_input()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 230525800,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user provides invalid planet name to be deleted",
+            "match": {
+              "location": "steps.PlanetDeletionSteps.user_provides_invalid_planet_name_to_be_deleted()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10891500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user should get a browser alert saying Invalid planet name",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_gets_invalid_planet_name_alert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 6511700,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user should stay on the home page",
+            "match": {
+              "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Planet deletion",
+    "description": "",
+    "id": "planet-deletion",
+    "keyword": "Feature",
+    "uri": "classpath:features/PlanetDeletion.feature",
+    "tags": []
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2025-01-27T16:06:34.725Z",
+        "before": [
+          {
+            "result": {
+              "duration": 16357400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 6,
+        "name": "valid credentials should pass",
+        "description": "",
+        "id": "user-login;valid-credentials-should-pass",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 45623900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "steps.RegisterSteps.user_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 271096500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user provides valid login credentials",
+            "match": {
+              "location": "steps.LoginSteps.user_enters_valid_login_credentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 15964600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user clicks login",
+            "match": {
+              "location": "steps.LoginSteps.user_clicks_login()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 550105900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user should be redirected to the Home page",
+            "match": {
+              "location": "steps.LoginSteps.should_be_redirected_to_homepage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:35.635Z",
+        "before": [
+          {
+            "result": {
+              "duration": 12000800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "invalid credentials should return alert",
+        "description": "",
+        "id": "user-login;invalid-credentials-should-return-alert;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 30147100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "steps.RegisterSteps.user_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 117218300,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user provides a username for login\"Batman\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Batman\"",
+                  "offset": 38
+                }
+              ],
+              "location": "steps.LoginSteps.user_provides_a_username_login(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 98341700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user provides a password for login\"b0Ts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"b0Ts\"",
+                  "offset": 38
+                }
+              ],
+              "location": "steps.LoginSteps.user_provides_a_password_login(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 84608500,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user submits the credentials",
+            "match": {
+              "location": "steps.RegisterSteps.user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003cInvalid [C]redentials\u003e but was:\u003cInvalid [c]redentials\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat steps.LoginSteps.user_should_see_invalid_credentials_alert(LoginSteps.java:62)\r\n\tat ✽.the user should see Invalid Credentials alert(classpath:features/UserLogin.feature:18)\r\n",
+              "duration": 581830200,
+              "status": "failed"
+            },
+            "line": 18,
+            "name": "the user should see Invalid Credentials alert",
+            "match": {
+              "location": "steps.LoginSteps.user_should_see_invalid_credentials_alert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 19,
+            "name": "the user should be redirected to the Login page",
+            "match": {
+              "location": "steps.LoginSteps.user_should_redirected_to_login_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:36.572Z",
+        "before": [
+          {
+            "result": {
+              "duration": 20313000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "invalid credentials should return alert",
+        "description": "",
+        "id": "user-login;invalid-credentials-should-return-alert;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 49669700,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "steps.RegisterSteps.user_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 174348000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user provides a username for login\"Robin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Robin\"",
+                  "offset": 38
+                }
+              ],
+              "location": "steps.LoginSteps.user_provides_a_username_login(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 178551000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user provides a password for login\"Iamthenight1939\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Iamthenight1939\"",
+                  "offset": 38
+                }
+              ],
+              "location": "steps.LoginSteps.user_provides_a_password_login(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 85224600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user submits the credentials",
+            "match": {
+              "location": "steps.RegisterSteps.user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003cInvalid [C]redentials\u003e but was:\u003cInvalid [c]redentials\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat steps.LoginSteps.user_should_see_invalid_credentials_alert(LoginSteps.java:62)\r\n\tat ✽.the user should see Invalid Credentials alert(classpath:features/UserLogin.feature:18)\r\n",
+              "duration": 523959500,
+              "status": "failed"
+            },
+            "line": 18,
+            "name": "the user should see Invalid Credentials alert",
+            "match": {
+              "location": "steps.LoginSteps.user_should_see_invalid_credentials_alert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 19,
+            "name": "the user should be redirected to the Login page",
+            "match": {
+              "location": "steps.LoginSteps.user_should_redirected_to_login_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:37.617Z",
+        "before": [
+          {
+            "result": {
+              "duration": 17147700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "invalid credentials should return alert",
+        "description": "",
+        "id": "user-login;invalid-credentials-should-return-alert;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 23121700,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "steps.RegisterSteps.user_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 101033300,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user provides a username for login\"Robin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Robin\"",
+                  "offset": 38
+                }
+              ],
+              "location": "steps.LoginSteps.user_provides_a_username_login(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 79040200,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user provides a password for login\"b0Ts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"b0Ts\"",
+                  "offset": 38
+                }
+              ],
+              "location": "steps.LoginSteps.user_provides_a_password_login(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 67091600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user submits the credentials",
+            "match": {
+              "location": "steps.RegisterSteps.user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.junit.ComparisonFailure: expected:\u003cInvalid [C]redentials\u003e but was:\u003cInvalid [c]redentials\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat steps.LoginSteps.user_should_see_invalid_credentials_alert(LoginSteps.java:62)\r\n\tat ✽.the user should see Invalid Credentials alert(classpath:features/UserLogin.feature:18)\r\n",
+              "duration": 526101800,
+              "status": "failed"
+            },
+            "line": 18,
+            "name": "the user should see Invalid Credentials alert",
+            "match": {
+              "location": "steps.LoginSteps.user_should_see_invalid_credentials_alert()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 19,
+            "name": "the user should be redirected to the Login page",
+            "match": {
+              "location": "steps.LoginSteps.user_should_redirected_to_login_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "User Login",
+    "description": "",
+    "id": "user-login",
+    "keyword": "Feature",
+    "uri": "classpath:features/UserLogin.feature",
+    "tags": []
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2025-01-27T16:06:38.439Z",
+        "before": [
+          {
+            "result": {
+              "duration": 14330900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "valid credentials should pass, invalid credentials should return alert",
+        "description": "",
+        "id": "user-registration;valid-credentials-should-pass--invalid-credentials-should-return-alert;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 33825700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "steps.RegisterSteps.user_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 124945000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the register link",
+            "match": {
+              "location": "steps.RegisterSteps.use_click_register_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 156212600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user provides a username \"Super_man-2001\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Super_man-2001\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 158083800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user provides a password \"Krypton-was_2000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Krypton-was_2000\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 73674200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user submits the credentials",
+            "match": {
+              "location": "steps.RegisterSteps.user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 518658200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should get a browser alert \"Account created successfully\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account created successfully\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.RegisterSteps.browser_alert(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 31354100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user is redirected to \"Planetarium Login\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planetarium Login\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.RegisterSteps.page_redirection(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:39.561Z",
+        "before": [
+          {
+            "result": {
+              "duration": 17073500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "valid credentials should pass, invalid credentials should return alert",
+        "description": "",
+        "id": "user-registration;valid-credentials-should-pass--invalid-credentials-should-return-alert;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 21465800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "steps.RegisterSteps.user_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 129367400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the register link",
+            "match": {
+              "location": "steps.RegisterSteps.use_click_register_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 100648200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user provides a username \"Batman\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Batman\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 155387900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user provides a password \"Krypton-was_2000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Krypton-was_2000\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 75963400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user submits the credentials",
+            "match": {
+              "location": "steps.RegisterSteps.user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 2 second(s) with 500 milliseconds interval)\nBuild info: version: \u00274.25.0\u0027, revision: \u00278a8aea2337\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.25\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\\Users\\Ahmed\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37170}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:37170/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 501a94c81d4f5314262f773ee84aa63e\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)\r\n\tat pom.RegisterPage.waitForAlert(RegisterPage.java:72)\r\n\tat steps.RegisterSteps.browser_alert(RegisterSteps.java:39)\r\n\tat ✽.the user should get a browser alert \"Invalid username\"(classpath:features/UserRegistration.feature:11)\r\n",
+              "duration": 2039965800,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "the user should get a browser alert \"Invalid username\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid username\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.RegisterSteps.browser_alert(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "the user is redirected to \"Account Creation\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account Creation\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.RegisterSteps.page_redirection(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:42.111Z",
+        "before": [
+          {
+            "result": {
+              "duration": 10212300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "valid credentials should pass, invalid credentials should return alert",
+        "description": "",
+        "id": "user-registration;valid-credentials-should-pass--invalid-credentials-should-return-alert;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 38799700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "steps.RegisterSteps.user_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 114383700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the register link",
+            "match": {
+              "location": "steps.RegisterSteps.use_click_register_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 80417900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user provides a username \"Bane\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bane\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 153881100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user provides a password \"Krypton-was_2000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Krypton-was_2000\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 67025200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user submits the credentials",
+            "match": {
+              "location": "steps.RegisterSteps.user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14340400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should get a browser alert \"Invalid username\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid username\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.RegisterSteps.browser_alert(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8885300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user is redirected to \"Account Creation\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account Creation\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.RegisterSteps.page_redirection(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:42.608Z",
+        "before": [
+          {
+            "result": {
+              "duration": 16450100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "valid credentials should pass, invalid credentials should return alert",
+        "description": "",
+        "id": "user-registration;valid-credentials-should-pass--invalid-credentials-should-return-alert;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 39285000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "steps.RegisterSteps.user_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 129330600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the register link",
+            "match": {
+              "location": "steps.RegisterSteps.use_click_register_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 256026900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user provides a username \"wonder_woman_for_the_DC_theming\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"wonder_woman_for_the_DC_theming\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 173862000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user provides a password \"Krypton-was_2000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Krypton-was_2000\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 75947600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user submits the credentials",
+            "match": {
+              "location": "steps.RegisterSteps.user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13805900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should get a browser alert \"Invalid username\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid username\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.RegisterSteps.browser_alert(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8258900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user is redirected to \"Account Creation\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account Creation\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.RegisterSteps.page_redirection(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:43.332Z",
+        "before": [
+          {
+            "result": {
+              "duration": 19742800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 21,
+        "name": "valid credentials should pass, invalid credentials should return alert",
+        "description": "",
+        "id": "user-registration;valid-credentials-should-pass--invalid-credentials-should-return-alert;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 48150800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "steps.RegisterSteps.user_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 138674900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the register link",
+            "match": {
+              "location": "steps.RegisterSteps.use_click_register_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 105038600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user provides a username \"2face\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2face\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 177638500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user provides a password \"Krypton-was_2000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Krypton-was_2000\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 72745900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user submits the credentials",
+            "match": {
+              "location": "steps.RegisterSteps.user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9561500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should get a browser alert \"Invalid username\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid username\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.RegisterSteps.browser_alert(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9469300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user is redirected to \"Account Creation\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account Creation\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.RegisterSteps.page_redirection(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:43.922Z",
+        "before": [
+          {
+            "result": {
+              "duration": 16693700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 22,
+        "name": "valid credentials should pass, invalid credentials should return alert",
+        "description": "",
+        "id": "user-registration;valid-credentials-should-pass--invalid-credentials-should-return-alert;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 43254100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "steps.RegisterSteps.user_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 130721500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the register link",
+            "match": {
+              "location": "steps.RegisterSteps.use_click_register_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 171697800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user provides a username \"joker!!!!!!?)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"joker!!!!!!?)\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 157473200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user provides a password \"Krypton-was_2000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Krypton-was_2000\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 76402200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user submits the credentials",
+            "match": {
+              "location": "steps.RegisterSteps.user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10917900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should get a browser alert \"Invalid username\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid username\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.RegisterSteps.browser_alert(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7656400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user is redirected to \"Account Creation\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account Creation\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.RegisterSteps.page_redirection(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:44.543Z",
+        "before": [
+          {
+            "result": {
+              "duration": 17040400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "valid credentials should pass, invalid credentials should return alert",
+        "description": "",
+        "id": "user-registration;valid-credentials-should-pass--invalid-credentials-should-return-alert;;8",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 46861200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "steps.RegisterSteps.user_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 143823800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the register link",
+            "match": {
+              "location": "steps.RegisterSteps.use_click_register_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 162302000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user provides a username \"Super_man-2001\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Super_man-2001\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 83605300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user provides a password \"b0Ts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"b0Ts\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 75023600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user submits the credentials",
+            "match": {
+              "location": "steps.RegisterSteps.user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10730000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should get a browser alert \"Invalid password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid password\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.RegisterSteps.browser_alert(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7105100,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user is redirected to \"Account Creation\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account Creation\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.RegisterSteps.page_redirection(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:45.097Z",
+        "before": [
+          {
+            "result": {
+              "duration": 12882800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "valid credentials should pass, invalid credentials should return alert",
+        "description": "",
+        "id": "user-registration;valid-credentials-should-pass--invalid-credentials-should-return-alert;;9",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 39007500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "steps.RegisterSteps.user_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 120397500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the register link",
+            "match": {
+              "location": "steps.RegisterSteps.use_click_register_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 151843600,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user provides a username \"Super_man-2001\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Super_man-2001\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 280935800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user provides a password \"AlfredIsTheBestButlerToExist111\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AlfredIsTheBestButlerToExist111\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 76330600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user submits the credentials",
+            "match": {
+              "location": "steps.RegisterSteps.user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12094800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should get a browser alert \"Invalid password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid password\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.RegisterSteps.browser_alert(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8386200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user is redirected to \"Account Creation\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account Creation\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.RegisterSteps.page_redirection(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:45.806Z",
+        "before": [
+          {
+            "result": {
+              "duration": 18878600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "valid credentials should pass, invalid credentials should return alert",
+        "description": "",
+        "id": "user-registration;valid-credentials-should-pass--invalid-credentials-should-return-alert;;10",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 40978600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "steps.RegisterSteps.user_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 125420600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the register link",
+            "match": {
+              "location": "steps.RegisterSteps.use_click_register_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 145567200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user provides a username \"Super_man-2001\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Super_man-2001\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 88684500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user provides a password \"3atman\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"3atman\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 72914000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user submits the credentials",
+            "match": {
+              "location": "steps.RegisterSteps.user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9964200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should get a browser alert \"Invalid password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid password\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.RegisterSteps.browser_alert(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10285200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user is redirected to \"Account Creation\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account Creation\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.RegisterSteps.page_redirection(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:46.325Z",
+        "before": [
+          {
+            "result": {
+              "duration": 21399100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "valid credentials should pass, invalid credentials should return alert",
+        "description": "",
+        "id": "user-registration;valid-credentials-should-pass--invalid-credentials-should-return-alert;;11",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 49593700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "steps.RegisterSteps.user_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 146163700,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the register link",
+            "match": {
+              "location": "steps.RegisterSteps.use_click_register_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 181108500,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user provides a username \"Super_man-2001\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Super_man-2001\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 260996100,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user provides a password \"A1fredIsTheBestButlerToExist!!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"A1fredIsTheBestButlerToExist!!\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 71203300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user submits the credentials",
+            "match": {
+              "location": "steps.RegisterSteps.user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13360100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should get a browser alert \"Invalid password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid password\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.RegisterSteps.browser_alert(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9011400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user is redirected to \"Account Creation\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account Creation\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.RegisterSteps.page_redirection(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:47.087Z",
+        "before": [
+          {
+            "result": {
+              "duration": 15854200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "valid credentials should pass, invalid credentials should return alert",
+        "description": "",
+        "id": "user-registration;valid-credentials-should-pass--invalid-credentials-should-return-alert;;12",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 42020000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "steps.RegisterSteps.user_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 124349900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the register link",
+            "match": {
+              "location": "steps.RegisterSteps.use_click_register_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 162019100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user provides a username \"Super_man-2001\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Super_man-2001\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 104173500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user provides a password \"batman1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"batman1\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 79749300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user submits the credentials",
+            "match": {
+              "location": "steps.RegisterSteps.user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9897200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should get a browser alert \"Invalid password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid password\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.RegisterSteps.browser_alert(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8389700,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user is redirected to \"Account Creation\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account Creation\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.RegisterSteps.page_redirection(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:47.641Z",
+        "before": [
+          {
+            "result": {
+              "duration": 18040300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 28,
+        "name": "valid credentials should pass, invalid credentials should return alert",
+        "description": "",
+        "id": "user-registration;valid-credentials-should-pass--invalid-credentials-should-return-alert;;13",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 44736300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "steps.RegisterSteps.user_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 118473100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the register link",
+            "match": {
+              "location": "steps.RegisterSteps.use_click_register_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 163268100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user provides a username \"Super_man-2001\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Super_man-2001\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 109621700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user provides a password \"BATMAN1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BATMAN1\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 68977500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user submits the credentials",
+            "match": {
+              "location": "steps.RegisterSteps.user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11117000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should get a browser alert \"Invalid password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid password\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.RegisterSteps.browser_alert(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8111800,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user is redirected to \"Account Creation\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account Creation\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.RegisterSteps.page_redirection(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-27T16:06:48.193Z",
+        "before": [
+          {
+            "result": {
+              "duration": 27881800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 29,
+        "name": "valid credentials should pass, invalid credentials should return alert",
+        "description": "",
+        "id": "user-registration;valid-credentials-should-pass--invalid-credentials-should-return-alert;;14",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 48920200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "steps.RegisterSteps.user_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 133936100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the register link",
+            "match": {
+              "location": "steps.RegisterSteps.use_click_register_link()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 172674300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the user provides a username \"Super_man-2001\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Super_man-2001\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 91201900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user provides a password \"Robin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Robin\"",
+                  "offset": 29
+                }
+              ],
+              "location": "steps.RegisterSteps.user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 70980800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user submits the credentials",
+            "match": {
+              "location": "steps.RegisterSteps.user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9902400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user should get a browser alert \"Invalid password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid password\"",
+                  "offset": 36
+                }
+              ],
+              "location": "steps.RegisterSteps.browser_alert(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8185600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user is redirected to \"Account Creation\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account Creation\"",
+                  "offset": 26
+                }
+              ],
+              "location": "steps.RegisterSteps.page_redirection(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "User Registration",
+    "description": "",
+    "id": "user-registration",
+    "keyword": "Feature",
+    "uri": "classpath:features/UserRegistration.feature",
     "tags": []
   }
 ]
