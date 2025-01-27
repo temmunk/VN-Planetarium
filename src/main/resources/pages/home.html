@@ -112,6 +112,69 @@
         }
     });
 
+    function toggleUpdateForm(type, planetId) {
+        const form = document.getElementById(`update${type}Form-${planetId}`);
+        if (form.style.display === 'none') {
+            form.style.display = '';
+        } else {
+            form.style.display = 'none';
+        }
+    }
+
+
+    async function updatePlanet(planetId, ownerId) {
+        const planetName = document.getElementById(`updatePlanetName-${planetId}`).value;
+
+        const updatedPlanet = {
+            planetId: planetId,
+            planetName: planetName,
+            ownerId: ownerId,
+        };
+
+        const response = await fetch(`http://{URL}:{PORT}/planetarium/planet`, {
+            method: 'PATCH',
+            body: JSON.stringify(updatedPlanet),
+            credentials: 'include',
+        });
+
+        if (response.ok) {
+            alert('Planet updated successfully!');
+            toggleUpdateForm('Planet', planetId);
+            populateCelestialTable();
+        } else {
+            const errorMessage = await response.text();
+            alert(`Failed to update planet: ${errorMessage}`);
+        }
+    }
+
+
+    async function updateMoon(moonId) {
+        const moonName = document.getElementById(`updateMoonName-${moonId}`).value;
+        const ownerId = document.getElementById(`updatePlanetOwnerId-${moonId}`).value;
+
+        const updatedMoon = {
+            moonId: moonId,
+            moonName: moonName,
+            ownerId: ownerId,
+        };
+
+        const response = await fetch(`http://{URL}:{PORT}/planetarium/moon`, {
+            method: 'PATCH',
+            body: JSON.stringify(updatedMoon),
+            credentials: 'include',
+        });
+
+        if (response.ok) {
+            alert('Moon updated successfully!');
+            toggleUpdateForm('Moon', moonId);
+            populateCelestialTable();
+        } else {
+            const errorMessage = await response.text();
+            alert(`Failed to update moon: ${errorMessage}`);
+        }
+    }
+
+
     async function populateCelestialTable() {
     document.getElementById('celestialTable').innerHTML = '<tr><th>Type</th><th>ID</th><th>Name</th><th>Owner</th><th>Image</th><th>Action</th></tr>';
 
@@ -133,7 +196,8 @@
             const nameCell = row.insertCell(2);
             const ownerCell = row.insertCell(3);
             const imageCell = row.insertCell(4);
-            const deleteCell = row.insertCell(5);
+            const actionsCell = row.insertCell(5);
+
             typeCell.textContent = 'planet';
             idCell.textContent = planet.planetId;
             nameCell.textContent = planet.planetName;
@@ -145,13 +209,38 @@
                 imageCell.appendChild(planetImageElement);
                 }
 
+            const updateBtn = document.createElement('button');
+            updateBtn.innerText = 'Edit';
+            updateBtn.onclick = function () {
+                toggleUpdateForm('Planet', planet.planetId);
+            }
 
-            const buttonElem = document.createElement('button');
-            buttonElem.innerText = 'delete';
-            buttonElem.onclick = function () {
+            const deleteBtn = document.createElement('button');
+            deleteBtn.innerText = 'Delete';
+            deleteBtn.onclick = function () {
                 deletePlanet(planet.planetId);
             };
-            deleteCell.appendChild(buttonElem);
+
+            actionsCell.appendChild(updateBtn);
+            actionsCell.appendChild(deleteBtn);
+
+            const form = table.insertRow();
+            form.id = `updatePlanetForm-${planet.planetId}`;
+            form.style.display = 'none';
+            const formCell = form.insertCell(0);
+            formCell.colSpan = 6;
+
+            formCell.innerHTML = `
+            <div class="center">
+                <form>
+                    <label for="updatePlanetName-${planet.planetId}">Planet Name:</label>
+                    <input type="text" id="updatePlanetName-${planet.planetId}" value="${planet.planetName}"><br>
+
+                    <button type="button" onclick="updatePlanet(${planet.planetId}, ${planet.ownerId})">Submit</button>
+                    <button type="button" onclick="toggleUpdateForm('Planet', ${planet.planetId})">Cancel</button>
+                </form>
+            </div>`;
+
         });
     }
 
@@ -171,7 +260,8 @@
             const nameCell = row.insertCell(2);
             const ownerCell = row.insertCell(3);
             const imageCell = row.insertCell(4);
-            const deleteCell = row.insertCell(5);
+            const actionsCell = row.insertCell(5);
+
             typeCell.textContent = 'moon';
             idCell.textContent = moon.moonId;
             nameCell.textContent = moon.moonName;
@@ -183,12 +273,41 @@
                         imageCell.appendChild(moonImageElement);
                         }
 
-            const buttonElem = document.createElement('button');
-            buttonElem.innerText = 'delete';
-            buttonElem.onclick = function () {
+            const updateBtn = document.createElement('button');
+            updateBtn.innerText = 'Edit';
+            updateBtn.onclick = function() {
+                toggleUpdateForm('Moon', moon.moonId);
+            };
+
+            const deleteBtn = document.createElement('button');
+            deleteBtn.innerText = 'Delete';
+            deleteBtn.onclick = function () {
                 deleteMoon(moon.moonId);
             };
-            deleteCell.appendChild(buttonElem);
+
+            actionsCell.appendChild(updateBtn);
+            actionsCell.appendChild(deleteBtn);
+
+            const form = table.insertRow();
+            form.id = `updateMoonForm-${moon.moonId}`;
+            form.style.display = 'none';
+            const formCell = form.insertCell(0);
+            formCell.colSpan = 6;
+
+            formCell.innerHTML = `
+            <div class="center">
+                <form>
+                    <label for="updateMoonName-${moon.moonId}">Moon Name:</label>
+                    <input type="text" id="updateMoonName-${moon.moonId}" value="${moon.moonName}"><br>
+
+                    <label for="updatePlanetOwnerId-${moon.moonId}">Owner ID:</label>
+                    <input type="text" id="updatePlanetOwnerId-${moon.moonId}" value="${moon.ownerId}"><br>
+
+                    <button type="button" onclick="updateMoon(${moon.moonId})">Submit</button>
+                    <button type="button" onclick="toggleUpdateForm('Moon', ${moon.moonId})">Cancel</button>
+                </form>
+            </div>`;
+
         });
     }
 }

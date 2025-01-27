@@ -87,6 +87,7 @@ public class JavalinSetup {
         app.get("/planetarium/moon/owner/{planetId}", moonController::findAllByPlanet);
         app.get("/planetarium/moon/{identifier}", moonController::findByIdentifier);
         app.post("/planetarium/moon", moonController::createMoon);
+        app.patch("/planetarium/moon", moonController::updateMoon);
         app.delete("/planetarium/moon/{identifier}", moonController::deleteMoon);
     }
     
