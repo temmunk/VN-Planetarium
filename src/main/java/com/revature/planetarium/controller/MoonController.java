@@ -4,9 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.revature.planetarium.entities.Moon;
-import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.MoonFail;
-import com.revature.planetarium.exceptions.PlanetFail;
 import com.revature.planetarium.service.moon.MoonService;
 
 import io.javalin.http.Context;
