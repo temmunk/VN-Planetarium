@@ -28,8 +28,6 @@ public class Setup {
             // Then read and execute the rest of the script
             String sqlString = Files.readString(sql);
 
-            // Remove the DROP statements from the script (including any potential comments before them)
-            sqlString = sqlString.replaceAll("(?s)--[^\n]*\n?|DROP.*?CASCADE;", "");
 
             try (Statement stmt = conn.createStatement()) {
                 for (String sqlStatement : sqlString.split(";")) {

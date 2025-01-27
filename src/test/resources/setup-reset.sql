@@ -1,7 +1,5 @@
 -- PostgreSQL setup script for Planetarium database
-DROP TABLE IF EXISTS moons CASCADE;
-DROP TABLE IF EXISTS planets CASCADE;
-DROP TABLE IF EXISTS users CASCADE;
+
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
