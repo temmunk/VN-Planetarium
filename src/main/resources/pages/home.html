@@ -124,12 +124,24 @@
 
     async function updatePlanet(planetId, ownerId) {
         const planetName = document.getElementById(`updatePlanetName-${planetId}`).value;
+        const planetImageInput = document.getElementById(`updatePlanetImage-${planetId}`);
+        let imageData = (planetImageInput.files.length > 0) ? await convertToBase64(planetImageInput) : null;
 
-        const updatedPlanet = {
-            planetId: planetId,
-            planetName: planetName,
-            ownerId: ownerId,
-        };
+        let updatedPlanet;
+        if (imageData) {
+            updatedPlanet = {
+                planetId: planetId,
+                planetName: planetName,
+                ownerId: ownerId,
+                imageData: imageData,
+            };
+        } else {
+            updatedPlanet = {
+                planetId: planetId,
+                planetName: planetName,
+                ownerId: ownerId,
+            };
+        }
 
         const response = await fetch(`http://{URL}:{PORT}/planetarium/planet`, {
             method: 'PATCH',
@@ -151,12 +163,24 @@
     async function updateMoon(moonId) {
         const moonName = document.getElementById(`updateMoonName-${moonId}`).value;
         const ownerId = document.getElementById(`updatePlanetOwnerId-${moonId}`).value;
+        const moonImageInput = document.getElementById(`updateMoonImage-${moonId}`);
+        let imageData = (moonImageInput.files.length > 0) ? await convertToBase64(moonImageInput) : null;
 
-        const updatedMoon = {
-            moonId: moonId,
-            moonName: moonName,
-            ownerId: ownerId,
-        };
+        let updatedMoon;
+        if (imageData) {
+            updatedMoon = {
+                moonId: moonId,
+                moonName: moonName,
+                ownerId: ownerId,
+                imageData: imageData,
+            }
+        } else {
+            updatedMoon = {
+                moonId: moonId,
+                moonName: moonName,
+                ownerId: ownerId,
+            };
+        }
 
         const response = await fetch(`http://{URL}:{PORT}/planetarium/moon`, {
             method: 'PATCH',
@@ -236,6 +260,9 @@
                     <label for="updatePlanetName-${planet.planetId}">Planet Name:</label>
                     <input type="text" id="updatePlanetName-${planet.planetId}" value="${planet.planetName}"><br>
 
+                    <label for="updatePlanetImage-${planet.planetId}">Image:</label>
+                    <input type="file" id="updatePlanetImage-${planet.planetId}" name="Planet Image" accept="image/*" placeholder="Upload Planet Image">
+
                     <button type="button" onclick="updatePlanet(${planet.planetId}, ${planet.ownerId})">Submit</button>
                     <button type="button" onclick="toggleUpdateForm('Planet', ${planet.planetId})">Cancel</button>
                 </form>
@@ -302,6 +329,9 @@
 
                     <label for="updatePlanetOwnerId-${moon.moonId}">Owner ID:</label>
                     <input type="text" id="updatePlanetOwnerId-${moon.moonId}" value="${moon.ownerId}"><br>
+
+                    <label for="updateMoonImage-${moon.moonId}">Image:</label>
+                    <input type="file" id="updateMoonImage-${moon.moonId}" name="Moon Image" accept="image/*" placeholder="Upload Moon Image">
 
                     <button type="button" onclick="updateMoon(${moon.moonId})">Submit</button>
                     <button type="button" onclick="toggleUpdateForm('Moon', ${moon.moonId})">Cancel</button>
