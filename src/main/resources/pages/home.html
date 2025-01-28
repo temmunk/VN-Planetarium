@@ -125,23 +125,23 @@
     async function updatePlanet(planetId, ownerId) {
         const planetName = document.getElementById(`updatePlanetName-${planetId}`).value;
         const planetImageInput = document.getElementById(`updatePlanetImage-${planetId}`);
-        let imageData = (planetImageInput.files.length > 0) ? await convertToBase64(planetImageInput) : null;
+        const existingImage = document.getElementById(`planetImage-${planetId}`);
 
-        let updatedPlanet;
-        if (imageData) {
-            updatedPlanet = {
-                planetId: planetId,
-                planetName: planetName,
-                ownerId: ownerId,
-                imageData: imageData,
-            };
-        } else {
-            updatedPlanet = {
-                planetId: planetId,
-                planetName: planetName,
-                ownerId: ownerId,
-            };
+        let imageData;
+        if (planetImageInput.files.length > 0) {
+            imageData = await convertToBase64(planetImageInput);
+        } else if (existingImage) {
+            const existingImageSrc = existingImage.src;
+            imageData = existingImageSrc.substring(existingImageSrc.indexOf(',') + 1);
         }
+
+        let updatedPlanet = {
+            planetId: planetId,
+            planetName: planetName,
+            ownerId: ownerId
+        }
+
+        if (imageData) updatedPlanet.imageData = imageData;
 
         const response = await fetch(`http://{URL}:{PORT}/planetarium/planet`, {
             method: 'PATCH',
@@ -164,23 +164,24 @@
         const moonName = document.getElementById(`updateMoonName-${moonId}`).value;
         const ownerId = document.getElementById(`updatePlanetOwnerId-${moonId}`).value;
         const moonImageInput = document.getElementById(`updateMoonImage-${moonId}`);
-        let imageData = (moonImageInput.files.length > 0) ? await convertToBase64(moonImageInput) : null;
+        const existingImage = document.getElementById(`moonImage-${moonId}`);
 
-        let updatedMoon;
-        if (imageData) {
-            updatedMoon = {
-                moonId: moonId,
-                moonName: moonName,
-                ownerId: ownerId,
-                imageData: imageData,
-            }
-        } else {
-            updatedMoon = {
-                moonId: moonId,
-                moonName: moonName,
-                ownerId: ownerId,
-            };
+        let imageData;
+        if (moonImageInput.files.length > 0) {
+            imageData = await convertToBase64(moonImageInput);
+        } else if (existingImage) {
+            const existingImageSrc = existingImage.src;
+            imageData = existingImageSrc.substring(existingImageSrc.indexOf(',') + 1);
         }
+
+        let updatedMoon = {
+            moonId: moonId,
+            moonName: moonName,
+            ownerId: ownerId,
+        }
+        
+        if (imageData) updatedMoon.imageData = imageData;
+        
 
         const response = await fetch(`http://{URL}:{PORT}/planetarium/moon`, {
             method: 'PATCH',
@@ -229,6 +230,7 @@
 
               if (planet.imageData) {
                 const planetImageElement = document.createElement('img');
+                planetImageElement.id = `planetImage-${planet.planetId}`;
                 planetImageElement.src = `data:image/jpeg;base64,${planet.imageData}`;
                 imageCell.appendChild(planetImageElement);
                 }
@@ -296,6 +298,7 @@
 
             if (moon.imageData) {
                         const moonImageElement = document.createElement('img');
+                        moonImageElement.id = `moonImage-${moon.moonId}`;
                         moonImageElement.src = `data:image/jpeg;base64,${moon.imageData}`;
                         imageCell.appendChild(moonImageElement);
                         }
