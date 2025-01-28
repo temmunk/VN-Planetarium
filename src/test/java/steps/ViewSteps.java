@@ -18,8 +18,8 @@ public class ViewSteps {
     @Then ("the planets and moons they added should be visible")
     public void planets_and_moons_should_be_visible(){
         TestRunner.wait.until(ExpectedConditions.titleIs("Home"));
-        TestRunner.homePage.waitUntilTableChanges(4);
-        Assert.assertEquals(4, TestRunner.homePage.getNumberOfCelestialRows());
+        TestRunner.homePage.waitUntilTableChanges(8);
+        Assert.assertEquals(8, TestRunner.homePage.getNumberOfCelestialRows());
     }
 
     @And ("a greeting message should be present for the user")

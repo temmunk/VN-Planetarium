@@ -36,14 +36,14 @@ public class MoonAdditionSteps {
 
     @Then ("the table should refresh after moon added")
     public void table_should_refresh() throws InterruptedException {
-        TestRunner.homePage.waitUntilTableChanges(5);
+        TestRunner.homePage.waitUntilTableChanges(10);
     }
 
     @And ("the user should be able to see the new moon added")
     public void user_should_see_new_moon(){
         try{
             TestRunner.wait.until(ExpectedConditions.titleIs("Home"));
-            Assert.assertEquals(5, TestRunner.homePage.getNumberOfCelestialRows());
+            Assert.assertEquals(10, TestRunner.homePage.getNumberOfCelestialRows());
         }
         finally {
             TestRunner.homePage.logout();

@@ -54,7 +54,6 @@ public class UserController {
         }
     }
 
-
     public void logout(Context ctx){
         ctx.req().getSession().invalidate();
         ctx.status(200);
@@ -65,4 +64,17 @@ public class UserController {
             throw new AuthenticationFailed("Please log in first");
         }
     }
+
+    public void checkUsername(Context ctx) {
+        String username = ctx.queryParam("username");
+        if (username == null || username.trim().isEmpty()) {
+            ctx.status(400);
+            ctx.json(Map.of("message", "Username parameter is missing or invalid"));
+            return;
+        }
+        boolean isTaken = userService.findUserByUsername(username).isPresent();
+        ctx.status(200);
+        ctx.json(Map.of("isTaken", isTaken));
+    }
+
 }

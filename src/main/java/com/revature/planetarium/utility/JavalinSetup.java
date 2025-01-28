@@ -67,6 +67,8 @@ public class JavalinSetup {
         app.post("/login", userController::login);
         app.post("/register", userController::createUser);
         app.post("/logout", userController::logout);
+        app.get("/api/users/check-username", userController::checkUsername);
+
 
         /*
          * Mapping Planet Routes
