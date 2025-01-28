@@ -49,7 +49,7 @@ public class HomePage {
     @FindBy(id="orbitedPlanetInput")
     private WebElement ownerPlanetInput;
 
-    @FindBy(xpath = "/html/body/div[1]/div[2]/button")
+    @FindBy(className="submit-button")
     private WebElement submitButton;
 
     public HomePage(WebDriver driver) {
@@ -87,6 +87,8 @@ public class HomePage {
 
     public void logout(){
         logoutButton.click();
+        TestRunner.registerPage.waitForAlert();
+        TestRunner.registerPage.acceptAlert();
     }
 
     public void clickSubmitButton(){
@@ -135,7 +137,7 @@ public class HomePage {
     }
 
     public void inputInvalidMoonImageType(){
-        File file = new File("src/test/resources/Celestial-Images/Moon png.png");
+        File file = new File("src/test/resources/Celestial-Images/InvalidMoon.gif");
         moonImageInput.sendKeys(file.getAbsolutePath());
     }
 

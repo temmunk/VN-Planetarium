@@ -13,6 +13,7 @@
       When the user decides to upload an image
       And the user provides a valid planet image jpg filetype
       And the user clicks submit
+      And the user accepts alert
       Then the table should refresh after planet added
       And the user should be able to see the new planet added
 
@@ -22,6 +23,7 @@
       When the user decides to upload an image
       And the user provides a valid planet image png filetype
       And the user clicks submit
+      And the user accepts alert
       Then the table should refresh after planet added
       And the user should be able to see the new planet added
 
@@ -30,6 +32,7 @@
       And the user provides valid planet name
       When the user decides not to upload an image
       And the user clicks submit
+      And the user accepts alert
       Then the table should refresh after planet added
       And the user should be able to see the new planet added
 

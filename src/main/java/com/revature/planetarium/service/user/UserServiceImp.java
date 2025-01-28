@@ -1,7 +1,6 @@
 package com.revature.planetarium.service.user;
 
 
-import java.util.List;
 import java.util.Optional;
 
 import com.revature.planetarium.entities.User;
@@ -74,5 +73,11 @@ public class UserServiceImp implements UserService {
 
         if (!(lowercaseFound && uppercaseFound && digitFound)) throw new UserFail("Invalid password");
     }
+
+    @Override
+    public Optional<User> findUserByUsername(String username) {
+        return userDao.findUserByUsername(username);
+    }
+
 
 }

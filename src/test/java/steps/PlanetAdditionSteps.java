@@ -36,14 +36,14 @@ public class PlanetAdditionSteps {
 
     @Then ("the table should refresh after planet added")
     public void table_should_refresh() {
-        TestRunner.homePage.waitUntilTableChanges(5);
+        TestRunner.homePage.waitUntilTableChanges(10);
     }
 
     @And ("the user should be able to see the new planet added")
     public void user_should_see_new_planet(){
         try{
             TestRunner.wait.until(ExpectedConditions.titleIs("Home"));
-            Assert.assertEquals(5, TestRunner.homePage.getNumberOfCelestialRows());
+            Assert.assertEquals(10, TestRunner.homePage.getNumberOfCelestialRows());
         }
         finally {
             TestRunner.homePage.logout();
@@ -89,6 +89,9 @@ public class PlanetAdditionSteps {
     }
 
 
-
-
+    @And("the user accepts alert")
+    public void theUserAcceptsAlert() {
+        TestRunner.registerPage.waitForAlert();
+        TestRunner.registerPage.acceptAlert();
+    }
 }
