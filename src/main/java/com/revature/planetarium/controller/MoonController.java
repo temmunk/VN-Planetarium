@@ -69,6 +69,19 @@ public class MoonController {
         }
     }
 
+    public void updateMoon(Context ctx){
+        try {
+            Moon moon = ctx.bodyAsClass(Moon.class);
+            Moon updatedMoon = moonService.updateMoon(moon);
+            ctx.json(updatedMoon);
+            ctx.status(200);
+        } catch (MoonFail e) {
+            ctx.result(e.getMessage());
+            ctx.status(400);
+        }
+
+    }
+
     public void deleteMoon(Context ctx) {
         try {
             String identifier = ctx.pathParam("identifier");

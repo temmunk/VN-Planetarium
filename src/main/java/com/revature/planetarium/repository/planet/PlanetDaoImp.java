@@ -144,10 +144,17 @@ public class PlanetDaoImp implements PlanetDao {
     @Override
     public Optional<Planet> updatePlanet(Planet planet) {
         try (Connection conn = DatabaseConnector.getConnection();
-             PreparedStatement stmt = conn.prepareStatement("UPDATE planets SET name = ?, ownerId = ? WHERE id = ?")) {
+             PreparedStatement stmt = conn.prepareStatement("UPDATE planets SET name = ?, ownerId = ?, image = ? WHERE id = ?")) {
             stmt.setString(1, planet.getPlanetName());
             stmt.setInt(2, planet.getOwnerId());
-            stmt.setInt(3, planet.getPlanetId());
+            stmt.setBytes(3, planet.imageDataAsByteArray());
+            stmt.setInt(4, planet.getPlanetId());
+
+            if (planet.getImageData() != null) {
+                if (!planet.getImageData().startsWith("/9j/") && !planet.getImageData().startsWith("iVBORw0KGgo")) {
+                    throw new PlanetFail("Invalid file type");
+                }
+            }
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0 ? Optional.of(planet) : Optional.empty();
         } catch (SQLException e) {

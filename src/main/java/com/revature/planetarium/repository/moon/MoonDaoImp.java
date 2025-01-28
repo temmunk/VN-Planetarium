@@ -174,10 +174,17 @@ public class MoonDaoImp implements MoonDao {
     @Override
     public Optional<Moon> updateMoon(Moon moon) {
         try (Connection conn = DatabaseConnector.getConnection();
-             PreparedStatement stmt = conn.prepareStatement("UPDATE moons SET name = ?, myPlanetId = ? WHERE id = ?")) {
+             PreparedStatement stmt = conn.prepareStatement("UPDATE moons SET name = ?, myPlanetId = ?, image = ? WHERE id = ?")) {
             stmt.setString(1, moon.getMoonName());
             stmt.setInt(2, moon.getOwnerId());
-            stmt.setInt(3, moon.getMoonId());
+            stmt.setBytes(3, moon.imageDataAsByteArray());
+            stmt.setInt(4, moon.getMoonId());
+
+            if (moon.getImageData() != null) {
+                if (!moon.getImageData().startsWith("/9j/") && !moon.getImageData().startsWith("iVBORw0KGgo")) {
+                    throw new MoonFail("Invalid file type");
+                }
+            }
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0 ? Optional.of(moon) : Optional.empty();
         } catch (SQLException e) {
