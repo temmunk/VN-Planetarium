@@ -6,10 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import testrunner.TestRunner;
 
 import java.io.File;
+import java.time.Duration;
 import java.util.List;
 
 public class HomePage {
@@ -182,5 +185,35 @@ public class HomePage {
         ownerPlanetInput.sendKeys("Earth");
     }
 
+    public void clickPlanetEditButton() {
+        WebElement editButton = driver.findElement(By.id("updateButton-1"));
+        editButton.click();
+    }
+
+    public void inputPlanetNameUpdateForm(String planetName) {
+        WebElement planetNameUpdateInput = driver.findElement(By.id("updatePlanetName-1"));
+        planetNameUpdateInput.clear();
+        if (!planetName.isEmpty()) planetNameUpdateInput.sendKeys(planetName);
+    }
+
+    public void inputPlanetFileUpdateForm(String image) {
+        if (!image.isEmpty()) {
+            File file = new File("src/test/resources/Celestial-Images/" + image);
+            WebElement imageUpdateInput = driver.findElement(By.id("updatePlanetImage-1"));
+            imageUpdateInput.sendKeys(file.getAbsolutePath());
+        }
+    }
+
+    public void clickSubmitPlanetUpdateForm() {
+        WebElement submitUpdateButton = driver.findElement(By.id("submitUpdateButton-1"));
+        submitUpdateButton.click();
+    }
+
+    public String getUpdatedPlanetName() {
+        WebElement planetName = driver.findElement(By.xpath("//tbody/tr[2]/td[3]"));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.textToBePresentInElement(planetName, "E-arth6_16"));
+        return planetName.getText();
+    }
 
 }

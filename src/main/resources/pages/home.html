@@ -127,6 +127,11 @@
         const planetImageInput = document.getElementById(`updatePlanetImage-${planetId}`);
         const existingImage = document.getElementById(`planetImage-${planetId}`);
 
+        if (!checkCelestialName(planetName)) {
+            alert("Invalid planet name");
+            return;
+        }
+
         let imageData;
         if (planetImageInput.files.length > 0) {
             imageData = await convertToBase64(planetImageInput);
@@ -155,7 +160,7 @@
             populateCelestialTable();
         } else {
             const errorMessage = await response.text();
-            alert(`Failed to update planet: ${errorMessage}`);
+            alert(errorMessage);
         }
     }
 
@@ -236,6 +241,7 @@
                 }
 
             const updateBtn = document.createElement('button');
+            updateBtn.id = `updateButton-${planet.planetId}`;
             updateBtn.innerText = 'Edit';
             updateBtn.onclick = function () {
                 toggleUpdateForm('Planet', planet.planetId);
@@ -265,8 +271,8 @@
                     <label for="updatePlanetImage-${planet.planetId}">Image:</label>
                     <input type="file" id="updatePlanetImage-${planet.planetId}" name="Planet Image" accept="image/*" placeholder="Upload Planet Image">
 
-                    <button type="button" onclick="updatePlanet(${planet.planetId}, ${planet.ownerId})">Submit</button>
-                    <button type="button" onclick="toggleUpdateForm('Planet', ${planet.planetId})">Cancel</button>
+                    <button type="button" id="submitUpdateButton-${planet.planetId}" onclick="updatePlanet(${planet.planetId}, ${planet.ownerId})">Submit</button>
+                    <button type="button" id="cancelUpdateButton-${planet.planetId}" onclick="toggleUpdateForm('Planet', ${planet.planetId})">Cancel</button>
                 </form>
             </div>`;
 
