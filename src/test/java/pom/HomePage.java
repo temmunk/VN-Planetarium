@@ -186,7 +186,7 @@ public class HomePage {
     }
 
     public void clickPlanetEditButton() {
-        WebElement editButton = driver.findElement(By.id("updateButton-1"));
+        WebElement editButton = driver.findElement(By.id("updatePlanetButton-1"));
         editButton.click();
     }
 
@@ -205,15 +205,52 @@ public class HomePage {
     }
 
     public void clickSubmitPlanetUpdateForm() {
-        WebElement submitUpdateButton = driver.findElement(By.id("submitUpdateButton-1"));
+        WebElement submitUpdateButton = driver.findElement(By.id("submitUpdatePlanetButton-1"));
         submitUpdateButton.click();
     }
 
     public String getUpdatedPlanetName() {
         WebElement planetName = driver.findElement(By.xpath("//tbody/tr[2]/td[3]"));
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.textToBePresentInElement(planetName, "E-arth6_16"));
+        wait.until(ExpectedConditions.textToBePresentInElement(planetName, "E-arth 6_16"));
         return planetName.getText();
+    }
+
+    public void clickMoonEditButton() {
+        WebElement editButton = driver.findElement(By.id("updateMoonButton-1"));
+        editButton.click();
+    }
+
+    public void inputMoonNameUpdateForm(String moonName) {
+        WebElement moonNameUpdateInput = driver.findElement(By.id("updateMoonName-1"));
+        moonNameUpdateInput.clear();
+        if (!moonName.isEmpty()) moonNameUpdateInput.sendKeys(moonName);
+    }
+
+    public void inputMoonFileUpdateForm(String image) {
+        if (!image.isEmpty()) {
+            File file = new File("src/test/resources/Celestial-Images/" + image);
+            WebElement imageUpdateInput = driver.findElement(By.id("updateMoonImage-1"));
+            imageUpdateInput.sendKeys(file.getAbsolutePath());
+        }
+    }
+
+    public void inputMoonOwnerIdUpdateForm(int ownerId) {
+        WebElement ownerIdUpdateInput = driver.findElement(By.id("updateMoonOwnerId-1"));
+        ownerIdUpdateInput.clear();
+        ownerIdUpdateInput.sendKeys(Integer.toString(ownerId));
+    }
+
+    public void clickSubmitMoonUpdateForm() {
+        WebElement submitUpdateButton = driver.findElement(By.id("submitUpdateMoonButton-1"));
+        submitUpdateButton.click();
+    }
+
+    public String getUpdatedMoonName() {
+        WebElement moonName = driver.findElement(By.xpath("//tbody/tr[6]/td[3]"));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.textToBePresentInElement(moonName, "Mo-on 6_16"));
+        return moonName.getText();
     }
 
 }

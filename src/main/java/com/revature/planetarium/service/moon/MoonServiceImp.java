@@ -92,11 +92,11 @@ public class MoonServiceImp<T> implements MoonService<T> {
             throw new MoonFail("Moon not found, could not update");
         }
         if (moon.getMoonName().length() < 1 || moon.getMoonName().length() > 30) {
-            throw new MoonFail("Moon name must be between 1 and 30 characters, could not update");
+            throw new MoonFail("Invalid moon name");
         }
         Optional<Moon> moonWithSameName = moonDao.readMoon(moon.getMoonName());
         if (moonWithSameName.isPresent() && moonWithSameName.get().getMoonId() != moon.getMoonId()) {
-            throw new MoonFail("Moon name must be unique, could not update");
+            throw new MoonFail("Invalid moon name");
         }
         Optional<Moon> updatedMoon = moonDao.updateMoon(moon);
         if (updatedMoon.isPresent()) {

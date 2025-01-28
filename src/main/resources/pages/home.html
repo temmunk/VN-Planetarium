@@ -167,9 +167,19 @@
 
     async function updateMoon(moonId) {
         const moonName = document.getElementById(`updateMoonName-${moonId}`).value;
-        const ownerId = document.getElementById(`updatePlanetOwnerId-${moonId}`).value;
+        const ownerId = document.getElementById(`updateMoonOwnerId-${moonId}`).value;
         const moonImageInput = document.getElementById(`updateMoonImage-${moonId}`);
         const existingImage = document.getElementById(`moonImage-${moonId}`);
+
+        if (!checkCelestialName(moonName)) {
+            alert("Invalid moon name");
+            return;
+        }
+
+        if(!validatePlanetId(ownerId)){
+            alert("Invalid planet id");
+            return;
+        }
 
         let imageData;
         if (moonImageInput.files.length > 0) {
@@ -200,7 +210,7 @@
             populateCelestialTable();
         } else {
             const errorMessage = await response.text();
-            alert(`Failed to update moon: ${errorMessage}`);
+            alert(errorMessage);
         }
     }
 
@@ -241,7 +251,7 @@
                 }
 
             const updateBtn = document.createElement('button');
-            updateBtn.id = `updateButton-${planet.planetId}`;
+            updateBtn.id = `updatePlanetButton-${planet.planetId}`;
             updateBtn.innerText = 'Edit';
             updateBtn.onclick = function () {
                 toggleUpdateForm('Planet', planet.planetId);
@@ -271,8 +281,8 @@
                     <label for="updatePlanetImage-${planet.planetId}">Image:</label>
                     <input type="file" id="updatePlanetImage-${planet.planetId}" name="Planet Image" accept="image/*" placeholder="Upload Planet Image">
 
-                    <button type="button" id="submitUpdateButton-${planet.planetId}" onclick="updatePlanet(${planet.planetId}, ${planet.ownerId})">Submit</button>
-                    <button type="button" id="cancelUpdateButton-${planet.planetId}" onclick="toggleUpdateForm('Planet', ${planet.planetId})">Cancel</button>
+                    <button type="button" id="submitUpdatePlanetButton-${planet.planetId}" onclick="updatePlanet(${planet.planetId}, ${planet.ownerId})">Submit</button>
+                    <button type="button" id="cancelUpdatePlanetButton-${planet.planetId}" onclick="toggleUpdateForm('Planet', ${planet.planetId})">Cancel</button>
                 </form>
             </div>`;
 
@@ -310,6 +320,7 @@
                         }
 
             const updateBtn = document.createElement('button');
+            updateBtn.id = `updateMoonButton-${moon.moonId}`;
             updateBtn.innerText = 'Edit';
             updateBtn.onclick = function() {
                 toggleUpdateForm('Moon', moon.moonId);
@@ -336,14 +347,14 @@
                     <label for="updateMoonName-${moon.moonId}">Moon Name:</label>
                     <input type="text" id="updateMoonName-${moon.moonId}" value="${moon.moonName}"><br>
 
-                    <label for="updatePlanetOwnerId-${moon.moonId}">Owner ID:</label>
-                    <input type="text" id="updatePlanetOwnerId-${moon.moonId}" value="${moon.ownerId}"><br>
+                    <label for="updateMoonOwnerId-${moon.moonId}">Owner ID:</label>
+                    <input type="text" id="updateMoonOwnerId-${moon.moonId}" value="${moon.ownerId}"><br>
 
                     <label for="updateMoonImage-${moon.moonId}">Image:</label>
                     <input type="file" id="updateMoonImage-${moon.moonId}" name="Moon Image" accept="image/*" placeholder="Upload Moon Image">
 
-                    <button type="button" onclick="updateMoon(${moon.moonId})">Submit</button>
-                    <button type="button" onclick="toggleUpdateForm('Moon', ${moon.moonId})">Cancel</button>
+                    <button type="button" id="submitUpdateMoonButton-${moon.moonId}" onclick="updateMoon(${moon.moonId})">Submit</button>
+                    <button type="button" id="cancelUpdateMoonButton-${moon.moonId}" onclick="toggleUpdateForm('Moon', ${moon.moonId})">Cancel</button>
                 </form>
             </div>`;
 

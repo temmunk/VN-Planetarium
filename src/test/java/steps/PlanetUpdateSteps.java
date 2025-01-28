@@ -36,7 +36,7 @@ public class PlanetUpdateSteps {
     @Then("the planet in the table should be updated")
     public void the_planet_in_the_table_should_be_updated() {
         String updatedPlanetName =  TestRunner.homePage.getUpdatedPlanetName();
-        Assert.assertEquals("E-arth6_16", updatedPlanetName);
+        Assert.assertEquals("E-arth 6_16", updatedPlanetName);
     }
 
 }

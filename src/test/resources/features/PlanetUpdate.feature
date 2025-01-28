@@ -1,6 +1,6 @@
 #this feature allows users to update planets in their planetarium
 
-Feature: Updating planets
+Feature: Planet Updating
 
   Background:
     Given the user is properly logged in on the home page
@@ -15,9 +15,9 @@ Feature: Updating planets
 
       Examples:
       |valid planet name|valid file    |alert message               |
-      |E-arth6_16       |              |Planet updated successfully!|
-      |E-arth6_16       |planet-5.jpg  |Planet updated successfully!|
-      |E-arth6_16       |Planet png.png|Planet updated successfully!|
+      |E-arth 6_16      |              |Planet updated successfully!|
+      |E-arth 6_16      |planet-5.jpg  |Planet updated successfully!|
+      |E-arth 6_16      |Planet png.png|Planet updated successfully!|
 
     Scenario Outline: User provides invalid planet name or invalid file type
       When the user enters a planet name "<invalid planet name>" in the planet update form
@@ -31,5 +31,5 @@ Feature: Updating planets
       |iDontKnowWhatToNameThisPlanet11|                 |Invalid planet name|
       |M@r$                           |                 |Invalid planet name|
       |Mars                           |                 |Invalid planet name|
-      |E-arth6_16                     |InvalidPlanet.gif|Invalid file type  |
+      |E-arth 6_16                    |InvalidPlanet.gif|Invalid file type  |
 
