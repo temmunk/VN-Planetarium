@@ -17,7 +17,7 @@ public class DatabaseConnector {
             Class.forName("org.postgresql.Driver"); // Explicitly load PostgreSQL driver
             testDatabaseConnection();
         } catch (ClassNotFoundException e) {
-            System.err.println("❌ PostgreSQL JDBC Driver not found. Make sure it's in your dependencies.");
+            System.err.println("PostgreSQL JDBC Driver not found. Make sure it's in your dependencies.");
             e.printStackTrace();
             System.exit(1); // Exit if driver is missing
         }
