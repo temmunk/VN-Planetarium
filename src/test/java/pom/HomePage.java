@@ -1,5 +1,6 @@
 package pom;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -54,6 +55,12 @@ public class HomePage {
 
     @FindBy(className="submit-button")
     private WebElement submitButton;
+
+    @FindBy(xpath = "//*[@id=\"celestialTable\"]/tbody/tr[2]/td[6]/button[2]")
+    private WebElement deletePlanetButton;
+
+    @FindBy(xpath = "//*[@id=\"celestialTable\"]/tbody/tr[8]/td[6]/button[2]")
+    private WebElement deleteMoonButton;
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
@@ -253,4 +260,17 @@ public class HomePage {
         return moonName.getText();
     }
 
+
+    public void clickDeletePlanetButton() {
+        deletePlanetButton.click();
+    }
+
+    public void confirmDeletion() {
+        Alert alert = driver.switchTo().alert();
+        alert.accept();
+    }
+
+    public void clickDeleteMoonButton() {
+        deleteMoonButton.click();
+    }
 }

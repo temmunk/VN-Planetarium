@@ -1,13 +1,176 @@
 [
   {
-    "line": 4,
+    "line": 1,
     "elements": [
       {
-        "start_timestamp": "2025-01-28T16:34:48.305Z",
+        "start_timestamp": "2025-01-29T19:31:46.498Z",
         "before": [
           {
             "result": {
-              "duration": 454380900,
+              "duration": 973812800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "User should be able to delete planet by clicking the delete button next to a planet, along with its associated moons",
+        "description": "",
+        "id": "moon-and-planet-deletion;user-should-be-able-to-delete-planet-by-clicking-the-delete-button-next-to-a-planet--along-with-its-associated-moons",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 838725300,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 473057600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user clicks the delete button next to a planet",
+            "match": {
+              "location": "steps.PlanetDeletionSteps.the_user_clicks_the_delete_button_next_to_a_planet()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 27838800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "confirm the deletion by clicking ok in the pop up window",
+            "match": {
+              "location": "steps.PlanetDeletionSteps.confirm_the_deletion_by_clicking_ok_in_the_pop_up_window()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2437026900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the planet should be deleted from the table",
+            "match": {
+              "location": "steps.PlanetDeletionSteps.the_planet_should_be_deleted_from_the_table()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2470458300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "the moons owned by that planet should be removed",
+            "match": {
+              "location": "steps.PlanetDeletionSteps.moons_owned_by_planet_should_be_deleted()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-29T19:31:54.163Z",
+        "before": [
+          {
+            "result": {
+              "duration": 55651600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 10,
+        "name": "User should be able to delete moon by clicking the delete button next to a moon",
+        "description": "",
+        "id": "moon-and-planet-deletion;user-should-be-able-to-delete-moon-by-clicking-the-delete-button-next-to-a-moon",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 674737000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 786665200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks the delete button next to a moon",
+            "match": {
+              "location": "steps.MoonDeletionSteps.the_user_clicks_the_delete_button_next_to_a_moon()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 63523400,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "confirm the deletion by clicking ok in the pop up window",
+            "match": {
+              "location": "steps.PlanetDeletionSteps.confirm_the_deletion_by_clicking_ok_in_the_pop_up_window()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3170807100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the moon should be deleted from the table",
+            "match": {
+              "location": "steps.MoonDeletionSteps.the_moon_should_be_deleted_from_the_table()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Moon and planet deletion",
+    "description": "",
+    "id": "moon-and-planet-deletion",
+    "keyword": "Feature",
+    "uri": "classpath:features/Deletion.feature",
+    "tags": []
+  },
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2025-01-29T19:31:58.966Z",
+        "before": [
+          {
+            "result": {
+              "duration": 109082400,
               "status": "passed"
             },
             "match": {
@@ -24,7 +187,7 @@
         "steps": [
           {
             "result": {
-              "duration": 376630600,
+              "duration": 85057300,
               "status": "passed"
             },
             "line": 7,
@@ -36,7 +199,7 @@
           },
           {
             "result": {
-              "duration": 436268200,
+              "duration": 138163600,
               "status": "passed"
             },
             "line": 8,
@@ -48,7 +211,7 @@
           },
           {
             "result": {
-              "duration": 32474300,
+              "duration": 35136100,
               "status": "passed"
             },
             "line": 9,
@@ -61,11 +224,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:34:49.745Z",
+        "start_timestamp": "2025-01-29T19:31:59.374Z",
         "before": [
           {
             "result": {
-              "duration": 38588300,
+              "duration": 36679000,
               "status": "passed"
             },
             "match": {
@@ -82,7 +245,7 @@
         "steps": [
           {
             "result": {
-              "duration": 585146300,
+              "duration": 699451100,
               "status": "passed"
             },
             "line": 13,
@@ -94,7 +257,7 @@
           },
           {
             "result": {
-              "duration": 1067981100,
+              "duration": 688245900,
               "status": "passed"
             },
             "line": 14,
@@ -106,7 +269,7 @@
           },
           {
             "result": {
-              "duration": 147367700,
+              "duration": 410432200,
               "status": "passed"
             },
             "line": 15,
@@ -119,11 +282,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:34:51.624Z",
+        "start_timestamp": "2025-01-29T19:32:01.254Z",
         "before": [
           {
             "result": {
-              "duration": 21699500,
+              "duration": 125989400,
               "status": "passed"
             },
             "match": {
@@ -140,7 +303,7 @@
         "steps": [
           {
             "result": {
-              "duration": 375222700,
+              "duration": 1040969700,
               "status": "passed"
             },
             "line": 20,
@@ -152,7 +315,7 @@
           },
           {
             "result": {
-              "duration": 198568500,
+              "duration": 526217900,
               "status": "passed"
             },
             "line": 21,
@@ -164,7 +327,7 @@
           },
           {
             "result": {
-              "duration": 38389000,
+              "duration": 155485300,
               "status": "passed"
             },
             "line": 22,
@@ -176,7 +339,7 @@
           },
           {
             "result": {
-              "duration": 133914300,
+              "duration": 406335700,
               "status": "passed"
             },
             "line": 23,
@@ -188,7 +351,7 @@
           },
           {
             "result": {
-              "duration": 874533300,
+              "duration": 1213977700,
               "status": "passed"
             },
             "line": 24,
@@ -200,7 +363,7 @@
           },
           {
             "result": {
-              "duration": 50966900,
+              "duration": 213924700,
               "status": "passed"
             },
             "line": 25,
@@ -212,7 +375,7 @@
           },
           {
             "result": {
-              "duration": 275816300,
+              "duration": 476515700,
               "status": "passed"
             },
             "line": 26,
@@ -224,7 +387,7 @@
           },
           {
             "result": {
-              "duration": 35179800,
+              "duration": 36127000,
               "status": "passed"
             },
             "line": 27,
@@ -236,7 +399,7 @@
           },
           {
             "result": {
-              "duration": 70067900,
+              "duration": 81659700,
               "status": "passed"
             },
             "line": 28,
@@ -248,7 +411,7 @@
           },
           {
             "result": {
-              "duration": 28997200,
+              "duration": 35669600,
               "status": "passed"
             },
             "line": 29,
@@ -269,10 +432,10 @@
     "tags": []
   },
   {
-    "line": 4,
+    "line": 3,
     "elements": [
       {
-        "line": 6,
+        "line": 5,
         "name": "",
         "description": "",
         "type": "background",
@@ -280,10 +443,10 @@
         "steps": [
           {
             "result": {
-              "duration": 436856200,
+              "duration": 592106800,
               "status": "passed"
             },
-            "line": 7,
+            "line": 6,
             "name": "the user is properly logged in on the home page",
             "match": {
               "location": "steps.ViewSteps.the_user_is_logged_in()"
@@ -292,10 +455,10 @@
           },
           {
             "result": {
-              "duration": 273878800,
+              "duration": 322660600,
               "status": "passed"
             },
-            "line": 8,
+            "line": 7,
             "name": "user clicks moon creation input",
             "match": {
               "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
@@ -305,11 +468,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:34:53.755Z",
+        "start_timestamp": "2025-01-29T19:32:05.602Z",
         "before": [
           {
             "result": {
-              "duration": 19808300,
+              "duration": 33974400,
               "status": "passed"
             },
             "match": {
@@ -317,7 +480,7 @@
             }
           }
         ],
-        "line": 11,
+        "line": 10,
         "name": "provided valid moon name, owner planet and jpg image type, new moon should be added",
         "description": "",
         "id": "moon-addition;provided-valid-moon-name--owner-planet-and-jpg-image-type--new-moon-should-be-added",
@@ -326,10 +489,10 @@
         "steps": [
           {
             "result": {
-              "duration": 360343900,
+              "duration": 240272100,
               "status": "passed"
             },
-            "line": 12,
+            "line": 11,
             "name": "the user provides valid moon name",
             "match": {
               "location": "steps.MoonAdditionSteps.user_provides_valid_moon_name()"
@@ -338,10 +501,10 @@
           },
           {
             "result": {
-              "duration": 74249800,
+              "duration": 136362900,
               "status": "passed"
             },
-            "line": 13,
+            "line": 12,
             "name": "the user provides valid owner planet",
             "match": {
               "location": "steps.MoonAdditionSteps.user_provides_valid_owner_planet()"
@@ -352,7 +515,7 @@
             "result": {
               "status": "passed"
             },
-            "line": 14,
+            "line": 13,
             "name": "the user decides to upload an image",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_decides_to_upload_image()"
@@ -361,10 +524,10 @@
           },
           {
             "result": {
-              "duration": 53717800,
+              "duration": 75397400,
               "status": "passed"
             },
-            "line": 15,
+            "line": 14,
             "name": "the user provides a jpg filetype",
             "match": {
               "location": "steps.MoonAdditionSteps.user_provides_valid_moon_image()"
@@ -373,10 +536,10 @@
           },
           {
             "result": {
-              "duration": 95131500,
+              "duration": 126165700,
               "status": "passed"
             },
-            "line": 16,
+            "line": 15,
             "name": "the user clicks submit",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
@@ -385,10 +548,10 @@
           },
           {
             "result": {
-              "duration": 523459500,
+              "duration": 539125100,
               "status": "passed"
             },
-            "line": 17,
+            "line": 16,
             "name": "the user accepts alert",
             "match": {
               "location": "steps.PlanetAdditionSteps.theUserAcceptsAlert()"
@@ -397,10 +560,10 @@
           },
           {
             "result": {
-              "duration": 539074200,
+              "duration": 617536900,
               "status": "passed"
             },
-            "line": 18,
+            "line": 17,
             "name": "the table should refresh after moon added",
             "match": {
               "location": "steps.MoonAdditionSteps.table_should_refresh()"
@@ -409,10 +572,10 @@
           },
           {
             "result": {
-              "duration": 92917600,
+              "duration": 345727100,
               "status": "passed"
             },
-            "line": 19,
+            "line": 18,
             "name": "the user should be able to see the new moon added",
             "match": {
               "location": "steps.MoonAdditionSteps.user_should_see_new_moon()"
@@ -422,7 +585,7 @@
         ]
       },
       {
-        "line": 6,
+        "line": 5,
         "name": "",
         "description": "",
         "type": "background",
@@ -430,10 +593,10 @@
         "steps": [
           {
             "result": {
-              "duration": 348738500,
+              "duration": 582433100,
               "status": "passed"
             },
-            "line": 7,
+            "line": 6,
             "name": "the user is properly logged in on the home page",
             "match": {
               "location": "steps.ViewSteps.the_user_is_logged_in()"
@@ -442,10 +605,10 @@
           },
           {
             "result": {
-              "duration": 226202700,
+              "duration": 275990600,
               "status": "passed"
             },
-            "line": 8,
+            "line": 7,
             "name": "user clicks moon creation input",
             "match": {
               "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
@@ -455,11 +618,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:34:56.255Z",
+        "start_timestamp": "2025-01-29T19:32:08.695Z",
         "before": [
           {
             "result": {
-              "duration": 21741100,
+              "duration": 99256500,
               "status": "passed"
             },
             "match": {
@@ -467,7 +630,7 @@
             }
           }
         ],
-        "line": 22,
+        "line": 21,
         "name": "provided valid moon name, owner planet and png image type, new moon should be added",
         "description": "",
         "id": "moon-addition;provided-valid-moon-name--owner-planet-and-png-image-type--new-moon-should-be-added",
@@ -476,10 +639,10 @@
         "steps": [
           {
             "result": {
-              "duration": 164046600,
+              "duration": 128261700,
               "status": "passed"
             },
-            "line": 23,
+            "line": 22,
             "name": "the user provides valid moon name",
             "match": {
               "location": "steps.MoonAdditionSteps.user_provides_valid_moon_name()"
@@ -488,10 +651,10 @@
           },
           {
             "result": {
-              "duration": 115518500,
+              "duration": 207093900,
               "status": "passed"
             },
-            "line": 24,
+            "line": 23,
             "name": "the user provides valid owner planet",
             "match": {
               "location": "steps.MoonAdditionSteps.user_provides_valid_owner_planet()"
@@ -502,7 +665,7 @@
             "result": {
               "status": "passed"
             },
-            "line": 25,
+            "line": 24,
             "name": "the user decides to upload an image",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_decides_to_upload_image()"
@@ -511,10 +674,10 @@
           },
           {
             "result": {
-              "duration": 47000300,
+              "duration": 56625300,
               "status": "passed"
             },
-            "line": 26,
+            "line": 25,
             "name": "the user provides a png filetype",
             "match": {
               "location": "steps.MoonAdditionSteps.user_provides_png_moon_image()"
@@ -523,10 +686,10 @@
           },
           {
             "result": {
-              "duration": 72520300,
+              "duration": 110073700,
               "status": "passed"
             },
-            "line": 27,
+            "line": 26,
             "name": "the user clicks submit",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
@@ -535,10 +698,10 @@
           },
           {
             "result": {
-              "duration": 529412500,
+              "duration": 534184800,
               "status": "passed"
             },
-            "line": 28,
+            "line": 27,
             "name": "the user accepts alert",
             "match": {
               "location": "steps.PlanetAdditionSteps.theUserAcceptsAlert()"
@@ -547,10 +710,10 @@
           },
           {
             "result": {
-              "duration": 530624800,
+              "duration": 655942100,
               "status": "passed"
             },
-            "line": 29,
+            "line": 28,
             "name": "the table should refresh after moon added",
             "match": {
               "location": "steps.MoonAdditionSteps.table_should_refresh()"
@@ -559,10 +722,10 @@
           },
           {
             "result": {
-              "duration": 61954200,
+              "duration": 295434400,
               "status": "passed"
             },
-            "line": 30,
+            "line": 29,
             "name": "the user should be able to see the new moon added",
             "match": {
               "location": "steps.MoonAdditionSteps.user_should_see_new_moon()"
@@ -572,7 +735,7 @@
         ]
       },
       {
-        "line": 6,
+        "line": 5,
         "name": "",
         "description": "",
         "type": "background",
@@ -580,10 +743,10 @@
         "steps": [
           {
             "result": {
-              "duration": 218195800,
+              "duration": 539271800,
               "status": "passed"
             },
-            "line": 7,
+            "line": 6,
             "name": "the user is properly logged in on the home page",
             "match": {
               "location": "steps.ViewSteps.the_user_is_logged_in()"
@@ -592,10 +755,10 @@
           },
           {
             "result": {
-              "duration": 160434600,
+              "duration": 353819800,
               "status": "passed"
             },
-            "line": 8,
+            "line": 7,
             "name": "user clicks moon creation input",
             "match": {
               "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
@@ -605,11 +768,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:34:58.390Z",
+        "start_timestamp": "2025-01-29T19:32:11.666Z",
         "before": [
           {
             "result": {
-              "duration": 12516100,
+              "duration": 52985400,
               "status": "passed"
             },
             "match": {
@@ -617,7 +780,7 @@
             }
           }
         ],
-        "line": 33,
+        "line": 32,
         "name": "provided valid moon name and owner planet without image, moon should be added",
         "description": "",
         "id": "moon-addition;provided-valid-moon-name-and-owner-planet-without-image--moon-should-be-added",
@@ -626,10 +789,10 @@
         "steps": [
           {
             "result": {
-              "duration": 114210600,
+              "duration": 366656100,
               "status": "passed"
             },
-            "line": 34,
+            "line": 33,
             "name": "the user provides valid moon name",
             "match": {
               "location": "steps.MoonAdditionSteps.user_provides_valid_moon_name()"
@@ -638,10 +801,10 @@
           },
           {
             "result": {
-              "duration": 112202500,
+              "duration": 171207000,
               "status": "passed"
             },
-            "line": 35,
+            "line": 34,
             "name": "the user provides valid owner planet",
             "match": {
               "location": "steps.MoonAdditionSteps.user_provides_valid_owner_planet()"
@@ -650,10 +813,9 @@
           },
           {
             "result": {
-              "duration": 1010600,
               "status": "passed"
             },
-            "line": 36,
+            "line": 35,
             "name": "the user decides not to upload an image",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_doesnt_upload_image()"
@@ -662,10 +824,10 @@
           },
           {
             "result": {
-              "duration": 84746600,
+              "duration": 116696700,
               "status": "passed"
             },
-            "line": 37,
+            "line": 36,
             "name": "the user clicks submit",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
@@ -674,10 +836,10 @@
           },
           {
             "result": {
-              "duration": 522475000,
+              "duration": 544341000,
               "status": "passed"
             },
-            "line": 38,
+            "line": 37,
             "name": "the user accepts alert",
             "match": {
               "location": "steps.PlanetAdditionSteps.theUserAcceptsAlert()"
@@ -686,10 +848,10 @@
           },
           {
             "result": {
-              "duration": 539579000,
+              "duration": 627884600,
               "status": "passed"
             },
-            "line": 39,
+            "line": 38,
             "name": "the table should refresh after moon added",
             "match": {
               "location": "steps.MoonAdditionSteps.table_should_refresh()"
@@ -698,10 +860,10 @@
           },
           {
             "result": {
-              "duration": 90539500,
+              "duration": 205943200,
               "status": "passed"
             },
-            "line": 40,
+            "line": 39,
             "name": "the user should be able to see the new moon added",
             "match": {
               "location": "steps.MoonAdditionSteps.user_should_see_new_moon()"
@@ -711,7 +873,7 @@
         ]
       },
       {
-        "line": 6,
+        "line": 5,
         "name": "",
         "description": "",
         "type": "background",
@@ -719,10 +881,10 @@
         "steps": [
           {
             "result": {
-              "duration": 279094900,
+              "duration": 569795900,
               "status": "passed"
             },
-            "line": 7,
+            "line": 6,
             "name": "the user is properly logged in on the home page",
             "match": {
               "location": "steps.ViewSteps.the_user_is_logged_in()"
@@ -731,10 +893,10 @@
           },
           {
             "result": {
-              "duration": 181300400,
+              "duration": 334067100,
               "status": "passed"
             },
-            "line": 8,
+            "line": 7,
             "name": "user clicks moon creation input",
             "match": {
               "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
@@ -744,11 +906,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:00.261Z",
+        "start_timestamp": "2025-01-29T19:32:14.669Z",
         "before": [
           {
             "result": {
-              "duration": 17604600,
+              "duration": 42471800,
               "status": "passed"
             },
             "match": {
@@ -756,7 +918,7 @@
             }
           }
         ],
-        "line": 44,
+        "line": 43,
         "name": "provided valid moon name and owner planet but wrong image format, alert should pop up",
         "description": "",
         "id": "moon-addition;provided-valid-moon-name-and-owner-planet-but-wrong-image-format--alert-should-pop-up",
@@ -765,10 +927,10 @@
         "steps": [
           {
             "result": {
-              "duration": 130256500,
+              "duration": 187100500,
               "status": "passed"
             },
-            "line": 45,
+            "line": 44,
             "name": "the user provides valid moon name",
             "match": {
               "location": "steps.MoonAdditionSteps.user_provides_valid_moon_name()"
@@ -777,10 +939,10 @@
           },
           {
             "result": {
-              "duration": 104389600,
+              "duration": 191979400,
               "status": "passed"
             },
-            "line": 46,
+            "line": 45,
             "name": "the user provides valid owner planet",
             "match": {
               "location": "steps.MoonAdditionSteps.user_provides_valid_owner_planet()"
@@ -791,7 +953,7 @@
             "result": {
               "status": "passed"
             },
-            "line": 47,
+            "line": 46,
             "name": "the user decides to upload an image",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_decides_to_upload_image()"
@@ -800,10 +962,10 @@
           },
           {
             "result": {
-              "duration": 28966400,
+              "duration": 52930900,
               "status": "passed"
             },
-            "line": 48,
+            "line": 47,
             "name": "the user uploads invalid file type",
             "match": {
               "location": "steps.MoonAdditionSteps.user_uploads_invalid_moon_image()"
@@ -812,10 +974,10 @@
           },
           {
             "result": {
-              "duration": 60057000,
+              "duration": 122987800,
               "status": "passed"
             },
-            "line": 49,
+            "line": 48,
             "name": "the user clicks submit",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
@@ -824,10 +986,10 @@
           },
           {
             "result": {
-              "duration": 9330800,
+              "duration": 17995300,
               "status": "passed"
             },
-            "line": 50,
+            "line": 49,
             "name": "the user should get a browser alert saying Invalid filetype",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_gets_invalid_filetype_browser_alert()"
@@ -836,10 +998,10 @@
           },
           {
             "result": {
-              "duration": 11737000,
+              "duration": 85120800,
               "status": "passed"
             },
-            "line": 51,
+            "line": 50,
             "name": "the user should stay on the home page",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
@@ -849,7 +1011,7 @@
         ]
       },
       {
-        "line": 6,
+        "line": 5,
         "name": "",
         "description": "",
         "type": "background",
@@ -857,10 +1019,10 @@
         "steps": [
           {
             "result": {
-              "duration": 376715600,
+              "duration": 572490000,
               "status": "passed"
             },
-            "line": 7,
+            "line": 6,
             "name": "the user is properly logged in on the home page",
             "match": {
               "location": "steps.ViewSteps.the_user_is_logged_in()"
@@ -869,10 +1031,10 @@
           },
           {
             "result": {
-              "duration": 169820100,
+              "duration": 356816700,
               "status": "passed"
             },
-            "line": 8,
+            "line": 7,
             "name": "user clicks moon creation input",
             "match": {
               "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
@@ -882,11 +1044,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:01.095Z",
+        "start_timestamp": "2025-01-29T19:32:16.289Z",
         "before": [
           {
             "result": {
-              "duration": 13603100,
+              "duration": 23504700,
               "status": "passed"
             },
             "match": {
@@ -894,7 +1056,7 @@
             }
           }
         ],
-        "line": 54,
+        "line": 53,
         "name": "provided invalid owner planet, alert should pop up",
         "description": "",
         "id": "moon-addition;provided-invalid-owner-planet--alert-should-pop-up",
@@ -903,10 +1065,10 @@
         "steps": [
           {
             "result": {
-              "duration": 93039300,
+              "duration": 201509500,
               "status": "passed"
             },
-            "line": 55,
+            "line": 54,
             "name": "the user provides valid moon name",
             "match": {
               "location": "steps.MoonAdditionSteps.user_provides_valid_moon_name()"
@@ -915,10 +1077,10 @@
           },
           {
             "result": {
-              "duration": 164981200,
+              "duration": 220542800,
               "status": "passed"
             },
-            "line": 56,
+            "line": 55,
             "name": "the user provides invalid owner planet",
             "match": {
               "location": "steps.MoonAdditionSteps.user_provides_invalid_owner_planet()"
@@ -927,10 +1089,10 @@
           },
           {
             "result": {
-              "duration": 67155900,
+              "duration": 125660900,
               "status": "passed"
             },
-            "line": 57,
+            "line": 56,
             "name": "the user clicks submit",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
@@ -939,10 +1101,10 @@
           },
           {
             "result": {
-              "duration": 9776600,
+              "duration": 14876300,
               "status": "passed"
             },
-            "line": 58,
+            "line": 57,
             "name": "the user should get a browser alert saying Invalid planet id",
             "match": {
               "location": "steps.MoonAdditionSteps.invalid_planet_id_alert()"
@@ -951,10 +1113,10 @@
           },
           {
             "result": {
-              "duration": 8010400,
+              "duration": 49120700,
               "status": "passed"
             },
-            "line": 59,
+            "line": 58,
             "name": "the user should stay on the home page",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
@@ -964,7 +1126,7 @@
         ]
       },
       {
-        "line": 6,
+        "line": 5,
         "name": "",
         "description": "",
         "type": "background",
@@ -972,10 +1134,10 @@
         "steps": [
           {
             "result": {
-              "duration": 286985700,
+              "duration": 739302400,
               "status": "passed"
             },
-            "line": 7,
+            "line": 6,
             "name": "the user is properly logged in on the home page",
             "match": {
               "location": "steps.ViewSteps.the_user_is_logged_in()"
@@ -984,10 +1146,10 @@
           },
           {
             "result": {
-              "duration": 193713800,
+              "duration": 333584100,
               "status": "passed"
             },
-            "line": 8,
+            "line": 7,
             "name": "user clicks moon creation input",
             "match": {
               "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
@@ -997,11 +1159,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:02.016Z",
+        "start_timestamp": "2025-01-29T19:32:17.887Z",
         "before": [
           {
             "result": {
-              "duration": 12639400,
+              "duration": 29237300,
               "status": "passed"
             },
             "match": {
@@ -1009,7 +1171,7 @@
             }
           }
         ],
-        "line": 72,
+        "line": 71,
         "name": "provided invalid moon name, alert should pop up",
         "description": "",
         "id": "moon-addition;provided-invalid-moon-name--alert-should-pop-up;;2",
@@ -1018,10 +1180,10 @@
         "steps": [
           {
             "result": {
-              "duration": 292052200,
+              "duration": 611720300,
               "status": "passed"
             },
-            "line": 63,
+            "line": 62,
             "name": "the user is properly logged in on the home page",
             "match": {
               "location": "steps.ViewSteps.the_user_is_logged_in()"
@@ -1030,10 +1192,10 @@
           },
           {
             "result": {
-              "duration": 185554200,
+              "duration": 364597600,
               "status": "passed"
             },
-            "line": 64,
+            "line": 63,
             "name": "user clicks moon creation input",
             "match": {
               "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
@@ -1042,10 +1204,10 @@
           },
           {
             "result": {
-              "duration": 109016500,
+              "duration": 104931000,
               "status": "passed"
             },
-            "line": 65,
+            "line": 64,
             "name": "the user provides moon name\"\"",
             "match": {
               "arguments": [
@@ -1060,10 +1222,10 @@
           },
           {
             "result": {
-              "duration": 67961800,
+              "duration": 210530800,
               "status": "passed"
             },
-            "line": 66,
+            "line": 65,
             "name": "the user clicks submit",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
@@ -1072,10 +1234,10 @@
           },
           {
             "result": {
-              "duration": 9144900,
+              "duration": 24579700,
               "status": "passed"
             },
-            "line": 67,
+            "line": 66,
             "name": "the user should get a browser alert saying Invalid moon name",
             "match": {
               "location": "steps.MoonAdditionSteps.invalid_moon_name_alert()"
@@ -1084,10 +1246,10 @@
           },
           {
             "result": {
-              "duration": 35539400,
+              "duration": 59200100,
               "status": "passed"
             },
-            "line": 68,
+            "line": 67,
             "name": "the user should stay on the home page",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
@@ -1097,7 +1259,7 @@
         ]
       },
       {
-        "line": 6,
+        "line": 5,
         "name": "",
         "description": "",
         "type": "background",
@@ -1105,10 +1267,10 @@
         "steps": [
           {
             "result": {
-              "duration": 347751100,
+              "duration": 678649000,
               "status": "passed"
             },
-            "line": 7,
+            "line": 6,
             "name": "the user is properly logged in on the home page",
             "match": {
               "location": "steps.ViewSteps.the_user_is_logged_in()"
@@ -1117,10 +1279,10 @@
           },
           {
             "result": {
-              "duration": 202431000,
+              "duration": 362343000,
               "status": "passed"
             },
-            "line": 8,
+            "line": 7,
             "name": "user clicks moon creation input",
             "match": {
               "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
@@ -1130,11 +1292,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:03.221Z",
+        "start_timestamp": "2025-01-29T19:32:20.396Z",
         "before": [
           {
             "result": {
-              "duration": 15989100,
+              "duration": 40931500,
               "status": "passed"
             },
             "match": {
@@ -1142,7 +1304,7 @@
             }
           }
         ],
-        "line": 73,
+        "line": 72,
         "name": "provided invalid moon name, alert should pop up",
         "description": "",
         "id": "moon-addition;provided-invalid-moon-name--alert-should-pop-up;;3",
@@ -1151,10 +1313,10 @@
         "steps": [
           {
             "result": {
-              "duration": 290989900,
+              "duration": 598067200,
               "status": "passed"
             },
-            "line": 63,
+            "line": 62,
             "name": "the user is properly logged in on the home page",
             "match": {
               "location": "steps.ViewSteps.the_user_is_logged_in()"
@@ -1163,10 +1325,10 @@
           },
           {
             "result": {
-              "duration": 181861800,
+              "duration": 455221800,
               "status": "passed"
             },
-            "line": 64,
+            "line": 63,
             "name": "user clicks moon creation input",
             "match": {
               "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
@@ -1175,10 +1337,10 @@
           },
           {
             "result": {
-              "duration": 276343700,
+              "duration": 234502900,
               "status": "passed"
             },
-            "line": 65,
+            "line": 64,
             "name": "the user provides moon name\"iDontKnowWhatToNameThisMoon1234\"",
             "match": {
               "arguments": [
@@ -1193,10 +1355,10 @@
           },
           {
             "result": {
-              "duration": 56170500,
+              "duration": 112432700,
               "status": "passed"
             },
-            "line": 66,
+            "line": 65,
             "name": "the user clicks submit",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
@@ -1205,10 +1367,10 @@
           },
           {
             "result": {
-              "duration": 9934000,
+              "duration": 17669300,
               "status": "passed"
             },
-            "line": 67,
+            "line": 66,
             "name": "the user should get a browser alert saying Invalid moon name",
             "match": {
               "location": "steps.MoonAdditionSteps.invalid_moon_name_alert()"
@@ -1217,10 +1379,10 @@
           },
           {
             "result": {
-              "duration": 6009800,
+              "duration": 55130200,
               "status": "passed"
             },
-            "line": 68,
+            "line": 67,
             "name": "the user should stay on the home page",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
@@ -1230,7 +1392,7 @@
         ]
       },
       {
-        "line": 6,
+        "line": 5,
         "name": "",
         "description": "",
         "type": "background",
@@ -1238,10 +1400,10 @@
         "steps": [
           {
             "result": {
-              "duration": 323123100,
+              "duration": 789234100,
               "status": "passed"
             },
-            "line": 7,
+            "line": 6,
             "name": "the user is properly logged in on the home page",
             "match": {
               "location": "steps.ViewSteps.the_user_is_logged_in()"
@@ -1250,10 +1412,10 @@
           },
           {
             "result": {
-              "duration": 217552600,
+              "duration": 342706200,
               "status": "passed"
             },
-            "line": 8,
+            "line": 7,
             "name": "user clicks moon creation input",
             "match": {
               "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
@@ -1263,11 +1425,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:04.616Z",
+        "start_timestamp": "2025-01-29T19:32:22.975Z",
         "before": [
           {
             "result": {
-              "duration": 14160000,
+              "duration": 74431800,
               "status": "passed"
             },
             "match": {
@@ -1275,7 +1437,7 @@
             }
           }
         ],
-        "line": 74,
+        "line": 73,
         "name": "provided invalid moon name, alert should pop up",
         "description": "",
         "id": "moon-addition;provided-invalid-moon-name--alert-should-pop-up;;4",
@@ -1284,10 +1446,10 @@
         "steps": [
           {
             "result": {
-              "duration": 344901500,
+              "duration": 789135300,
               "status": "passed"
             },
-            "line": 63,
+            "line": 62,
             "name": "the user is properly logged in on the home page",
             "match": {
               "location": "steps.ViewSteps.the_user_is_logged_in()"
@@ -1296,10 +1458,10 @@
           },
           {
             "result": {
-              "duration": 188975300,
+              "duration": 691319100,
               "status": "passed"
             },
-            "line": 64,
+            "line": 63,
             "name": "user clicks moon creation input",
             "match": {
               "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
@@ -1308,10 +1470,10 @@
           },
           {
             "result": {
-              "duration": 81129400,
+              "duration": 340669600,
               "status": "passed"
             },
-            "line": 65,
+            "line": 64,
             "name": "the user provides moon name\"M##n\"",
             "match": {
               "arguments": [
@@ -1326,10 +1488,10 @@
           },
           {
             "result": {
-              "duration": 123079400,
+              "duration": 213490300,
               "status": "passed"
             },
-            "line": 66,
+            "line": 65,
             "name": "the user clicks submit",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
@@ -1338,10 +1500,10 @@
           },
           {
             "result": {
-              "duration": 10255400,
+              "duration": 75484800,
               "status": "passed"
             },
-            "line": 67,
+            "line": 66,
             "name": "the user should get a browser alert saying Invalid moon name",
             "match": {
               "location": "steps.MoonAdditionSteps.invalid_moon_name_alert()"
@@ -1350,10 +1512,10 @@
           },
           {
             "result": {
-              "duration": 36933900,
+              "duration": 366702500,
               "status": "passed"
             },
-            "line": 68,
+            "line": 67,
             "name": "the user should stay on the home page",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
@@ -1363,7 +1525,7 @@
         ]
       },
       {
-        "line": 6,
+        "line": 5,
         "name": "",
         "description": "",
         "type": "background",
@@ -1371,10 +1533,10 @@
         "steps": [
           {
             "result": {
-              "duration": 314060800,
+              "duration": 1326560100,
               "status": "passed"
             },
-            "line": 7,
+            "line": 6,
             "name": "the user is properly logged in on the home page",
             "match": {
               "location": "steps.ViewSteps.the_user_is_logged_in()"
@@ -1383,10 +1545,10 @@
           },
           {
             "result": {
-              "duration": 183396100,
+              "duration": 455334300,
               "status": "passed"
             },
-            "line": 8,
+            "line": 7,
             "name": "user clicks moon creation input",
             "match": {
               "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
@@ -1396,11 +1558,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:05.964Z",
+        "start_timestamp": "2025-01-29T19:32:26.703Z",
         "before": [
           {
             "result": {
-              "duration": 13725600,
+              "duration": 66838400,
               "status": "passed"
             },
             "match": {
@@ -1408,7 +1570,7 @@
             }
           }
         ],
-        "line": 75,
+        "line": 74,
         "name": "provided invalid moon name, alert should pop up",
         "description": "",
         "id": "moon-addition;provided-invalid-moon-name--alert-should-pop-up;;5",
@@ -1417,10 +1579,10 @@
         "steps": [
           {
             "result": {
-              "duration": 303137600,
+              "duration": 972497400,
               "status": "passed"
             },
-            "line": 63,
+            "line": 62,
             "name": "the user is properly logged in on the home page",
             "match": {
               "location": "steps.ViewSteps.the_user_is_logged_in()"
@@ -1429,10 +1591,10 @@
           },
           {
             "result": {
-              "duration": 180718000,
+              "duration": 408867300,
               "status": "passed"
             },
-            "line": 64,
+            "line": 63,
             "name": "user clicks moon creation input",
             "match": {
               "location": "steps.MoonAdditionSteps.user_clicks_moon_creation_input()"
@@ -1441,10 +1603,10 @@
           },
           {
             "result": {
-              "duration": 109657000,
+              "duration": 457888100,
               "status": "passed"
             },
-            "line": 65,
+            "line": 64,
             "name": "the user provides moon name\"Luna\"",
             "match": {
               "arguments": [
@@ -1459,10 +1621,10 @@
           },
           {
             "result": {
-              "duration": 63218800,
+              "duration": 300312600,
               "status": "passed"
             },
-            "line": 66,
+            "line": 65,
             "name": "the user clicks submit",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_clicks_submit()"
@@ -1471,10 +1633,10 @@
           },
           {
             "result": {
-              "duration": 8299100,
+              "duration": 54168600,
               "status": "passed"
             },
-            "line": 67,
+            "line": 66,
             "name": "the user should get a browser alert saying Invalid moon name",
             "match": {
               "location": "steps.MoonAdditionSteps.invalid_moon_name_alert()"
@@ -1483,10 +1645,10 @@
           },
           {
             "result": {
-              "duration": 30491600,
+              "duration": 59227800,
               "status": "passed"
             },
-            "line": 68,
+            "line": 67,
             "name": "the user should stay on the home page",
             "match": {
               "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
@@ -1504,34 +1666,21 @@
     "tags": []
   },
   {
-    "line": 4,
+    "line": 3,
     "elements": [
       {
-        "start_timestamp": "2025-01-28T16:35:07.180Z",
-        "before": [
-          {
-            "result": {
-              "duration": 13011000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "steps.hooks.Hooks.resetDatabase()"
-            }
-          }
-        ],
-        "line": 7,
-        "name": "provided valid moon name to delete, moon should be deleted",
+        "line": 5,
+        "name": "",
         "description": "",
-        "id": "moon-deletion;provided-valid-moon-name-to-delete--moon-should-be-deleted",
-        "type": "scenario",
-        "keyword": "Scenario",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 262897700,
+              "duration": 960307200,
               "status": "passed"
             },
-            "line": 8,
+            "line": 6,
             "name": "the user is properly logged in on the home page",
             "match": {
               "location": "steps.ViewSteps.the_user_is_logged_in()"
@@ -1540,80 +1689,149 @@
           },
           {
             "result": {
-              "duration": 190897800,
+              "duration": 528780900,
               "status": "passed"
             },
-            "line": 9,
-            "name": "the user clicks the moon deletion input",
+            "line": 7,
+            "name": "the user clicks the edit button for a moon",
             "match": {
-              "location": "steps.MoonDeletionSteps.user_clicks_moon_deletion_input()"
+              "location": "steps.MoonUpdateSteps.the_user_clicks_the_edit_button_for_a_moon()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-29T19:32:30.839Z",
+        "before": [
+          {
+            "result": {
+              "duration": 91486000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "User provides valid moon data",
+        "description": "",
+        "id": "moon-updating;user-provides-valid-moon-data;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1094594300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user enters a moon name \"Mo-on 6_16\" in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Mo-on 6_16\"",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_enters_a_moon_name_in_the_moon_update_form(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#deleteInput\"}\n  (Session info: chrome\u003d131.0.6778.265)\nFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nBuild info: version: \u00274.25.0\u0027, revision: \u00278a8aea2337\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.25\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [2be89e30ed885101eb883445da4141c8, findElement {value\u003ddeleteInput, using\u003did}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\\Users\\Ahmed\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58564}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58564/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 2be89e30ed885101eb883445da4141c8\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy15.sendKeys(Unknown Source)\r\n\tat pom.HomePage.inputValidMoonToDelete(HomePage.java:157)\r\n\tat steps.MoonDeletionSteps.user_provides_valid_moon_to_be_deleted(MoonDeletionSteps.java:18)\r\n\tat ✽.the user provides valid moon name to be deleted(classpath:features/MoonDeletion.feature:10)\r\n",
-              "duration": 1047433100,
-              "status": "failed"
+              "duration": 523700,
+              "status": "passed"
             },
-            "line": 10,
-            "name": "the user provides valid moon name to be deleted",
+            "line": 11,
+            "name": "the user selects a file \"\" in the moon update form",
             "match": {
-              "location": "steps.MoonDeletionSteps.user_provides_valid_moon_to_be_deleted()"
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 24
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_selects_a_file_in_the_moon_update_form(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 831026200,
+              "status": "passed"
             },
-            "line": 11,
-            "name": "the table should refresh after moon removed",
+            "line": 12,
+            "name": "the user enters an ownerId 2 in the moon update form",
             "match": {
-              "location": "steps.MoonDeletionSteps.table_should_refresh()"
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_enters_an_ownerId_in_the_moon_update_form(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 523592200,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user clicks submit in the moon update form",
+            "match": {
+              "location": "steps.MoonUpdateSteps.the_user_clicks_submit_in_the_moon_update_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 559648000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user should get a browser alert saying \"Moon updated successfully!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Moon updated successfully!\"",
+                  "offset": 43
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1000800,
-              "status": "skipped"
+              "duration": 478630700,
+              "status": "passed"
             },
-            "line": 12,
-            "name": "the user should be able to see the named moon removed",
+            "line": 15,
+            "name": "the moon in the table should be updated",
             "match": {
-              "location": "steps.MoonDeletionSteps.user_should_see_moon_removed()"
+              "location": "steps.MoonUpdateSteps.the_moon_in_the_table_should_be_updated()"
             },
             "keyword": "And "
           }
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:08.721Z",
-        "before": [
-          {
-            "result": {
-              "duration": 8853600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "steps.hooks.Hooks.resetDatabase()"
-            }
-          }
-        ],
-        "line": 15,
-        "name": "provided invalid moon name to delete, alert should pop up",
+        "line": 5,
+        "name": "",
         "description": "",
-        "id": "moon-deletion;provided-invalid-moon-name-to-delete--alert-should-pop-up",
-        "type": "scenario",
-        "keyword": "Scenario",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 215685700,
+              "duration": 1261160500,
               "status": "passed"
             },
-            "line": 16,
+            "line": 6,
             "name": "the user is properly logged in on the home page",
             "match": {
               "location": "steps.ViewSteps.the_user_is_logged_in()"
@@ -1622,59 +1840,1123 @@
           },
           {
             "result": {
-              "duration": 178153900,
+              "duration": 529474500,
               "status": "passed"
             },
-            "line": 17,
-            "name": "the user clicks the moon deletion input",
+            "line": 7,
+            "name": "the user clicks the edit button for a moon",
             "match": {
-              "location": "steps.MoonDeletionSteps.user_clicks_moon_deletion_input()"
+              "location": "steps.MoonUpdateSteps.the_user_clicks_the_edit_button_for_a_moon()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-29T19:32:35.964Z",
+        "before": [
+          {
+            "result": {
+              "duration": 60377400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "User provides valid moon data",
+        "description": "",
+        "id": "moon-updating;user-provides-valid-moon-data;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1248881100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user enters a moon name \"Mo-on 6_16\" in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Mo-on 6_16\"",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_enters_a_moon_name_in_the_moon_update_form(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#deleteInput\"}\n  (Session info: chrome\u003d131.0.6778.265)\nFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nBuild info: version: \u00274.25.0\u0027, revision: \u00278a8aea2337\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.25\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [2be89e30ed885101eb883445da4141c8, findElement {value\u003ddeleteInput, using\u003did}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\\Users\\Ahmed\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58564}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58564/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 2be89e30ed885101eb883445da4141c8\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy15.sendKeys(Unknown Source)\r\n\tat pom.HomePage.inputInvalidMoonToDelete(HomePage.java:161)\r\n\tat steps.MoonDeletionSteps.user_provides_invalid_moon_name_to_be_deleted(MoonDeletionSteps.java:34)\r\n\tat ✽.the use provides invalid moon name to be deleted(classpath:features/MoonDeletion.feature:18)\r\n",
-              "duration": 1033181100,
-              "status": "failed"
+              "duration": 131006000,
+              "status": "passed"
             },
-            "line": 18,
-            "name": "the use provides invalid moon name to be deleted",
+            "line": 11,
+            "name": "the user selects a file \"moon-5.jpg\" in the moon update form",
             "match": {
-              "location": "steps.MoonDeletionSteps.user_provides_invalid_moon_name_to_be_deleted()"
+              "arguments": [
+                {
+                  "val": "\"moon-5.jpg\"",
+                  "offset": 24
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_selects_a_file_in_the_moon_update_form(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 542259300,
+              "status": "passed"
             },
-            "line": 19,
-            "name": "the user should get a browser alert saying Invalid moon name",
+            "line": 12,
+            "name": "the user enters an ownerId 2 in the moon update form",
             "match": {
-              "location": "steps.MoonAdditionSteps.invalid_moon_name_alert()"
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_enters_an_ownerId_in_the_moon_update_form(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 163005100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user clicks submit in the moon update form",
+            "match": {
+              "location": "steps.MoonUpdateSteps.the_user_clicks_submit_in_the_moon_update_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 544929600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user should get a browser alert saying \"Moon updated successfully!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Moon updated successfully!\"",
+                  "offset": 43
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 289207100,
+              "status": "passed"
             },
-            "line": 20,
-            "name": "the user should stay on the home page",
+            "line": 15,
+            "name": "the moon in the table should be updated",
             "match": {
-              "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
+              "location": "steps.MoonUpdateSteps.the_moon_in_the_table_should_be_updated()"
             },
             "keyword": "And "
           }
         ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1794268400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 567364400,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the edit button for a moon",
+            "match": {
+              "location": "steps.MoonUpdateSteps.the_user_clicks_the_edit_button_for_a_moon()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-29T19:32:40.764Z",
+        "before": [
+          {
+            "result": {
+              "duration": 36836800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 21,
+        "name": "User provides valid moon data",
+        "description": "",
+        "id": "moon-updating;user-provides-valid-moon-data;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 985846500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user enters a moon name \"Mo-on 6_16\" in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Mo-on 6_16\"",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_enters_a_moon_name_in_the_moon_update_form(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 73644600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user selects a file \"Moon png.png\" in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Moon png.png\"",
+                  "offset": 24
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_selects_a_file_in_the_moon_update_form(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 464745500,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user enters an ownerId 2 in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_enters_an_ownerId_in_the_moon_update_form(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 112828800,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user clicks submit in the moon update form",
+            "match": {
+              "location": "steps.MoonUpdateSteps.the_user_clicks_submit_in_the_moon_update_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 530778900,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user should get a browser alert saying \"Moon updated successfully!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Moon updated successfully!\"",
+                  "offset": 43
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 370811400,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the moon in the table should be updated",
+            "match": {
+              "location": "steps.MoonUpdateSteps.the_moon_in_the_table_should_be_updated()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 686792700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 414546200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the edit button for a moon",
+            "match": {
+              "location": "steps.MoonUpdateSteps.the_user_clicks_the_edit_button_for_a_moon()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-29T19:32:45.731Z",
+        "before": [
+          {
+            "result": {
+              "duration": 51434500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "User provides invalid moon data",
+        "description": "",
+        "id": "moon-updating;user-provides-invalid-moon-data;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 136405500,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user enters a moon name \"\" in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_enters_a_moon_name_in_the_moon_update_form(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user selects a file \"\" in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 24
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_selects_a_file_in_the_moon_update_form(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 766364900,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user enters an ownerId 2 in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_enters_an_ownerId_in_the_moon_update_form(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 204794700,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user clicks submit in the moon update form",
+            "match": {
+              "location": "steps.MoonUpdateSteps.the_user_clicks_submit_in_the_moon_update_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 27549100,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user should get a browser alert saying \"Invalid moon name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid moon name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1100938400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 525906200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the edit button for a moon",
+            "match": {
+              "location": "steps.MoonUpdateSteps.the_user_clicks_the_edit_button_for_a_moon()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-29T19:32:48.042Z",
+        "before": [
+          {
+            "result": {
+              "duration": 47785300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 33,
+        "name": "User provides invalid moon data",
+        "description": "",
+        "id": "moon-updating;user-provides-invalid-moon-data;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 722865800,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user enters a moon name \"iDontKnowWhatToNameThisMoon1234\" in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"iDontKnowWhatToNameThisMoon1234\"",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_enters_a_moon_name_in_the_moon_update_form(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user selects a file \"\" in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 24
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_selects_a_file_in_the_moon_update_form(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 351237900,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user enters an ownerId 2 in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_enters_an_ownerId_in_the_moon_update_form(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 154398500,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user clicks submit in the moon update form",
+            "match": {
+              "location": "steps.MoonUpdateSteps.the_user_clicks_submit_in_the_moon_update_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 26062600,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user should get a browser alert saying \"Invalid moon name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid moon name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 682413900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 436035500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the edit button for a moon",
+            "match": {
+              "location": "steps.MoonUpdateSteps.the_user_clicks_the_edit_button_for_a_moon()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-29T19:32:50.997Z",
+        "before": [
+          {
+            "result": {
+              "duration": 37964900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 34,
+        "name": "User provides invalid moon data",
+        "description": "",
+        "id": "moon-updating;user-provides-invalid-moon-data;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 574688700,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user enters a moon name \"M##n\" in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"M##n\"",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_enters_a_moon_name_in_the_moon_update_form(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user selects a file \"\" in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 24
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_selects_a_file_in_the_moon_update_form(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 328990600,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user enters an ownerId 2 in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_enters_an_ownerId_in_the_moon_update_form(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 145966000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user clicks submit in the moon update form",
+            "match": {
+              "location": "steps.MoonUpdateSteps.the_user_clicks_submit_in_the_moon_update_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 23690500,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user should get a browser alert saying \"Invalid moon name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid moon name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 710265900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 371789600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the edit button for a moon",
+            "match": {
+              "location": "steps.MoonUpdateSteps.the_user_clicks_the_edit_button_for_a_moon()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-29T19:32:53.246Z",
+        "before": [
+          {
+            "result": {
+              "duration": 49447900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 35,
+        "name": "User provides invalid moon data",
+        "description": "",
+        "id": "moon-updating;user-provides-invalid-moon-data;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 585688900,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user enters a moon name \"Titan\" in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Titan\"",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_enters_a_moon_name_in_the_moon_update_form(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user selects a file \"\" in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 24
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_selects_a_file_in_the_moon_update_form(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 313959900,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user enters an ownerId 2 in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_enters_an_ownerId_in_the_moon_update_form(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 134601400,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user clicks submit in the moon update form",
+            "match": {
+              "location": "steps.MoonUpdateSteps.the_user_clicks_submit_in_the_moon_update_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 554392300,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user should get a browser alert saying \"Invalid moon name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid moon name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 603904700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 358219000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the edit button for a moon",
+            "match": {
+              "location": "steps.MoonUpdateSteps.the_user_clicks_the_edit_button_for_a_moon()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-29T19:32:56.005Z",
+        "before": [
+          {
+            "result": {
+              "duration": 66522600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 36,
+        "name": "User provides invalid moon data",
+        "description": "",
+        "id": "moon-updating;user-provides-invalid-moon-data;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 642011700,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user enters a moon name \"Mo-on 6_16\" in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Mo-on 6_16\"",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_enters_a_moon_name_in_the_moon_update_form(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 63303900,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user selects a file \"InvalidMoon.gif\" in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"InvalidMoon.gif\"",
+                  "offset": 24
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_selects_a_file_in_the_moon_update_form(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 329861100,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user enters an ownerId 2 in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_enters_an_ownerId_in_the_moon_update_form(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 124819400,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user clicks submit in the moon update form",
+            "match": {
+              "location": "steps.MoonUpdateSteps.the_user_clicks_submit_in_the_moon_update_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18194300,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user should get a browser alert saying \"Invalid file type\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid file type\"",
+                  "offset": 43
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 710613300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 451168600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the edit button for a moon",
+            "match": {
+              "location": "steps.MoonUpdateSteps.the_user_clicks_the_edit_button_for_a_moon()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-29T19:32:58.234Z",
+        "before": [
+          {
+            "result": {
+              "duration": 49463300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 37,
+        "name": "User provides invalid moon data",
+        "description": "",
+        "id": "moon-updating;user-provides-invalid-moon-data;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 587888700,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user enters a moon name \"Mo-on 6_16\" in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Mo-on 6_16\"",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_enters_a_moon_name_in_the_moon_update_form(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1153600,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user selects a file \"\" in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 24
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_selects_a_file_in_the_moon_update_form(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 350576900,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user enters an ownerId 3 in the moon update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 27
+                }
+              ],
+              "location": "steps.MoonUpdateSteps.the_user_enters_an_ownerId_in_the_moon_update_form(int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 150442100,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user clicks submit in the moon update form",
+            "match": {
+              "location": "steps.MoonUpdateSteps.the_user_clicks_submit_in_the_moon_update_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 18047700,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user should get a browser alert saying \"Invalid planet id\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid planet id\"",
+                  "offset": 43
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
       }
     ],
-    "name": "Moon deletion",
+    "name": "Moon Updating",
     "description": "",
-    "id": "moon-deletion",
+    "id": "moon-updating",
     "keyword": "Feature",
-    "uri": "classpath:features/MoonDeletion.feature",
+    "uri": "classpath:features/MoonUpdate.feature",
     "tags": []
   },
   {
@@ -1689,7 +2971,7 @@
         "steps": [
           {
             "result": {
-              "duration": 227904500,
+              "duration": 722830100,
               "status": "passed"
             },
             "line": 7,
@@ -1701,7 +2983,7 @@
           },
           {
             "result": {
-              "duration": 193928600,
+              "duration": 474415500,
               "status": "passed"
             },
             "line": 8,
@@ -1714,11 +2996,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:10.164Z",
+        "start_timestamp": "2025-01-29T19:33:00.576Z",
         "before": [
           {
             "result": {
-              "duration": 8005300,
+              "duration": 39591900,
               "status": "passed"
             },
             "match": {
@@ -1735,7 +3017,7 @@
         "steps": [
           {
             "result": {
-              "duration": 187861200,
+              "duration": 344423500,
               "status": "passed"
             },
             "line": 12,
@@ -1758,7 +3040,7 @@
           },
           {
             "result": {
-              "duration": 35374000,
+              "duration": 70614300,
               "status": "passed"
             },
             "line": 14,
@@ -1770,7 +3052,7 @@
           },
           {
             "result": {
-              "duration": 64178900,
+              "duration": 151874700,
               "status": "passed"
             },
             "line": 15,
@@ -1782,7 +3064,7 @@
           },
           {
             "result": {
-              "duration": 518310800,
+              "duration": 545966100,
               "status": "passed"
             },
             "line": 16,
@@ -1794,7 +3076,7 @@
           },
           {
             "result": {
-              "duration": 516689700,
+              "duration": 841605800,
               "status": "passed"
             },
             "line": 17,
@@ -1806,7 +3088,7 @@
           },
           {
             "result": {
-              "duration": 60943100,
+              "duration": 351555800,
               "status": "passed"
             },
             "line": 18,
@@ -1827,7 +3109,7 @@
         "steps": [
           {
             "result": {
-              "duration": 226139400,
+              "duration": 758014800,
               "status": "passed"
             },
             "line": 7,
@@ -1839,7 +3121,7 @@
           },
           {
             "result": {
-              "duration": 194892200,
+              "duration": 433170200,
               "status": "passed"
             },
             "line": 8,
@@ -1852,11 +3134,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:11.991Z",
+        "start_timestamp": "2025-01-29T19:33:04.143Z",
         "before": [
           {
             "result": {
-              "duration": 13596700,
+              "duration": 45373000,
               "status": "passed"
             },
             "match": {
@@ -1873,7 +3155,7 @@
         "steps": [
           {
             "result": {
-              "duration": 198477000,
+              "duration": 310644600,
               "status": "passed"
             },
             "line": 22,
@@ -1885,7 +3167,6 @@
           },
           {
             "result": {
-              "duration": 1004700,
               "status": "passed"
             },
             "line": 23,
@@ -1897,7 +3178,7 @@
           },
           {
             "result": {
-              "duration": 25993800,
+              "duration": 65104400,
               "status": "passed"
             },
             "line": 24,
@@ -1909,7 +3190,7 @@
           },
           {
             "result": {
-              "duration": 54625200,
+              "duration": 180417700,
               "status": "passed"
             },
             "line": 25,
@@ -1921,7 +3202,7 @@
           },
           {
             "result": {
-              "duration": 511760200,
+              "duration": 531056800,
               "status": "passed"
             },
             "line": 26,
@@ -1933,7 +3214,7 @@
           },
           {
             "result": {
-              "duration": 520436400,
+              "duration": 621011900,
               "status": "passed"
             },
             "line": 27,
@@ -1945,7 +3226,7 @@
           },
           {
             "result": {
-              "duration": 65310000,
+              "duration": 246908400,
               "status": "passed"
             },
             "line": 28,
@@ -1966,7 +3247,7 @@
         "steps": [
           {
             "result": {
-              "duration": 237875400,
+              "duration": 612384800,
               "status": "passed"
             },
             "line": 7,
@@ -1978,7 +3259,7 @@
           },
           {
             "result": {
-              "duration": 173717700,
+              "duration": 431913300,
               "status": "passed"
             },
             "line": 8,
@@ -1991,11 +3272,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:13.813Z",
+        "start_timestamp": "2025-01-29T19:33:07.358Z",
         "before": [
           {
             "result": {
-              "duration": 10515100,
+              "duration": 67653800,
               "status": "passed"
             },
             "match": {
@@ -2012,7 +3293,7 @@
         "steps": [
           {
             "result": {
-              "duration": 228504300,
+              "duration": 313900900,
               "status": "passed"
             },
             "line": 32,
@@ -2024,7 +3305,6 @@
           },
           {
             "result": {
-              "duration": 1218400,
               "status": "passed"
             },
             "line": 33,
@@ -2036,7 +3316,7 @@
           },
           {
             "result": {
-              "duration": 62476900,
+              "duration": 139373600,
               "status": "passed"
             },
             "line": 34,
@@ -2048,7 +3328,7 @@
           },
           {
             "result": {
-              "duration": 520664900,
+              "duration": 535972100,
               "status": "passed"
             },
             "line": 35,
@@ -2060,7 +3340,7 @@
           },
           {
             "result": {
-              "duration": 515389000,
+              "duration": 618959000,
               "status": "passed"
             },
             "line": 36,
@@ -2072,7 +3352,7 @@
           },
           {
             "result": {
-              "duration": 68883900,
+              "duration": 275869500,
               "status": "passed"
             },
             "line": 37,
@@ -2093,7 +3373,7 @@
         "steps": [
           {
             "result": {
-              "duration": 272682500,
+              "duration": 688101500,
               "status": "passed"
             },
             "line": 7,
@@ -2105,7 +3385,7 @@
           },
           {
             "result": {
-              "duration": 197384100,
+              "duration": 436638600,
               "status": "passed"
             },
             "line": 8,
@@ -2118,11 +3398,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:15.640Z",
+        "start_timestamp": "2025-01-29T19:33:10.378Z",
         "before": [
           {
             "result": {
-              "duration": 12863300,
+              "duration": 48674500,
               "status": "passed"
             },
             "match": {
@@ -2139,7 +3419,7 @@
         "steps": [
           {
             "result": {
-              "duration": 284196000,
+              "duration": 600462800,
               "status": "passed"
             },
             "line": 41,
@@ -2162,7 +3442,7 @@
           },
           {
             "result": {
-              "duration": 37821000,
+              "duration": 72719000,
               "status": "passed"
             },
             "line": 43,
@@ -2174,7 +3454,7 @@
           },
           {
             "result": {
-              "duration": 80851000,
+              "duration": 142871400,
               "status": "passed"
             },
             "line": 44,
@@ -2186,7 +3466,7 @@
           },
           {
             "result": {
-              "duration": 10130500,
+              "duration": 19150100,
               "status": "passed"
             },
             "line": 45,
@@ -2198,7 +3478,7 @@
           },
           {
             "result": {
-              "duration": 5580300,
+              "duration": 38970700,
               "status": "passed"
             },
             "line": 46,
@@ -2219,7 +3499,7 @@
         "steps": [
           {
             "result": {
-              "duration": 349897300,
+              "duration": 1047538300,
               "status": "passed"
             },
             "line": 7,
@@ -2231,7 +3511,7 @@
           },
           {
             "result": {
-              "duration": 220784200,
+              "duration": 559420900,
               "status": "passed"
             },
             "line": 8,
@@ -2244,11 +3524,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:16.552Z",
+        "start_timestamp": "2025-01-29T19:33:12.445Z",
         "before": [
           {
             "result": {
-              "duration": 14230200,
+              "duration": 63147700,
               "status": "passed"
             },
             "match": {
@@ -2265,7 +3545,7 @@
         "steps": [
           {
             "result": {
-              "duration": 135491700,
+              "duration": 263238500,
               "status": "passed"
             },
             "line": 50,
@@ -2283,7 +3563,7 @@
           },
           {
             "result": {
-              "duration": 103516100,
+              "duration": 200728600,
               "status": "passed"
             },
             "line": 51,
@@ -2295,7 +3575,7 @@
           },
           {
             "result": {
-              "duration": 11936000,
+              "duration": 27496800,
               "status": "passed"
             },
             "line": 52,
@@ -2307,7 +3587,7 @@
           },
           {
             "result": {
-              "duration": 6526100,
+              "duration": 43865700,
               "status": "passed"
             },
             "line": 53,
@@ -2328,7 +3608,7 @@
         "steps": [
           {
             "result": {
-              "duration": 338909600,
+              "duration": 685099000,
               "status": "passed"
             },
             "line": 7,
@@ -2340,7 +3620,7 @@
           },
           {
             "result": {
-              "duration": 244055800,
+              "duration": 350627400,
               "status": "passed"
             },
             "line": 8,
@@ -2353,11 +3633,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:17.406Z",
+        "start_timestamp": "2025-01-29T19:33:14.664Z",
         "before": [
           {
             "result": {
-              "duration": 14590700,
+              "duration": 28490300,
               "status": "passed"
             },
             "match": {
@@ -2374,7 +3654,7 @@
         "steps": [
           {
             "result": {
-              "duration": 340073600,
+              "duration": 314539100,
               "status": "passed"
             },
             "line": 50,
@@ -2392,7 +3672,7 @@
           },
           {
             "result": {
-              "duration": 82519200,
+              "duration": 110452200,
               "status": "passed"
             },
             "line": 51,
@@ -2404,7 +3684,7 @@
           },
           {
             "result": {
-              "duration": 19899100,
+              "duration": 18161700,
               "status": "passed"
             },
             "line": 52,
@@ -2416,7 +3696,7 @@
           },
           {
             "result": {
-              "duration": 11499700,
+              "duration": 25102200,
               "status": "passed"
             },
             "line": 53,
@@ -2437,7 +3717,7 @@
         "steps": [
           {
             "result": {
-              "duration": 358963000,
+              "duration": 602629500,
               "status": "passed"
             },
             "line": 7,
@@ -2449,7 +3729,7 @@
           },
           {
             "result": {
-              "duration": 247938500,
+              "duration": 391807900,
               "status": "passed"
             },
             "line": 8,
@@ -2462,11 +3742,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:18.470Z",
+        "start_timestamp": "2025-01-29T19:33:16.210Z",
         "before": [
           {
             "result": {
-              "duration": 16284900,
+              "duration": 27041100,
               "status": "passed"
             },
             "match": {
@@ -2483,7 +3763,7 @@
         "steps": [
           {
             "result": {
-              "duration": 297472600,
+              "duration": 260308200,
               "status": "passed"
             },
             "line": 50,
@@ -2501,7 +3781,7 @@
           },
           {
             "result": {
-              "duration": 152981500,
+              "duration": 133098800,
               "status": "passed"
             },
             "line": 51,
@@ -2513,7 +3793,7 @@
           },
           {
             "result": {
-              "duration": 11264000,
+              "duration": 16867300,
               "status": "passed"
             },
             "line": 52,
@@ -2525,7 +3805,7 @@
           },
           {
             "result": {
-              "duration": 8391000,
+              "duration": 25594700,
               "status": "passed"
             },
             "line": 53,
@@ -2546,7 +3826,7 @@
         "steps": [
           {
             "result": {
-              "duration": 342318300,
+              "duration": 596821700,
               "status": "passed"
             },
             "line": 7,
@@ -2558,7 +3838,7 @@
           },
           {
             "result": {
-              "duration": 217817700,
+              "duration": 304118200,
               "status": "passed"
             },
             "line": 8,
@@ -2571,11 +3851,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:19.576Z",
+        "start_timestamp": "2025-01-29T19:33:17.678Z",
         "before": [
           {
             "result": {
-              "duration": 16526500,
+              "duration": 26779500,
               "status": "passed"
             },
             "match": {
@@ -2592,7 +3872,7 @@
         "steps": [
           {
             "result": {
-              "duration": 230594600,
+              "duration": 263089700,
               "status": "passed"
             },
             "line": 50,
@@ -2610,7 +3890,7 @@
           },
           {
             "result": {
-              "duration": 65171100,
+              "duration": 164294400,
               "status": "passed"
             },
             "line": 51,
@@ -2622,7 +3902,7 @@
           },
           {
             "result": {
-              "duration": 517856700,
+              "duration": 28619400,
               "status": "passed"
             },
             "line": 52,
@@ -2634,7 +3914,7 @@
           },
           {
             "result": {
-              "duration": 5998500,
+              "duration": 39879900,
               "status": "passed"
             },
             "line": 53,
@@ -2655,34 +3935,21 @@
     "tags": []
   },
   {
-    "line": 4,
+    "line": 3,
     "elements": [
       {
-        "start_timestamp": "2025-01-28T16:35:20.980Z",
-        "before": [
-          {
-            "result": {
-              "duration": 10423100,
-              "status": "passed"
-            },
-            "match": {
-              "location": "steps.hooks.Hooks.resetDatabase()"
-            }
-          }
-        ],
-        "line": 7,
-        "name": "provided valid planet name, it should be deleted along with owned moons",
+        "line": 5,
+        "name": "",
         "description": "",
-        "id": "planet-deletion;provided-valid-planet-name--it-should-be-deleted-along-with-owned-moons",
-        "type": "scenario",
-        "keyword": "Scenario",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 343296200,
+              "duration": 588310400,
               "status": "passed"
             },
-            "line": 8,
+            "line": 6,
             "name": "the user is properly logged in on the home page",
             "match": {
               "location": "steps.ViewSteps.the_user_is_logged_in()"
@@ -2691,90 +3958,131 @@
           },
           {
             "result": {
-              "duration": 210986200,
+              "duration": 427805300,
               "status": "passed"
             },
-            "line": 9,
-            "name": "the user clicks the planet deletion input",
+            "line": 7,
+            "name": "the user clicks the edit button for a planet",
             "match": {
-              "location": "steps.PlanetDeletionSteps.user_clicks_planet_deletion_input()"
+              "location": "steps.PlanetUpdateSteps.the_user_clicks_the_edit_button_for_a_planet()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-29T19:33:19.118Z",
+        "before": [
+          {
+            "result": {
+              "duration": 37401800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "User provides valid planet name and valid file type",
+        "description": "",
+        "id": "planet-updating;user-provides-valid-planet-name-and-valid-file-type;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 462285100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user enters a planet name \"E-arth 6_16\" in the planet update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"E-arth 6_16\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_enters_a_valid_planet_name_in_the_planet_update_form(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#deleteInput\"}\n  (Session info: chrome\u003d131.0.6778.265)\nFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nBuild info: version: \u00274.25.0\u0027, revision: \u00278a8aea2337\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.25\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [2be89e30ed885101eb883445da4141c8, findElement {value\u003ddeleteInput, using\u003did}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\\Users\\Ahmed\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58564}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58564/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 2be89e30ed885101eb883445da4141c8\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy15.sendKeys(Unknown Source)\r\n\tat pom.HomePage.inputValidPlanetToDelete(HomePage.java:149)\r\n\tat steps.PlanetDeletionSteps.user_provides_valid_planet_to_delete(PlanetDeletionSteps.java:18)\r\n\tat ✽.the user provides valid planet name to delete(classpath:features/PlanetDeletion.feature:10)\r\n",
-              "duration": 1064473800,
-              "status": "failed"
+              "duration": 997300,
+              "status": "passed"
             },
-            "line": 10,
-            "name": "the user provides valid planet name to delete",
+            "line": 11,
+            "name": "the user selects a file \"\" in the planet update form",
             "match": {
-              "location": "steps.PlanetDeletionSteps.user_provides_valid_planet_to_delete()"
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 24
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_selects_a_file_in_the_planet_update_form(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 114592900,
+              "status": "passed"
             },
-            "line": 11,
-            "name": "the table should refresh after planet removed",
+            "line": 12,
+            "name": "the user clicks submit in the planet update form",
             "match": {
-              "location": "steps.PlanetDeletionSteps.table_should_refresh()"
+              "location": "steps.PlanetUpdateSteps.the_user_clicks_submit_in_the_planet_update_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 529442300,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user should get a browser alert saying \"Planet updated successfully!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet updated successfully!\"",
+                  "offset": 43
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 237605300,
+              "status": "passed"
             },
-            "line": 12,
-            "name": "the user should be able to see the named planet removed",
+            "line": 14,
+            "name": "the planet in the table should be updated",
             "match": {
-              "location": "steps.PlanetDeletionSteps.user_should_see_named_planet_removed()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 13,
-            "name": "the moons owned by that planet should be removed",
-            "match": {
-              "location": "steps.PlanetDeletionSteps.moons_owned_by_planet_should_be_deleted()"
+              "location": "steps.PlanetUpdateSteps.the_planet_in_the_table_should_be_updated()"
             },
             "keyword": "And "
           }
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:22.618Z",
-        "before": [
-          {
-            "result": {
-              "duration": 10745700,
-              "status": "passed"
-            },
-            "match": {
-              "location": "steps.hooks.Hooks.resetDatabase()"
-            }
-          }
-        ],
-        "line": 16,
-        "name": "provided invalid planet name, browser alert appears",
+        "line": 5,
+        "name": "",
         "description": "",
-        "id": "planet-deletion;provided-invalid-planet-name--browser-alert-appears",
-        "type": "scenario",
-        "keyword": "Scenario",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 263490200,
+              "duration": 847208300,
               "status": "passed"
             },
-            "line": 17,
+            "line": 6,
             "name": "the user is properly logged in on the home page",
             "match": {
               "location": "steps.ViewSteps.the_user_is_logged_in()"
@@ -2783,70 +4091,871 @@
           },
           {
             "result": {
-              "duration": 194060800,
+              "duration": 397236300,
               "status": "passed"
             },
-            "line": 18,
-            "name": "the user clicks the planet deletion input",
+            "line": 7,
+            "name": "the user clicks the edit button for a planet",
             "match": {
-              "location": "steps.PlanetDeletionSteps.user_clicks_planet_deletion_input()"
+              "location": "steps.PlanetUpdateSteps.the_user_clicks_the_edit_button_for_a_planet()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-29T19:33:21.536Z",
+        "before": [
+          {
+            "result": {
+              "duration": 28975400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "User provides valid planet name and valid file type",
+        "description": "",
+        "id": "planet-updating;user-provides-valid-planet-name-and-valid-file-type;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 567865500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user enters a planet name \"E-arth 6_16\" in the planet update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"E-arth 6_16\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_enters_a_valid_planet_name_in_the_planet_update_form(java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#deleteInput\"}\n  (Session info: chrome\u003d131.0.6778.265)\nFor documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nBuild info: version: \u00274.25.0\u0027, revision: \u00278a8aea2337\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.25\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [2be89e30ed885101eb883445da4141c8, findElement {value\u003ddeleteInput, using\u003did}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.265, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\\Users\\Ahmed\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58564}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58564/devtoo..., se:cdpVersion: 131.0.6778.265, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: 2be89e30ed885101eb883445da4141c8\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy15.sendKeys(Unknown Source)\r\n\tat pom.HomePage.inputInvalidPlanetToDelete(HomePage.java:153)\r\n\tat steps.PlanetDeletionSteps.user_provides_invalid_planet_name_to_be_deleted(PlanetDeletionSteps.java:39)\r\n\tat ✽.the user provides invalid planet name to be deleted(classpath:features/PlanetDeletion.feature:19)\r\n",
-              "duration": 1027105100,
-              "status": "failed"
+              "duration": 166582400,
+              "status": "passed"
             },
-            "line": 19,
-            "name": "the user provides invalid planet name to be deleted",
+            "line": 11,
+            "name": "the user selects a file \"planet-5.jpg\" in the planet update form",
             "match": {
-              "location": "steps.PlanetDeletionSteps.user_provides_invalid_planet_name_to_be_deleted()"
+              "arguments": [
+                {
+                  "val": "\"planet-5.jpg\"",
+                  "offset": 24
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_selects_a_file_in_the_planet_update_form(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 166748900,
+              "status": "passed"
             },
-            "line": 20,
-            "name": "the user should get a browser alert saying Invalid planet name",
+            "line": 12,
+            "name": "the user clicks submit in the planet update form",
             "match": {
-              "location": "steps.PlanetAdditionSteps.user_gets_invalid_planet_name_alert()"
+              "location": "steps.PlanetUpdateSteps.the_user_clicks_submit_in_the_planet_update_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 534199900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user should get a browser alert saying \"Planet updated successfully!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet updated successfully!\"",
+                  "offset": 43
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 401078800,
+              "status": "passed"
             },
-            "line": 21,
-            "name": "the user should stay on the home page",
+            "line": 14,
+            "name": "the planet in the table should be updated",
             "match": {
-              "location": "steps.PlanetAdditionSteps.user_should_stay_on_homepage()"
+              "location": "steps.PlanetUpdateSteps.the_planet_in_the_table_should_be_updated()"
             },
             "keyword": "And "
           }
         ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 898112000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 450242500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the edit button for a planet",
+            "match": {
+              "location": "steps.PlanetUpdateSteps.the_user_clicks_the_edit_button_for_a_planet()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-29T19:33:24.664Z",
+        "before": [
+          {
+            "result": {
+              "duration": 26534000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "User provides valid planet name and valid file type",
+        "description": "",
+        "id": "planet-updating;user-provides-valid-planet-name-and-valid-file-type;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 728979200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user enters a planet name \"E-arth 6_16\" in the planet update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"E-arth 6_16\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_enters_a_valid_planet_name_in_the_planet_update_form(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 58762200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user selects a file \"Planet png.png\" in the planet update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet png.png\"",
+                  "offset": 24
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_selects_a_file_in_the_planet_update_form(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 333142000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user clicks submit in the planet update form",
+            "match": {
+              "location": "steps.PlanetUpdateSteps.the_user_clicks_submit_in_the_planet_update_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 623190600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the user should get a browser alert saying \"Planet updated successfully!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet updated successfully!\"",
+                  "offset": 43
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 280733700,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the planet in the table should be updated",
+            "match": {
+              "location": "steps.PlanetUpdateSteps.the_planet_in_the_table_should_be_updated()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 591093600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 315031200,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the edit button for a planet",
+            "match": {
+              "location": "steps.PlanetUpdateSteps.the_user_clicks_the_edit_button_for_a_planet()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-29T19:33:28.081Z",
+        "before": [
+          {
+            "result": {
+              "duration": 27226600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 30,
+        "name": "User provides invalid planet name or invalid file type",
+        "description": "",
+        "id": "planet-updating;user-provides-invalid-planet-name-or-invalid-file-type;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 221734500,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user enters a planet name \"\" in the planet update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_enters_a_valid_planet_name_in_the_planet_update_form(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1001500,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user selects a file \"\" in the planet update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 24
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_selects_a_file_in_the_planet_update_form(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 165749200,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user clicks submit in the planet update form",
+            "match": {
+              "location": "steps.PlanetUpdateSteps.the_user_clicks_submit_in_the_planet_update_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 12923400,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user should get a browser alert saying \"Invalid planet name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid planet name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 631267200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 328039800,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the edit button for a planet",
+            "match": {
+              "location": "steps.PlanetUpdateSteps.the_user_clicks_the_edit_button_for_a_planet()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-29T19:33:29.430Z",
+        "before": [
+          {
+            "result": {
+              "duration": 35466800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "User provides invalid planet name or invalid file type",
+        "description": "",
+        "id": "planet-updating;user-provides-invalid-planet-name-or-invalid-file-type;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 493585400,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user enters a planet name \"iDontKnowWhatToNameThisPlanet11\" in the planet update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"iDontKnowWhatToNameThisPlanet11\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_enters_a_valid_planet_name_in_the_planet_update_form(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1368900,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user selects a file \"\" in the planet update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 24
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_selects_a_file_in_the_planet_update_form(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 158692500,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user clicks submit in the planet update form",
+            "match": {
+              "location": "steps.PlanetUpdateSteps.the_user_clicks_submit_in_the_planet_update_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 22529400,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user should get a browser alert saying \"Invalid planet name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid planet name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 770244800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 319394000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the edit button for a planet",
+            "match": {
+              "location": "steps.PlanetUpdateSteps.the_user_clicks_the_edit_button_for_a_planet()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-29T19:33:31.123Z",
+        "before": [
+          {
+            "result": {
+              "duration": 43768600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "User provides invalid planet name or invalid file type",
+        "description": "",
+        "id": "planet-updating;user-provides-invalid-planet-name-or-invalid-file-type;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 469440600,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user enters a planet name \"M@r$\" in the planet update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"M@r$\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_enters_a_valid_planet_name_in_the_planet_update_form(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user selects a file \"\" in the planet update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 24
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_selects_a_file_in_the_planet_update_form(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 94420100,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user clicks submit in the planet update form",
+            "match": {
+              "location": "steps.PlanetUpdateSteps.the_user_clicks_submit_in_the_planet_update_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14690700,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user should get a browser alert saying \"Invalid planet name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid planet name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 664938500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 318335500,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the edit button for a planet",
+            "match": {
+              "location": "steps.PlanetUpdateSteps.the_user_clicks_the_edit_button_for_a_planet()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-29T19:33:32.848Z",
+        "before": [
+          {
+            "result": {
+              "duration": 30872600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 33,
+        "name": "User provides invalid planet name or invalid file type",
+        "description": "",
+        "id": "planet-updating;user-provides-invalid-planet-name-or-invalid-file-type;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 570272800,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user enters a planet name \"Mars\" in the planet update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Mars\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_enters_a_valid_planet_name_in_the_planet_update_form(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user selects a file \"\" in the planet update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 24
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_selects_a_file_in_the_planet_update_form(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 92355000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user clicks submit in the planet update form",
+            "match": {
+              "location": "steps.PlanetUpdateSteps.the_user_clicks_submit_in_the_planet_update_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 536390700,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user should get a browser alert saying \"Invalid planet name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid planet name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 952072500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is properly logged in on the home page",
+            "match": {
+              "location": "steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 352044100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user clicks the edit button for a planet",
+            "match": {
+              "location": "steps.PlanetUpdateSteps.the_user_clicks_the_edit_button_for_a_planet()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-29T19:33:35.088Z",
+        "before": [
+          {
+            "result": {
+              "duration": 55743900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 34,
+        "name": "User provides invalid planet name or invalid file type",
+        "description": "",
+        "id": "planet-updating;user-provides-invalid-planet-name-or-invalid-file-type;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 500151000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user enters a planet name \"E-arth 6_16\" in the planet update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"E-arth 6_16\"",
+                  "offset": 30
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_enters_a_valid_planet_name_in_the_planet_update_form(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 43161900,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user selects a file \"InvalidPlanet.gif\" in the planet update form",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"InvalidPlanet.gif\"",
+                  "offset": 24
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_selects_a_file_in_the_planet_update_form(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 101114900,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user clicks submit in the planet update form",
+            "match": {
+              "location": "steps.PlanetUpdateSteps.the_user_clicks_submit_in_the_planet_update_form()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14423400,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "the user should get a browser alert saying \"Invalid file type\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid file type\"",
+                  "offset": 43
+                }
+              ],
+              "location": "steps.PlanetUpdateSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
       }
     ],
-    "name": "Planet deletion",
+    "name": "Planet Updating",
     "description": "",
-    "id": "planet-deletion",
+    "id": "planet-updating",
     "keyword": "Feature",
-    "uri": "classpath:features/PlanetDeletion.feature",
+    "uri": "classpath:features/PlanetUpdate.feature",
     "tags": []
   },
   {
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2025-01-28T16:35:24.122Z",
+        "start_timestamp": "2025-01-29T19:33:37.124Z",
         "before": [
           {
             "result": {
-              "duration": 6816400,
+              "duration": 34093200,
               "status": "passed"
             },
             "match": {
@@ -2863,7 +4972,7 @@
         "steps": [
           {
             "result": {
-              "duration": 34645100,
+              "duration": 108951300,
               "status": "passed"
             },
             "line": 7,
@@ -2875,7 +4984,7 @@
           },
           {
             "result": {
-              "duration": 143958000,
+              "duration": 376927000,
               "status": "passed"
             },
             "line": 8,
@@ -2887,7 +4996,7 @@
           },
           {
             "result": {
-              "duration": 14049500,
+              "duration": 20523100,
               "status": "passed"
             },
             "line": 9,
@@ -2899,7 +5008,7 @@
           },
           {
             "result": {
-              "duration": 534278700,
+              "duration": 589699900,
               "status": "passed"
             },
             "line": 10,
@@ -2912,11 +5021,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:24.861Z",
+        "start_timestamp": "2025-01-29T19:33:38.271Z",
         "before": [
           {
             "result": {
-              "duration": 8067800,
+              "duration": 25666100,
               "status": "passed"
             },
             "match": {
@@ -2933,7 +5042,7 @@
         "steps": [
           {
             "result": {
-              "duration": 35506400,
+              "duration": 91167400,
               "status": "passed"
             },
             "line": 14,
@@ -2945,7 +5054,7 @@
           },
           {
             "result": {
-              "duration": 66406200,
+              "duration": 239813600,
               "status": "passed"
             },
             "line": 15,
@@ -2963,7 +5072,7 @@
           },
           {
             "result": {
-              "duration": 73762400,
+              "duration": 149539600,
               "status": "passed"
             },
             "line": 16,
@@ -2981,7 +5090,7 @@
           },
           {
             "result": {
-              "duration": 81295100,
+              "duration": 141746800,
               "status": "passed"
             },
             "line": 17,
@@ -2993,7 +5102,7 @@
           },
           {
             "result": {
-              "duration": 513681400,
+              "duration": 27798100,
               "status": "passed"
             },
             "line": 18,
@@ -3005,7 +5114,7 @@
           },
           {
             "result": {
-              "duration": 8997600,
+              "duration": 39320300,
               "status": "passed"
             },
             "line": 19,
@@ -3018,11 +5127,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:25.656Z",
+        "start_timestamp": "2025-01-29T19:33:38.997Z",
         "before": [
           {
             "result": {
-              "duration": 7997900,
+              "duration": 34236800,
               "status": "passed"
             },
             "match": {
@@ -3039,7 +5148,7 @@
         "steps": [
           {
             "result": {
-              "duration": 18401900,
+              "duration": 57884300,
               "status": "passed"
             },
             "line": 14,
@@ -3051,7 +5160,7 @@
           },
           {
             "result": {
-              "duration": 68791100,
+              "duration": 201698700,
               "status": "passed"
             },
             "line": 15,
@@ -3069,7 +5178,7 @@
           },
           {
             "result": {
-              "duration": 101565500,
+              "duration": 151993600,
               "status": "passed"
             },
             "line": 16,
@@ -3087,7 +5196,7 @@
           },
           {
             "result": {
-              "duration": 74923300,
+              "duration": 114975300,
               "status": "passed"
             },
             "line": 17,
@@ -3099,7 +5208,7 @@
           },
           {
             "result": {
-              "duration": 515335600,
+              "duration": 543322600,
               "status": "passed"
             },
             "line": 18,
@@ -3111,7 +5220,7 @@
           },
           {
             "result": {
-              "duration": 23256300,
+              "duration": 86499100,
               "status": "passed"
             },
             "line": 19,
@@ -3124,11 +5233,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:26.473Z",
+        "start_timestamp": "2025-01-29T19:33:40.216Z",
         "before": [
           {
             "result": {
-              "duration": 12338600,
+              "duration": 72227200,
               "status": "passed"
             },
             "match": {
@@ -3145,7 +5254,7 @@
         "steps": [
           {
             "result": {
-              "duration": 26114100,
+              "duration": 103749500,
               "status": "passed"
             },
             "line": 14,
@@ -3157,7 +5266,7 @@
           },
           {
             "result": {
-              "duration": 72144500,
+              "duration": 200910700,
               "status": "passed"
             },
             "line": 15,
@@ -3175,7 +5284,7 @@
           },
           {
             "result": {
-              "duration": 68439800,
+              "duration": 125266200,
               "status": "passed"
             },
             "line": 16,
@@ -3193,7 +5302,7 @@
           },
           {
             "result": {
-              "duration": 64694800,
+              "duration": 126290100,
               "status": "passed"
             },
             "line": 17,
@@ -3205,7 +5314,7 @@
           },
           {
             "result": {
-              "duration": 517819500,
+              "duration": 23457900,
               "status": "passed"
             },
             "line": 18,
@@ -3217,7 +5326,7 @@
           },
           {
             "result": {
-              "duration": 7249900,
+              "duration": 31683000,
               "status": "passed"
             },
             "line": 19,
@@ -3241,11 +5350,11 @@
     "line": 3,
     "elements": [
       {
-        "start_timestamp": "2025-01-28T16:35:27.248Z",
+        "start_timestamp": "2025-01-29T19:33:40.916Z",
         "before": [
           {
             "result": {
-              "duration": 8338600,
+              "duration": 26666200,
               "status": "passed"
             },
             "match": {
@@ -3262,7 +5371,7 @@
         "steps": [
           {
             "result": {
-              "duration": 17773300,
+              "duration": 56897300,
               "status": "passed"
             },
             "line": 6,
@@ -3274,7 +5383,7 @@
           },
           {
             "result": {
-              "duration": 101863300,
+              "duration": 320636700,
               "status": "passed"
             },
             "line": 7,
@@ -3286,7 +5395,7 @@
           },
           {
             "result": {
-              "duration": 95209700,
+              "duration": 259236500,
               "status": "passed"
             },
             "line": 8,
@@ -3304,7 +5413,7 @@
           },
           {
             "result": {
-              "duration": 110889000,
+              "duration": 152108500,
               "status": "passed"
             },
             "line": 9,
@@ -3322,7 +5431,7 @@
           },
           {
             "result": {
-              "duration": 69238200,
+              "duration": 111371600,
               "status": "passed"
             },
             "line": 10,
@@ -3334,7 +5443,7 @@
           },
           {
             "result": {
-              "duration": 522670400,
+              "duration": 550596400,
               "status": "passed"
             },
             "line": 11,
@@ -3352,7 +5461,7 @@
           },
           {
             "result": {
-              "duration": 43923500,
+              "duration": 324270900,
               "status": "passed"
             },
             "line": 12,
@@ -3371,11 +5480,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:28.228Z",
+        "start_timestamp": "2025-01-29T19:33:42.741Z",
         "before": [
           {
             "result": {
-              "duration": 8672800,
+              "duration": 32975200,
               "status": "passed"
             },
             "match": {
@@ -3392,7 +5501,7 @@
         "steps": [
           {
             "result": {
-              "duration": 18955300,
+              "duration": 68646600,
               "status": "passed"
             },
             "line": 6,
@@ -3404,7 +5513,7 @@
           },
           {
             "result": {
-              "duration": 101557300,
+              "duration": 286883700,
               "status": "passed"
             },
             "line": 7,
@@ -3416,7 +5525,7 @@
           },
           {
             "result": {
-              "duration": 62394100,
+              "duration": 158607000,
               "status": "passed"
             },
             "line": 8,
@@ -3434,7 +5543,7 @@
           },
           {
             "result": {
-              "duration": 97052100,
+              "duration": 175491100,
               "status": "passed"
             },
             "line": 9,
@@ -3452,7 +5561,7 @@
           },
           {
             "result": {
-              "duration": 68687100,
+              "duration": 132097500,
               "status": "passed"
             },
             "line": 10,
@@ -3464,7 +5573,7 @@
           },
           {
             "result": {
-              "duration": 514933200,
+              "duration": 523209600,
               "status": "passed"
             },
             "line": 11,
@@ -3482,7 +5591,7 @@
           },
           {
             "result": {
-              "duration": 3970300,
+              "duration": 43560900,
               "status": "passed"
             },
             "line": 12,
@@ -3501,11 +5610,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:29.111Z",
+        "start_timestamp": "2025-01-29T19:33:44.177Z",
         "before": [
           {
             "result": {
-              "duration": 9026100,
+              "duration": 27534600,
               "status": "passed"
             },
             "match": {
@@ -3522,7 +5631,7 @@
         "steps": [
           {
             "result": {
-              "duration": 33251500,
+              "duration": 98482500,
               "status": "passed"
             },
             "line": 6,
@@ -3534,7 +5643,7 @@
           },
           {
             "result": {
-              "duration": 109095100,
+              "duration": 237437300,
               "status": "passed"
             },
             "line": 7,
@@ -3546,7 +5655,7 @@
           },
           {
             "result": {
-              "duration": 60783600,
+              "duration": 227210700,
               "status": "passed"
             },
             "line": 8,
@@ -3564,7 +5673,7 @@
           },
           {
             "result": {
-              "duration": 90798400,
+              "duration": 156455800,
               "status": "passed"
             },
             "line": 9,
@@ -3582,7 +5691,7 @@
           },
           {
             "result": {
-              "duration": 67573600,
+              "duration": 125008000,
               "status": "passed"
             },
             "line": 10,
@@ -3594,7 +5703,7 @@
           },
           {
             "result": {
-              "duration": 6436300,
+              "duration": 13090500,
               "status": "passed"
             },
             "line": 11,
@@ -3612,7 +5721,7 @@
           },
           {
             "result": {
-              "duration": 5006900,
+              "duration": 20040100,
               "status": "passed"
             },
             "line": 12,
@@ -3631,11 +5740,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:29.498Z",
+        "start_timestamp": "2025-01-29T19:33:45.093Z",
         "before": [
           {
             "result": {
-              "duration": 11944700,
+              "duration": 28023000,
               "status": "passed"
             },
             "match": {
@@ -3652,7 +5761,7 @@
         "steps": [
           {
             "result": {
-              "duration": 43179500,
+              "duration": 87032400,
               "status": "passed"
             },
             "line": 6,
@@ -3664,7 +5773,7 @@
           },
           {
             "result": {
-              "duration": 125441600,
+              "duration": 240608800,
               "status": "passed"
             },
             "line": 7,
@@ -3676,7 +5785,7 @@
           },
           {
             "result": {
-              "duration": 173993100,
+              "duration": 272329700,
               "status": "passed"
             },
             "line": 8,
@@ -3694,7 +5803,7 @@
           },
           {
             "result": {
-              "duration": 101426200,
+              "duration": 131508200,
               "status": "passed"
             },
             "line": 9,
@@ -3712,7 +5821,7 @@
           },
           {
             "result": {
-              "duration": 74441000,
+              "duration": 106194200,
               "status": "passed"
             },
             "line": 10,
@@ -3724,7 +5833,7 @@
           },
           {
             "result": {
-              "duration": 7665600,
+              "duration": 13355500,
               "status": "passed"
             },
             "line": 11,
@@ -3742,7 +5851,7 @@
           },
           {
             "result": {
-              "duration": 4603800,
+              "duration": 16549800,
               "status": "passed"
             },
             "line": 12,
@@ -3761,11 +5870,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:30.045Z",
+        "start_timestamp": "2025-01-29T19:33:45.998Z",
         "before": [
           {
             "result": {
-              "duration": 12300400,
+              "duration": 23976700,
               "status": "passed"
             },
             "match": {
@@ -3782,7 +5891,7 @@
         "steps": [
           {
             "result": {
-              "duration": 48197500,
+              "duration": 91205200,
               "status": "passed"
             },
             "line": 6,
@@ -3794,7 +5903,7 @@
           },
           {
             "result": {
-              "duration": 125203200,
+              "duration": 288067800,
               "status": "passed"
             },
             "line": 7,
@@ -3806,7 +5915,7 @@
           },
           {
             "result": {
-              "duration": 80361300,
+              "duration": 266865000,
               "status": "passed"
             },
             "line": 8,
@@ -3824,7 +5933,7 @@
           },
           {
             "result": {
-              "duration": 107275700,
+              "duration": 243532300,
               "status": "passed"
             },
             "line": 9,
@@ -3842,7 +5951,7 @@
           },
           {
             "result": {
-              "duration": 69618900,
+              "duration": 312380000,
               "status": "passed"
             },
             "line": 10,
@@ -3854,7 +5963,7 @@
           },
           {
             "result": {
-              "duration": 6450600,
+              "duration": 26549900,
               "status": "passed"
             },
             "line": 11,
@@ -3872,7 +5981,7 @@
           },
           {
             "result": {
-              "duration": 5757300,
+              "duration": 61985700,
               "status": "passed"
             },
             "line": 12,
@@ -3891,11 +6000,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:30.506Z",
+        "start_timestamp": "2025-01-29T19:33:47.336Z",
         "before": [
           {
             "result": {
-              "duration": 13204700,
+              "duration": 82030900,
               "status": "passed"
             },
             "match": {
@@ -3912,7 +6021,7 @@
         "steps": [
           {
             "result": {
-              "duration": 44799600,
+              "duration": 170633700,
               "status": "passed"
             },
             "line": 6,
@@ -3924,7 +6033,7 @@
           },
           {
             "result": {
-              "duration": 141319200,
+              "duration": 281401200,
               "status": "passed"
             },
             "line": 7,
@@ -3936,7 +6045,7 @@
           },
           {
             "result": {
-              "duration": 106104400,
+              "duration": 187033600,
               "status": "passed"
             },
             "line": 8,
@@ -3954,7 +6063,7 @@
           },
           {
             "result": {
-              "duration": 103949300,
+              "duration": 131504900,
               "status": "passed"
             },
             "line": 9,
@@ -3972,7 +6081,7 @@
           },
           {
             "result": {
-              "duration": 74249600,
+              "duration": 189750100,
               "status": "passed"
             },
             "line": 10,
@@ -3984,7 +6093,7 @@
           },
           {
             "result": {
-              "duration": 6096300,
+              "duration": 28586600,
               "status": "passed"
             },
             "line": 11,
@@ -4002,7 +6111,7 @@
           },
           {
             "result": {
-              "duration": 8498500,
+              "duration": 64176500,
               "status": "passed"
             },
             "line": 12,
@@ -4021,11 +6130,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:31.011Z",
+        "start_timestamp": "2025-01-29T19:33:48.510Z",
         "before": [
           {
             "result": {
-              "duration": 11918100,
+              "duration": 64032400,
               "status": "passed"
             },
             "match": {
@@ -4042,7 +6151,7 @@
         "steps": [
           {
             "result": {
-              "duration": 46316100,
+              "duration": 215216600,
               "status": "passed"
             },
             "line": 6,
@@ -4054,7 +6163,7 @@
           },
           {
             "result": {
-              "duration": 119130600,
+              "duration": 472387700,
               "status": "passed"
             },
             "line": 7,
@@ -4066,7 +6175,7 @@
           },
           {
             "result": {
-              "duration": 113324100,
+              "duration": 239681100,
               "status": "passed"
             },
             "line": 8,
@@ -4084,7 +6193,7 @@
           },
           {
             "result": {
-              "duration": 67587000,
+              "duration": 128060100,
               "status": "passed"
             },
             "line": 9,
@@ -4102,7 +6211,7 @@
           },
           {
             "result": {
-              "duration": 73770100,
+              "duration": 292309200,
               "status": "passed"
             },
             "line": 10,
@@ -4114,7 +6223,7 @@
           },
           {
             "result": {
-              "duration": 9418500,
+              "duration": 30497200,
               "status": "passed"
             },
             "line": 11,
@@ -4132,7 +6241,7 @@
           },
           {
             "result": {
-              "duration": 6020400,
+              "duration": 56268400,
               "status": "passed"
             },
             "line": 12,
@@ -4151,11 +6260,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:31.464Z",
+        "start_timestamp": "2025-01-29T19:33:50.043Z",
         "before": [
           {
             "result": {
-              "duration": 10666200,
+              "duration": 61726500,
               "status": "passed"
             },
             "match": {
@@ -4172,7 +6281,7 @@
         "steps": [
           {
             "result": {
-              "duration": 48497600,
+              "duration": 219159000,
               "status": "passed"
             },
             "line": 6,
@@ -4184,7 +6293,7 @@
           },
           {
             "result": {
-              "duration": 123694000,
+              "duration": 268422900,
               "status": "passed"
             },
             "line": 7,
@@ -4196,7 +6305,7 @@
           },
           {
             "result": {
-              "duration": 122887000,
+              "duration": 300817900,
               "status": "passed"
             },
             "line": 8,
@@ -4214,7 +6323,7 @@
           },
           {
             "result": {
-              "duration": 151807700,
+              "duration": 189817800,
               "status": "passed"
             },
             "line": 9,
@@ -4232,7 +6341,7 @@
           },
           {
             "result": {
-              "duration": 75961300,
+              "duration": 146082600,
               "status": "passed"
             },
             "line": 10,
@@ -4244,7 +6353,7 @@
           },
           {
             "result": {
-              "duration": 8223400,
+              "duration": 19149100,
               "status": "passed"
             },
             "line": 11,
@@ -4262,7 +6371,7 @@
           },
           {
             "result": {
-              "duration": 6401700,
+              "duration": 34262700,
               "status": "passed"
             },
             "line": 12,
@@ -4281,11 +6390,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:32.018Z",
+        "start_timestamp": "2025-01-29T19:33:51.294Z",
         "before": [
           {
             "result": {
-              "duration": 10668900,
+              "duration": 29880000,
               "status": "passed"
             },
             "match": {
@@ -4302,7 +6411,7 @@
         "steps": [
           {
             "result": {
-              "duration": 50786400,
+              "duration": 107380600,
               "status": "passed"
             },
             "line": 6,
@@ -4314,7 +6423,7 @@
           },
           {
             "result": {
-              "duration": 132287600,
+              "duration": 254116300,
               "status": "passed"
             },
             "line": 7,
@@ -4326,7 +6435,7 @@
           },
           {
             "result": {
-              "duration": 116628400,
+              "duration": 309198200,
               "status": "passed"
             },
             "line": 8,
@@ -4344,7 +6453,7 @@
           },
           {
             "result": {
-              "duration": 78754600,
+              "duration": 216224000,
               "status": "passed"
             },
             "line": 9,
@@ -4362,7 +6471,7 @@
           },
           {
             "result": {
-              "duration": 64419900,
+              "duration": 218156800,
               "status": "passed"
             },
             "line": 10,
@@ -4374,7 +6483,7 @@
           },
           {
             "result": {
-              "duration": 8327000,
+              "duration": 19123000,
               "status": "passed"
             },
             "line": 11,
@@ -4392,7 +6501,7 @@
           },
           {
             "result": {
-              "duration": 6008800,
+              "duration": 32528400,
               "status": "passed"
             },
             "line": 12,
@@ -4411,11 +6520,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:32.494Z",
+        "start_timestamp": "2025-01-29T19:33:52.499Z",
         "before": [
           {
             "result": {
-              "duration": 11999100,
+              "duration": 28758700,
               "status": "passed"
             },
             "match": {
@@ -4432,7 +6541,7 @@
         "steps": [
           {
             "result": {
-              "duration": 41803900,
+              "duration": 106354300,
               "status": "passed"
             },
             "line": 6,
@@ -4444,7 +6553,7 @@
           },
           {
             "result": {
-              "duration": 103038500,
+              "duration": 298835500,
               "status": "passed"
             },
             "line": 7,
@@ -4456,7 +6565,7 @@
           },
           {
             "result": {
-              "duration": 111420900,
+              "duration": 247067200,
               "status": "passed"
             },
             "line": 8,
@@ -4474,7 +6583,7 @@
           },
           {
             "result": {
-              "duration": 138323400,
+              "duration": 197440600,
               "status": "passed"
             },
             "line": 9,
@@ -4492,7 +6601,7 @@
           },
           {
             "result": {
-              "duration": 64374700,
+              "duration": 219590800,
               "status": "passed"
             },
             "line": 10,
@@ -4504,7 +6613,7 @@
           },
           {
             "result": {
-              "duration": 7615300,
+              "duration": 35754800,
               "status": "passed"
             },
             "line": 11,
@@ -4522,7 +6631,7 @@
           },
           {
             "result": {
-              "duration": 6017900,
+              "duration": 69409800,
               "status": "passed"
             },
             "line": 12,
@@ -4541,11 +6650,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:32.986Z",
+        "start_timestamp": "2025-01-29T19:33:53.738Z",
         "before": [
           {
             "result": {
-              "duration": 12535400,
+              "duration": 64368800,
               "status": "passed"
             },
             "match": {
@@ -4562,7 +6671,7 @@
         "steps": [
           {
             "result": {
-              "duration": 42525300,
+              "duration": 169070400,
               "status": "passed"
             },
             "line": 6,
@@ -4574,7 +6683,7 @@
           },
           {
             "result": {
-              "duration": 104599800,
+              "duration": 263674800,
               "status": "passed"
             },
             "line": 7,
@@ -4586,7 +6695,7 @@
           },
           {
             "result": {
-              "duration": 103608700,
+              "duration": 261579700,
               "status": "passed"
             },
             "line": 8,
@@ -4604,7 +6713,7 @@
           },
           {
             "result": {
-              "duration": 74620100,
+              "duration": 174079000,
               "status": "passed"
             },
             "line": 9,
@@ -4622,7 +6731,7 @@
           },
           {
             "result": {
-              "duration": 70578900,
+              "duration": 137884500,
               "status": "passed"
             },
             "line": 10,
@@ -4634,7 +6743,7 @@
           },
           {
             "result": {
-              "duration": 8451500,
+              "duration": 13242000,
               "status": "passed"
             },
             "line": 11,
@@ -4652,7 +6761,7 @@
           },
           {
             "result": {
-              "duration": 5011800,
+              "duration": 39046000,
               "status": "passed"
             },
             "line": 12,
@@ -4671,11 +6780,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:33.415Z",
+        "start_timestamp": "2025-01-29T19:33:54.878Z",
         "before": [
           {
             "result": {
-              "duration": 10139400,
+              "duration": 29866600,
               "status": "passed"
             },
             "match": {
@@ -4692,7 +6801,7 @@
         "steps": [
           {
             "result": {
-              "duration": 42261200,
+              "duration": 84747900,
               "status": "passed"
             },
             "line": 6,
@@ -4704,7 +6813,7 @@
           },
           {
             "result": {
-              "duration": 103018100,
+              "duration": 285650200,
               "status": "passed"
             },
             "line": 7,
@@ -4716,7 +6825,7 @@
           },
           {
             "result": {
-              "duration": 95704900,
+              "duration": 220187500,
               "status": "passed"
             },
             "line": 8,
@@ -4734,7 +6843,7 @@
           },
           {
             "result": {
-              "duration": 77462300,
+              "duration": 126185900,
               "status": "passed"
             },
             "line": 9,
@@ -4752,7 +6861,7 @@
           },
           {
             "result": {
-              "duration": 75907000,
+              "duration": 173145900,
               "status": "passed"
             },
             "line": 10,
@@ -4764,7 +6873,7 @@
           },
           {
             "result": {
-              "duration": 6471100,
+              "duration": 24678300,
               "status": "passed"
             },
             "line": 11,
@@ -4782,7 +6891,7 @@
           },
           {
             "result": {
-              "duration": 5587200,
+              "duration": 44845400,
               "status": "passed"
             },
             "line": 12,
@@ -4801,11 +6910,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:35:33.845Z",
+        "start_timestamp": "2025-01-29T19:33:55.901Z",
         "before": [
           {
             "result": {
-              "duration": 10104100,
+              "duration": 56942000,
               "status": "passed"
             },
             "match": {
@@ -4822,7 +6931,7 @@
         "steps": [
           {
             "result": {
-              "duration": 39405100,
+              "duration": 188426100,
               "status": "passed"
             },
             "line": 6,
@@ -4834,7 +6943,7 @@
           },
           {
             "result": {
-              "duration": 105868600,
+              "duration": 272155000,
               "status": "passed"
             },
             "line": 7,
@@ -4846,7 +6955,7 @@
           },
           {
             "result": {
-              "duration": 97545900,
+              "duration": 241465100,
               "status": "passed"
             },
             "line": 8,
@@ -4864,7 +6973,7 @@
           },
           {
             "result": {
-              "duration": 63949000,
+              "duration": 232835700,
               "status": "passed"
             },
             "line": 9,
@@ -4882,7 +6991,7 @@
           },
           {
             "result": {
-              "duration": 67978300,
+              "duration": 339167400,
               "status": "passed"
             },
             "line": 10,
@@ -4894,7 +7003,7 @@
           },
           {
             "result": {
-              "duration": 7584400,
+              "duration": 33118100,
               "status": "passed"
             },
             "line": 11,
@@ -4912,7 +7021,7 @@
           },
           {
             "result": {
-              "duration": 5294700,
+              "duration": 77900100,
               "status": "passed"
             },
             "line": 12,
