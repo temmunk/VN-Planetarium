@@ -8,6 +8,7 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
         PlanetServiceNegativeCreateTest.class,
         PlanetServiceNegativeRetrievalTest.class,
+        PlanetServiceNegativeUpdateTest.class,
         PlanetServiceNegativeDeleteTest.class,
         PlanetServicePositiveTest.class
 })

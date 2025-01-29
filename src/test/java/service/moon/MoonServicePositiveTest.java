@@ -19,6 +19,8 @@ import java.util.Optional;
 public class MoonServicePositiveTest extends MoonServiceTest{
 
     private Moon positiveMoon;
+    private Moon positiveUpdatedMoon;
+    private Moon existingMoon;
     private String jpgData;
     private String pngData;
     private String moonName;
@@ -33,6 +35,8 @@ public class MoonServicePositiveTest extends MoonServiceTest{
     public void positiveSetup()
     {
         positiveMoon = new Moon(0, "Mo-on 6_16", 1);
+        positiveUpdatedMoon = new Moon(1, "Mo-on 6_16", 2);
+        existingMoon = new Moon(1, "Luna", 1);
         jpgData = getData("src/test/resources/Celestial-Images/moon-1.jpg");
         pngData = getData("src/test/resources/Celestial-Images/Moon png.png");
         mockReturnedMoon = new Moon(3, "Mo-on 6_16", 1);
@@ -100,6 +104,18 @@ public class MoonServicePositiveTest extends MoonServiceTest{
         List result = moonService.selectByPlanet(planetId);
         Assert.assertEquals(mockReturnedMoonsList, result);
 //        Assert.fail("selectByPlanet() in MoonService returns List object, where we expect it to return ArrayList.");
+    }
+
+    @Test
+    public void updateMoonServicePosiiveTest()
+    {
+        positiveUpdatedMoon.setImageData(pngData);
+        existingMoon.setImageData(jpgData);
+        Mockito.when(moonDao.readMoon(1)).thenReturn(Optional.of(existingMoon));
+        Mockito.when(moonDao.readMoon("Mo-on 6_16")).thenReturn(Optional.empty());
+        Mockito.when(moonDao.updateMoon(positiveUpdatedMoon)).thenReturn(Optional.of(positiveUpdatedMoon));
+        Moon updateMoonResult = moonService.updateMoon(positiveUpdatedMoon);
+        Assert.assertEquals(positiveUpdatedMoon, updateMoonResult);
     }
 
     @Test

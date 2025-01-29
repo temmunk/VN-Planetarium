@@ -19,6 +19,7 @@ public class PlanetServicePositiveTest extends PlanetServiceTest {
 
     private Planet positivePlanet;
     private Planet positivePlanet2;
+    private Planet positiveUpdatedPlanet;
     private String positivePlanetNameToDelete;
     private Planet mockReturnedPlanet;
     private Planet mockReturnedPlanet2;
@@ -38,6 +39,7 @@ public class PlanetServicePositiveTest extends PlanetServiceTest {
     public void positiveSetup() throws IOException {
         positivePlanet = new Planet();
         positivePlanet2 = new Planet();
+        positiveUpdatedPlanet = new Planet();
         positivePlanetNameToDelete = "Earth";
         mockReturnedPlanet = new Planet();
         mockReturnedPlanet2 = new Planet();
@@ -56,6 +58,10 @@ public class PlanetServicePositiveTest extends PlanetServiceTest {
         positivePlanet2.setPlanetName("Mars 6_16");
         positivePlanet2.setOwnerId(1);
         positivePlanet2.setImageData(encodedPNGImage);
+        positiveUpdatedPlanet.setPlanetId(1);
+        positiveUpdatedPlanet.setPlanetName("E-arth 6_16");
+        positiveUpdatedPlanet.setOwnerId(1);
+        positiveUpdatedPlanet.setImageData(encodedPNGImage);
         mockReturnedPlanet2.setPlanetName("Mars 6_16");
         mockReturnedPlanet2.setPlanetId(3);
         mockReturnedPlanet2.setOwnerId(1);
@@ -103,6 +109,15 @@ public class PlanetServicePositiveTest extends PlanetServiceTest {
         Mockito.when(planetDao.readPlanetsByOwner(1)).thenReturn(ownerOnePlanetList);
         List result = planetService.selectByOwner(1);
         Assert.assertEquals(ownerOnePlanetList,result);
+    }
+
+    @Test
+    public void positiveUpdatePlanet() {
+        Mockito.when(planetDao.readPlanet(1)).thenReturn(Optional.of(earth));
+        Mockito.when(planetDao.readPlanet("E-arth 6_16")).thenReturn(Optional.empty());
+        Mockito.when(planetDao.updatePlanet(positiveUpdatedPlanet)).thenReturn(Optional.of(positiveUpdatedPlanet));
+        Planet planetUpdateResult = planetService.updatePlanet(positiveUpdatedPlanet);
+        Assert.assertEquals(positiveUpdatedPlanet, planetUpdateResult);
     }
 
     @Test

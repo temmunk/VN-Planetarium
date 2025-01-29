@@ -1,8 +1,11 @@
 package com.revature.planetarium.service.moon;
 
 import com.revature.planetarium.entities.Moon;
+import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.MoonFail;
 import com.revature.planetarium.repository.moon.MoonDao;
+import com.revature.planetarium.repository.planet.PlanetDao;
+import com.revature.planetarium.repository.planet.PlanetDaoImp;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,9 +15,11 @@ import java.util.regex.Pattern;
 public class MoonServiceImp<T> implements MoonService<T> {
     
     private MoonDao moonDao;
+    private PlanetDao planetDao;
 
     public MoonServiceImp(MoonDao moonDao) {
         this.moonDao = moonDao;
+        this.planetDao = new PlanetDaoImp();
     }
 
     @Override
@@ -87,17 +92,35 @@ public class MoonServiceImp<T> implements MoonService<T> {
 
     @Override
     public Moon updateMoon(Moon moon) {
+        Pattern p = Pattern.compile("^[\\w\\-\\s]+$", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = p.matcher(moon.getMoonName());
+
         Optional<Moon> existingMoon = moonDao.readMoon(moon.getMoonId());
         if (existingMoon.isEmpty()) {
             throw new MoonFail("Moon not found, could not update");
         }
-        if (moon.getMoonName().length() < 1 || moon.getMoonName().length() > 30) {
+        if (moon.getMoonName().length() < 1 || moon.getMoonName().length() > 30 || !matcher.matches()) {
             throw new MoonFail("Invalid moon name");
         }
+
+        if (moon.getImageData() != null && !moon.getImageData().startsWith("/9j/")
+                && !moon.getImageData().startsWith("iVBORw0KGgo")) {
+            throw new MoonFail("Invalid file type");
+        }
+
         Optional<Moon> moonWithSameName = moonDao.readMoon(moon.getMoonName());
         if (moonWithSameName.isPresent() && moonWithSameName.get().getMoonId() != moon.getMoonId()) {
             throw new MoonFail("Invalid moon name");
         }
+
+        List<Planet> planets = planetDao.readAllPlanets();
+        boolean planetFound = false;
+        for (Planet planet : planets) {
+            if (planet.getPlanetId() == moon.getOwnerId()) planetFound = true;
+        }
+        if (!planetFound) throw new MoonFail("Invalid planet id");
+
+
         Optional<Moon> updatedMoon = moonDao.updateMoon(moon);
         if (updatedMoon.isPresent()) {
             return updatedMoon.get();
