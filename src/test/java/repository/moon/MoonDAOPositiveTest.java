@@ -1,6 +1,7 @@
 package repository.moon;
 
 import com.revature.planetarium.entities.Moon;
+import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.repository.moon.MoonDao;
 import com.revature.planetarium.repository.moon.MoonDaoImp;
 import org.junit.Assert;
@@ -17,6 +18,7 @@ import java.util.Optional;
 public class MoonDAOPositiveTest extends MoonDAOTest{
     private MoonDao moonDao;
     private Moon positiveMoon;
+    private Moon positiveMoonToUpdate;
     private String jpgData;
     private String pngData;
     private String moonName;
@@ -29,6 +31,8 @@ public class MoonDAOPositiveTest extends MoonDAOTest{
         jpgData = getData("src/test/resources/Celestial-Images/moon-1.jpg");
         pngData = getData("src/test/resources/Celestial-Images/Moon png.png");
         moonName = "Luna";
+        positiveMoonToUpdate = new Moon(1, "Mo-on 6_16", 2);
+        positiveMoonToUpdate.setImageData(pngData);
     }
 
     private String getData(String filePath)
@@ -76,6 +80,14 @@ public class MoonDAOPositiveTest extends MoonDAOTest{
         Assert.assertFalse(response.isEmpty());
         Assert.assertEquals(1, response.size());
 
+    }
+
+    @Test
+    public void updateMoonTest()
+    {
+        Optional<Moon> moonUpdateResult = moonDao.updateMoon(positiveMoonToUpdate);
+        Assert.assertTrue(moonUpdateResult.isPresent());
+        Assert.assertEquals(moonUpdateResult.get(), positiveMoonToUpdate);
     }
 
     @Test

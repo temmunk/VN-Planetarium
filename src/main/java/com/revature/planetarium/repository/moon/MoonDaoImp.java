@@ -180,6 +180,11 @@ public class MoonDaoImp implements MoonDao {
             stmt.setBytes(3, moon.imageDataAsByteArray());
             stmt.setInt(4, moon.getMoonId());
 
+            Optional<Moon> existingMoon = readMoon(moon.getMoonName());
+            if(existingMoon.isPresent()) {
+                throw new MoonFail("Invalid moon name");
+            }
+
             if (moon.getImageData() != null) {
                 if (!moon.getImageData().startsWith("/9j/") && !moon.getImageData().startsWith("iVBORw0KGgo")) {
                     throw new MoonFail("Invalid file type");
@@ -188,8 +193,8 @@ public class MoonDaoImp implements MoonDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0 ? Optional.of(moon) : Optional.empty();
         } catch (SQLException e) {
-
-            throw new MoonFail(e.getMessage());
+            if (e.getMessage().contains("FOREIGN KEY")) throw new MoonFail("Invalid planet id");
+            throw new MoonFail("Invalid moon name");
         }
     }
 

@@ -8,7 +8,8 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({
         PlanetDAOPositiveTest.class,
         PlanetDAONegativeTest.class,
-        PlanetDAOCreatePlanetNegativeTest.class
+        PlanetDAOCreatePlanetNegativeTest.class,
+        PlanetDAOUpdatePlanetNegativeTest.class
 })
 public class PlanetDAOTestSuite {
 
