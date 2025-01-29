@@ -77,17 +77,24 @@ public class PlanetServiceImp<T> implements PlanetService<T> {
 
     @Override
     public Planet updatePlanet(Planet planet) {
+        Pattern p = Pattern.compile("^[\\w\\-\\s]+$", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = p.matcher(planet.getPlanetName());
+
         Optional<Planet> existingPlanet = planetDao.readPlanet(planet.getPlanetId());
         if (existingPlanet.isEmpty()) {
             throw new PlanetFail("Planet not found, could not update");
         }
-        if (planet.getPlanetName().length() < 1 || planet.getPlanetName().length() > 30) {
+        if (planet.getPlanetName().length() < 1 || planet.getPlanetName().length() > 30 || !matcher.matches()) {
             throw new PlanetFail("Invalid planet name");
         }
         if (!planet.getPlanetName().equals(existingPlanet.get().getPlanetName())) {
             if (planetDao.readPlanet(planet.getPlanetName()).isPresent()) {
                 throw new PlanetFail("Invalid planet name");
             }
+        }
+        if (planet.getImageData() != null && !planet.getImageData().startsWith("/9j/")
+                && !planet.getImageData().startsWith("iVBORw0KGgo")) {
+            throw new PlanetFail("Invalid file type");
         }
         Optional<Planet> updatedPlanet = planetDao.updatePlanet(planet);
         if (updatedPlanet.isPresent()) {

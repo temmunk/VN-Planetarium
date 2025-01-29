@@ -8,6 +8,7 @@ import static org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({
         MoonServicePositiveTest.class,
         MoonServiceCreationNegativeTest.class,
+        MoonServiceUpdateNegativeTest.class,
         MoonServiceDeletionNegativeTest.class,
         MoonServiceRetrievalNegativeTest.class
 })
