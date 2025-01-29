@@ -26,7 +26,7 @@ public class ViewSteps {
     public void greeting_message_should_be_present(){
         try{
             Assert.assertEquals(String.format("Expected 'Welcome to the Home Page Batman' but got %s",
-                    TestRunner.homePage.getHomePageGreeting()),"Welcome to the Home Page Batman",
+                    TestRunner.homePage.getHomePageGreeting()),"Welcome to your Planetarium Batman!",
                     TestRunner.homePage.getHomePageGreeting());
         }
         finally {

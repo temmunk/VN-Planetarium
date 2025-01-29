@@ -124,8 +124,7 @@
     <!--        </div>-->
     <div id="inputContainer"></div>
 </div>
-<div>
-    <table id="celestialTable">
+    <table class="styled-table" id="celestialTable">
         <tr>
             <th>Type</th>
             <th>ID</th>
@@ -133,7 +132,6 @@
             <th>Owner</th>
         </tr>
     </table>
-</div>
 <script>
 
     populateCelestialTable();
@@ -669,7 +667,7 @@
                 first = false;
                 continue;
             }
-            if(row.getElementsByTagName("td")[0].textContent === "planet" && row.getElementsByTagName("td")[1].textContent === planetId){
+            if(row.getElementsByTagName("td")[0].textContent === "Planet" && row.getElementsByTagName("td")[1].textContent === planetId){
                 return true;
             }
         }
@@ -691,7 +689,7 @@
             first = false; // Skip the header row
             continue;
         }
-        if (row.getElementsByTagName("td")[0].textContent === "moon" &&
+        if (row.getElementsByTagName("td")[0].textContent === "Moon" &&
             row.getElementsByTagName("td")[2].textContent === moonName) {
             return true; // Moon name already exists
         }
