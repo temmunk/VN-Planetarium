@@ -8,31 +8,17 @@ import testrunner.TestRunner;
 
 public class MoonDeletionSteps {
 
-    @When ("the user clicks the moon deletion input")
-    public void user_clicks_moon_deletion_input(){
-        TestRunner.homePage.selectMoonInput();
+    @When("the user clicks the delete button next to a moon")
+    public void the_user_clicks_the_delete_button_next_to_a_moon() {
+        TestRunner.homePage.clickDeleteMoonButton();
     }
 
-    @And("the user provides valid moon name to be deleted")
-    public void user_provides_valid_moon_to_be_deleted(){
-        TestRunner.homePage.inputValidMoonToDelete();
-        TestRunner.homePage.clickDelete();
-    }
 
-    @Then ("the table should refresh after moon removed")
-    public void table_should_refresh() throws InterruptedException {
-        TestRunner.homePage.waitUntilTableChanges(3);
-    }
-
-    @And ("the user should be able to see the named moon removed")
-    public void user_should_see_moon_removed(){
-        Assert.assertFalse(TestRunner.homePage.isCelestialBodyDeleted("Luna"));
-    }
-
-    @And ("the use provides invalid moon name to be deleted")
-    public void user_provides_invalid_moon_name_to_be_deleted(){
-        TestRunner.homePage.inputInvalidMoonToDelete();
-        TestRunner.homePage.clickDelete();
+    @Then("the moon should be deleted from the table")
+    public void the_moon_should_be_deleted_from_the_table() {
+        TestRunner.homePage.waitUntilTableChanges(6);
+        Assert.assertFalse(TestRunner.homePage.isCelestialBodyDeleted("Titan"));
+        TestRunner.homePage.logout();
     }
 
 }
