@@ -14,11 +14,13 @@
       height: 100vh;
     }
     .container {
-      background-color: #333333;
+      background-color: rgba(51, 51, 51, 0.4);
       padding: 20px;
+      padding-top: 5px;
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       width: 300px;
+      font-size: 14px;
     }
     .container input[type="text"],
     .container input[type="password"] {
@@ -47,7 +49,7 @@
 </head>
 <body>
   <div class="container">
-    <h1>Planetarium Login</h1>
+    <h1>Login to your planetarium</h1>
     <form id="loginForm">
       <input type="text" id="usernameInput" name="username" placeholder="Username">
       <input type="password" id="passwordInput" name="password" placeholder="Password">
@@ -57,6 +59,8 @@
   </div>
 </body>
 <script>
+
+
 
   async function login(){
     const username = document.getElementById('usernameInput').value;
@@ -72,6 +76,8 @@
         password: password
     };
 
+
+
     const loginBody = JSON.stringify(loginData);
 
     const response = await fetch('http://{URL}:{PORT}/login', {
@@ -79,7 +85,7 @@
         headers: headersList,
         credentials: 'include',
         body: loginBody
-    }) 
+    })
     if (response.status === 200) {
       const data = await response.json();
       sessionStorage.setItem("user", data.username)
@@ -90,9 +96,29 @@
     }
   }
 
+
   document.getElementById('loginForm').addEventListener('submit', function(event) {
       event.preventDefault();
       login();
   });
-  </script>
+      async function setBackgroundImage(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        response.text().then(function (imageData) {
+            document.body.style.backgroundImage = `url(data:image/jpg;base64,${imageData})`;
+            document.body.style.backgroundSize = 'cover';
+            document.body.style.backgroundRepeat = 'no-repeat';
+            document.body.style.backgroundPosition = 'center center';
+            document.body.style.backgroundAttachment = 'fixed';
+        });
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+       setBackgroundImage('http://{URL}:{PORT}/backgroundLogin');
+
+</script>
 </html>

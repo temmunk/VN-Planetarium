@@ -72,4 +72,18 @@ public class ViewController {
             }
         }
     }
+
+    public void backgroundImageLogin(Context ctx) throws IOException {
+        try (InputStream is = getClass().getClassLoader().getResourceAsStream("images/spaceBackground.jpg")) {
+            if (is != null) {
+                byte[] fileBytes = is.readAllBytes();
+                String imageDataBase64 = Base64.getEncoder().encodeToString(fileBytes);
+                ctx.result(imageDataBase64);
+            } else {
+                // Handle resource not found
+                ctx.result("Resource not found");
+                ctx.status(404);
+            }
+        }
+    }
 }

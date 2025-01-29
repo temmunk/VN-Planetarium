@@ -6,6 +6,43 @@
         body {
         overscroll-behavior-y: none;
         }
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            //min-width: 400px;
+            width: auto;
+            margin-left: auto;
+    		margin-right: auto;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        .styled-table th {
+            background-color: rgba(3, 188, 255, 0.5);
+            color: #ffffff;
+            text-align: left;
+        }
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+        }
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #ffffff;
+        }
+
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid rgba(3, 188, 255, 1);
+        }
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: rgba(3, 188, 255, 1);
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -18,7 +55,7 @@
         }
 
         h1 {
-            color: #333;
+            color: #ffffff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
 
@@ -60,10 +97,11 @@
 
         .center{
             margin: auto;
-            width: 50%;
+            width: 45%;
             padding: 10px;
-            background-color: rgba(192, 192, 192, 0.85);
+            background-color: rgba(255, 255, 255, 0.3);
             text-align: center;
+             color: #ffffff;
 
         }
         .heading{
@@ -74,7 +112,7 @@
 <body>
 <button class="logout-button" id="logoutButton" onclick="logout()">Logout</button>
 <div class="center">
-    <h1 id="greeting">Welcome to the Home Page</h1>
+    <h1 id="greeting"></h1>
     <h3>Please select and enter your celestial inputs:</h3>
     <select id="locationSelect" class="heading">
         <option value="moon">Moon</option>
@@ -86,8 +124,7 @@
     <!--        </div>-->
     <div id="inputContainer"></div>
 </div>
-<div class="center" style="border: 3px solid black;">
-    <table id="celestialTable">
+    <table class="styled-table" id="celestialTable">
         <tr>
             <th>Type</th>
             <th>ID</th>
@@ -95,12 +132,11 @@
             <th>Owner</th>
         </tr>
     </table>
-</div>
 <script>
 
     populateCelestialTable();
     createMoonInputs();
-    greeting.textContent = `Welcome to the Home Page ${sessionStorage.getItem("user")}`
+    greeting.textContent = `Welcome to your Planetarium ${sessionStorage.getItem("user")}!`
     document.getElementById('locationSelect').addEventListener('change', function() {
         let selectedValue = this.value;
         let inputContainer = document.getElementById('inputContainer');
@@ -238,7 +274,7 @@
             const imageCell = row.insertCell(4);
             const actionsCell = row.insertCell(5);
 
-            typeCell.textContent = 'planet';
+            typeCell.textContent = 'Planet';
             idCell.textContent = planet.planetId;
             nameCell.textContent = planet.planetName;
             ownerCell.textContent = planet.ownerId;
@@ -307,7 +343,7 @@
             const imageCell = row.insertCell(4);
             const actionsCell = row.insertCell(5);
 
-            typeCell.textContent = 'moon';
+            typeCell.textContent = 'Moon';
             idCell.textContent = moon.moonId;
             nameCell.textContent = moon.moonName;
             ownerCell.textContent = moon.ownerId;
@@ -627,8 +663,9 @@
         }
         response.text().then(function (imageData) {
             document.body.style.backgroundImage = `url(data:image/jpg;base64,${imageData})`;
-            document.body.style.backgroundSize = 'auto 100%';
-            document.body.style.backgroundPosition = 'left top';
+            document.body.style.backgroundSize = 'cover';
+            document.body.style.backgroundRepeat = 'no-repeat';
+            document.body.style.backgroundPosition = 'center center';
             document.body.style.backgroundAttachment = 'fixed';
         });
 
@@ -647,7 +684,7 @@
                 first = false;
                 continue;
             }
-            if(row.getElementsByTagName("td")[0].textContent === "planet" && row.getElementsByTagName("td")[1].textContent === planetId){
+            if(row.getElementsByTagName("td")[0].textContent === "Planet" && row.getElementsByTagName("td")[1].textContent === planetId){
                 return true;
             }
         }
@@ -669,7 +706,7 @@
             first = false; // Skip the header row
             continue;
         }
-        if (row.getElementsByTagName("td")[0].textContent === "moon" &&
+        if (row.getElementsByTagName("td")[0].textContent === "Moon" &&
             row.getElementsByTagName("td")[2].textContent === moonName) {
             return true; // Moon name already exists
         }
