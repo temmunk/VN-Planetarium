@@ -68,7 +68,7 @@ public class PlanetController {
             ctx.json(updatedPlanet);
             ctx.status(200);
         } catch (PlanetFail e) {
-            ctx.result(e.getMessage());
+            ctx.json(Map.of("message",e.getMessage()));
             ctx.status(400);
         }
 
