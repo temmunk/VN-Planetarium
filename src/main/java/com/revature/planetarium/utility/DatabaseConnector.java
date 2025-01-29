@@ -15,7 +15,9 @@ public class DatabaseConnector {
     public static Connection getConnection() throws SQLException {
 
         String url = System.getenv("DATABASE_URL");
-        return DriverManager.getConnection(url);
+        String username = System.getenv("DB_USER");
+        String password = System.getenv("DB_PASSWORD");
+        return DriverManager.getConnection(url, username, password);
     }
 
     private static void testDatabaseConnection() {
