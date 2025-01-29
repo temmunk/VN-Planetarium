@@ -14,6 +14,7 @@ public class PlanetDAOPositiveTest extends PlanetDAOTest {
     private String existingPlanetName;
     private String positiveImageData1;
     private String positiveImageData2;
+    private Planet positivePlanetToUpdate;
 
     @Before
     public void positiveSetup() {
@@ -21,6 +22,11 @@ public class PlanetDAOPositiveTest extends PlanetDAOTest {
         existingPlanetName = "Earth";
         positiveImageData1 = getImageData("src/test/resources/Celestial-Images/moon-1.jpg");
         positiveImageData2 = getImageData("src/test/resources/Celestial-Images/Moon png.png");
+        positivePlanetToUpdate = new Planet();
+        positivePlanetToUpdate.setPlanetId(1);
+        positivePlanetToUpdate.setPlanetName("E-arth 6_16");
+        positivePlanetToUpdate.setOwnerId(1);
+        positivePlanetToUpdate.setImageData(getImageData("src/test/resources/Celestial-Images/planet-5.jpg"));
     }
 
     @Test
@@ -65,6 +71,13 @@ public class PlanetDAOPositiveTest extends PlanetDAOTest {
     public void readPlanetsByOwnerPositive() {
         List<Planet> response = planetDao.readPlanetsByOwner(1);
         Assert.assertFalse(response.isEmpty());
+    }
+
+    @Test
+    public void updatePlanetPositive() {
+        Optional<Planet> planetUpdateResult = planetDao.updatePlanet(positivePlanetToUpdate);
+        Assert.assertTrue(planetUpdateResult.isPresent());
+        Assert.assertEquals(planetUpdateResult.get(), positivePlanetToUpdate);
     }
 
     @Test

@@ -11,6 +11,7 @@ import static org.junit.runners.Suite.SuiteClasses;
         MoonDAOPositiveTest.class,
         MoonDAOCreationNegativeTest.class,
         MoonDAORetrievalNegativeTest.class,
+        MoonDAOUpdateNegativeTest.class,
         MoonDAODeletionNegativeTest.class
 })
 public class MoonDAOTestSuite {
