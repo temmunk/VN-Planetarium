@@ -7,16 +7,25 @@ import java.sql.SQLException;
 import org.sqlite.SQLiteConfig;
 
 public class DatabaseConnector {
+    private static final String url = System.getenv("DATABASE_URL");
+    private static final String username = System.getenv("DB_USER");
+    private static final String password = System.getenv("DB_PASSWORD");
+
 
     static {
-        testDatabaseConnection(); // Test connection on startup
+        try {
+            Class.forName("org.postgresql.Driver"); // Explicitly load PostgreSQL driver
+            testDatabaseConnection();
+        } catch (ClassNotFoundException e) {
+            System.err.println("❌ PostgreSQL JDBC Driver not found. Make sure it's in your dependencies.");
+            e.printStackTrace();
+            System.exit(1); // Exit if driver is missing
+        }
     }
 
     public static Connection getConnection() throws SQLException {
 
-        String url = System.getenv("DATABASE_URL");
-        String username = System.getenv("DB_USER");
-        String password = System.getenv("DB_PASSWORD");
+
         return DriverManager.getConnection(url, username, password);
     }
 
