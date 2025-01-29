@@ -1,5 +1,4 @@
-#this feature allows users to add moons to their planetarium
-#according to User Story 4
+#this feature allows users to add moons to their planetarium according to User Story 4
 
 Feature: Moon addition
    #because the user has to be properly logged in to see the moon creation input, we can set up a background
@@ -14,6 +13,7 @@ Feature: Moon addition
     When the user decides to upload an image
     And the user provides a jpg filetype
     And the user clicks submit
+    And the user accepts alert
     Then the table should refresh after moon added
     And the user should be able to see the new moon added
 
@@ -24,6 +24,7 @@ Feature: Moon addition
     When the user decides to upload an image
     And the user provides a png filetype
     And the user clicks submit
+    And the user accepts alert
     Then the table should refresh after moon added
     And the user should be able to see the new moon added
 
@@ -33,6 +34,7 @@ Feature: Moon addition
     And the user provides valid owner planet
     When the user decides not to upload an image
     And the user clicks submit
+    And the user accepts alert
     Then the table should refresh after moon added
     And the user should be able to see the new moon added
 
