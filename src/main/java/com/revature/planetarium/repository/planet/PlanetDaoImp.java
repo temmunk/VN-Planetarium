@@ -23,6 +23,13 @@ public class PlanetDaoImp implements PlanetDao {
             stmt.setString(1, planet.getPlanetName());
             stmt.setInt(2, planet.getOwnerId());
             stmt.setBytes(3, planet.imageDataAsByteArray());
+
+            if (planet.getImageData() != null) {
+                if (!planet.getImageData().startsWith("/9j/") && !planet.getImageData().startsWith("iVBORw0KGgo")) {
+                    throw new PlanetFail("Invalid file type");
+                }
+            }
+
             stmt.executeUpdate();
             try (ResultSet rs = stmt.getGeneratedKeys()){
                 if (rs.next()) {
@@ -32,8 +39,8 @@ public class PlanetDaoImp implements PlanetDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println(e);
-            throw new PlanetFail(e.getMessage());
+
+            throw new PlanetFail("Invalid planet name");
         }
         return Optional.empty();
     }
@@ -54,7 +61,7 @@ public class PlanetDaoImp implements PlanetDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new PlanetFail(e.getMessage());
         }
         return Optional.empty();
@@ -76,7 +83,7 @@ public class PlanetDaoImp implements PlanetDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new PlanetFail(e.getMessage());
         }
         return Optional.empty();
@@ -101,7 +108,7 @@ public class PlanetDaoImp implements PlanetDao {
                     planets.add(planet);
                 }
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new PlanetFail(e.getMessage());
         }
         return planets;
@@ -128,7 +135,7 @@ public class PlanetDaoImp implements PlanetDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new PlanetFail(e.getMessage());
         }
         return planets;
@@ -137,14 +144,21 @@ public class PlanetDaoImp implements PlanetDao {
     @Override
     public Optional<Planet> updatePlanet(Planet planet) {
         try (Connection conn = DatabaseConnector.getConnection();
-             PreparedStatement stmt = conn.prepareStatement("UPDATE planets SET name = ?, ownerId = ? WHERE id = ?")) {
+             PreparedStatement stmt = conn.prepareStatement("UPDATE planets SET name = ?, ownerId = ?, image = ? WHERE id = ?")) {
             stmt.setString(1, planet.getPlanetName());
             stmt.setInt(2, planet.getOwnerId());
-            stmt.setInt(3, planet.getPlanetId());
+            stmt.setBytes(3, planet.imageDataAsByteArray());
+            stmt.setInt(4, planet.getPlanetId());
+
+            if (planet.getImageData() != null) {
+                if (!planet.getImageData().startsWith("/9j/") && !planet.getImageData().startsWith("iVBORw0KGgo")) {
+                    throw new PlanetFail("Invalid file type");
+                }
+            }
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0 ? Optional.of(planet) : Optional.empty();
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new PlanetFail(e.getMessage());
         }
     }
@@ -161,7 +175,7 @@ public class PlanetDaoImp implements PlanetDao {
             int rowsDeleted = stmt.executeUpdate();
             return rowsDeleted > 0;
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new PlanetFail(e.getMessage());
         }
     }
@@ -172,9 +186,10 @@ public class PlanetDaoImp implements PlanetDao {
              PreparedStatement stmt = conn.prepareStatement("DELETE FROM planets WHERE name = ?")) {
             stmt.setString(1, name);
             int rowsDeleted = stmt.executeUpdate();
+            if (rowsDeleted == 0) throw new PlanetFail("Invalid planet name");
             return rowsDeleted > 0;
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new PlanetFail(e.getMessage());
         }
     }

@@ -51,7 +51,9 @@ public class JavalinSetup {
 
         // for background image
         app.get("/background", viewController::backgroundImage);
-        
+        app.get("/backgroundLogin", viewController::backgroundImageLogin);
+
+
         /*
          * Mapping Pages to Javalin app
          */
@@ -67,6 +69,8 @@ public class JavalinSetup {
         app.post("/login", userController::login);
         app.post("/register", userController::createUser);
         app.post("/logout", userController::logout);
+        app.get("/api/users/check-username", userController::checkUsername);
+
 
         /*
          * Mapping Planet Routes
@@ -87,6 +91,7 @@ public class JavalinSetup {
         app.get("/planetarium/moon/owner/{planetId}", moonController::findAllByPlanet);
         app.get("/planetarium/moon/{identifier}", moonController::findByIdentifier);
         app.post("/planetarium/moon", moonController::createMoon);
+        app.patch("/planetarium/moon", moonController::updateMoon);
         app.delete("/planetarium/moon/{identifier}", moonController::deleteMoon);
     }
     

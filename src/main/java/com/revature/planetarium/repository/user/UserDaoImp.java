@@ -27,8 +27,11 @@ public class UserDaoImp implements UserDao {
                 }
             }
         } catch (SQLException e) {
-            System.out.println(e);
-            throw new UserFail(e.getMessage());
+            if (e.getMessage().contains("username")){
+                throw new UserFail("Invalid username");
+            } else if (e.getMessage().contains("password")) {
+                throw new UserFail("Invalid password");
+            }
         }
         return Optional.empty();
     }
@@ -49,7 +52,7 @@ public class UserDaoImp implements UserDao {
             }
             return Optional.empty();
         } catch (SQLException e) {
-            System.out.println(e);
+
             throw new UserFail(e.getMessage());
         }
     }
