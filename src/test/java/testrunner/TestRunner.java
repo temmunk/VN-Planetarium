@@ -16,7 +16,7 @@ import java.time.Duration;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "classpath:features/HomePage.feature",
+        features = "classpath:features",
         glue = "steps",
         plugin = {"pretty",
                 "html:src/test/resources/reports/html-report.html",

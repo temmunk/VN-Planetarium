@@ -31,11 +31,11 @@ public class LoginPage {
     }
 
     public void goToLogin(){
-        driver.get("http://localhost:8080");
+        driver.get("http://98.81.140.90:8080");
     }
 
     public void setUpLoggedInUser(){
-        driver.get("http://localhost:8080/");
+        driver.get("http://98.81.140.90:8080/");
         usernameInput.sendKeys("Batman");
         passwordInput.sendKeys("Iamthenight1939");
         loginButton.click();
