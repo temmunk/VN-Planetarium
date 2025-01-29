@@ -76,7 +76,7 @@ public class MoonController {
             ctx.json(updatedMoon);
             ctx.status(200);
         } catch (MoonFail e) {
-            ctx.result(e.getMessage());
+            ctx.json(Map.of("message",e.getMessage()));
             ctx.status(400);
         }
 
