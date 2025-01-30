@@ -340,9 +340,9 @@
             moonName: moonName,
             ownerId: ownerId,
         }
-        
+
         if (imageData) updatedMoon.imageData = imageData;
-        
+
 
         const response = await fetch(`http://{URL}:{PORT}/planetarium/moon`, {
             method: 'PATCH',
