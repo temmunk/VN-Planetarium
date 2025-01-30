@@ -7,6 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pom.HomePage;
 import pom.LoginPage;
@@ -32,7 +33,11 @@ public class TestRunner {
 
     @BeforeClass
     public static void setup(){
-        driver = new ChromeDriver();
+        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+
+        driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
         wait = new WebDriverWait(driver, Duration.ofSeconds(2));
         homePage = new HomePage(driver);

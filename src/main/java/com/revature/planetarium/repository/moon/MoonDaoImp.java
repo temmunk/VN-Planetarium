@@ -62,7 +62,7 @@ public class MoonDaoImp implements MoonDao {
             }
         } catch (Exception e) {
 
-            if (e.getMessage().contains("FOREIGN KEY")){
+            if (e.getMessage().contains("moons_myplanetid_fkey")){
                 throw new MoonFail("Invalid planet ID");
             }
             throw new MoonFail(e.getMessage());
