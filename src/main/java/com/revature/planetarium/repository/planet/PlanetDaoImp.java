@@ -158,8 +158,7 @@ public class PlanetDaoImp implements PlanetDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0 ? Optional.of(planet) : Optional.empty();
         } catch (SQLException e) {
-
-            throw new PlanetFail(e.getMessage());
+            throw new PlanetFail("Invalid planet name");
         }
     }
 
