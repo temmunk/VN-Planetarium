@@ -42,7 +42,7 @@ CREATE TABLE planets (
 );
 
 INSERT INTO planets (name, ownerId, image) VALUES ('Earth', 1, ?);
-INSERT INTO planets (name, ownerId, image) VALUES ('Mars', 1, ?);
+INSERT INTO planets (name, ownerId, image) VALUES ('Pluto', 1, ?);
 
 CREATE TABLE moons (
     id SERIAL PRIMARY KEY,
