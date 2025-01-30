@@ -15,12 +15,14 @@ public class Main {
 				config.bundledPlugins.enableCors(cors -> {
 					cors.addRule(it -> {
 						it.anyHost();
+						it.allowCredentials = true;
+						it.exposeHeader("*");
 					});
 				});
 				config.bundledPlugins.enableDevLogging();
 			});
 			JavalinSetup.mapRoutes(app);
-			app.start(8080);	
+			app.start("0.0.0.0", 8080);
 		} catch (ConfigurationFail e) {
 			e.printStackTrace();
 		}

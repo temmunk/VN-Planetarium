@@ -1,69 +1,61 @@
--- Use this script to set up your Planetarium database: do not edit the script
+-- PostgreSQL setup script for Planetarium database
 
--- needed for referential integrity enforcement if executing the queries manually
-PRAGMA foreign_keys = ON;
 
-drop table if exists moons;
-
-drop table if exists planets;
-
-drop table if exists users;
-
-create table users(
-	id integer primary key,
-	username text unique not null,
-	password text not null,
-	constraint username_length_check check (
-		length(username) >= 5 and 
-		length(username) <= 30
-	),
-	constraint password_length_check check (
-		length(password) >= 5 and 
-		length(password) <= 30
-	),
-	constraint username_character_check check (
-		username GLOB '[a-zA-Z]*' AND 
-		username not glob '*[^a-zA-Z0-9_-]*'
-	),
-	constraint password_character_check check (
-		password GLOB '*[a-z]*' and
-		password GLOB '*[A-Z]*' and 
-		password GLOB '*[0-9]*' and
-		password GLOB '[a-zA-Z]*' AND 
-		password not glob '*[^a-zA-Z0-9_-]*'
-	)
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL,
+    CONSTRAINT username_length_check CHECK (
+        LENGTH(username) >= 5 AND
+        LENGTH(username) <= 30
+    ),
+    CONSTRAINT password_length_check CHECK (
+        LENGTH(password) >= 5 AND
+        LENGTH(password) <= 30
+    ),
+    CONSTRAINT username_character_check CHECK (
+        username ~ '^[a-zA-Z]' AND
+        username ~ '^[a-zA-Z0-9_-]*$'
+    ),
+    CONSTRAINT password_character_check CHECK (
+        password ~ '[a-z]' AND
+        password ~ '[A-Z]' AND
+        password ~ '[0-9]' AND
+        password ~ '^[a-zA-Z]' AND
+        password ~ '^[a-zA-Z0-9_-]*$'
+    )
 );
 
-insert into users (username, password) values ('Batman', 'Iamthenight1939');
+INSERT INTO users (username, password) VALUES ('Batman', 'Iamthenight1939');
 
-create table planets(
-	id integer primary key,
-	name text unique not null,
-	ownerId integer not null,
-	image blob,
-	foreign key(ownerId) references users(id) on delete restrict,
-	constraint name_length_check check (length(name) <= 30),
-	constraint name_character_check check (
-		name GLOB '[a-zA-Z]*' and
-		name not GLOB '*[^a-zA-Z0-9_ -]*'
-	)
+CREATE TABLE planets (
+    id SERIAL PRIMARY KEY,
+    name TEXT UNIQUE NOT NULL,
+    ownerId INTEGER NOT NULL,
+    image BYTEA,
+    FOREIGN KEY(ownerId) REFERENCES users(id) ON DELETE RESTRICT,
+    CONSTRAINT name_length_check CHECK (LENGTH(name) <= 30),
+    CONSTRAINT name_character_check CHECK (
+        name ~ '^[a-zA-Z]' AND
+        name ~ '^[a-zA-Z0-9_ -]*$'
+    )
 );
 
-insert into planets (name, ownerId, image) values ('Earth', 1, ?);
-insert into planets (name, ownerId, image) values ('Mars', 1, ?);
+INSERT INTO planets (name, ownerId, image) VALUES ('Earth', 1, NULL);
+INSERT INTO planets (name, ownerId, image) VALUES ('Mars', 1, NULL);
 
-create table moons(
-	id integer primary key,
-	name text not null,
-	myPlanetId integer not null,
-	image blob,
-	foreign key(myPlanetId) references planets(id) on delete cascade,
-	constraint name_length_check check (length(name) <= 30),
-	constraint name_character_check check (
-		name GLOB '[a-zA-Z]*' AND
-		name not GLOB '*[^a-zA-Z0-9_ -]*'
-	)
+CREATE TABLE moons (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    myPlanetId INTEGER NOT NULL,
+    image BYTEA,
+    FOREIGN KEY(myPlanetId) REFERENCES planets(id) ON DELETE CASCADE,
+    CONSTRAINT name_length_check CHECK (LENGTH(name) <= 30),
+    CONSTRAINT name_character_check CHECK (
+        name ~ '^[a-zA-Z]' AND
+        name ~ '^[a-zA-Z0-9_ -]*$'
+    )
 );
 
-insert into moons (name, myPlanetId, image) values ('Luna', 1, ?);
-insert into moons (name, myPlanetId, image) values ('Titan', 2, ?);
+INSERT INTO moons (name, myPlanetId, image) VALUES ('Luna', 1, NULL);
+INSERT INTO moons (name, myPlanetId, image) VALUES ('Titan', 2, NULL);

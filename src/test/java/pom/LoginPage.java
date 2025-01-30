@@ -1,12 +1,12 @@
 package pom;
 
-import org.openqa.selenium.Alert;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
+
 
 import static testrunner.TestRunner.wait;
 
@@ -31,11 +31,11 @@ public class LoginPage {
     }
 
     public void goToLogin(){
-        driver.get("http://localhost:8080");
+        driver.get("http://98.81.140.90:8080");
     }
 
     public void setUpLoggedInUser(){
-        driver.get("http://localhost:8080/");
+        driver.get("http://98.81.140.90:8080/");
         usernameInput.sendKeys("Batman");
         passwordInput.sendKeys("Iamthenight1939");
         loginButton.click();
