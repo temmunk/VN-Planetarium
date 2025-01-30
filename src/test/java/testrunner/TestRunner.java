@@ -33,11 +33,9 @@ public class TestRunner {
 
     @BeforeClass
     public static void setup(){
-        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless");
 
-        driver = new ChromeDriver(options);
+
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1));
         wait = new WebDriverWait(driver, Duration.ofSeconds(2));
         homePage = new HomePage(driver);
