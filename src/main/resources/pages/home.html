@@ -195,8 +195,8 @@
             toggleUpdateForm('Planet', planetId);
             populateCelestialTable();
         } else {
-            const errorMessage = await response.text();
-            alert(errorMessage);
+            const errorData = await response.json();
+            alert(errorData.message);
         }
     }
 
@@ -245,8 +245,8 @@
             toggleUpdateForm('Moon', moonId);
             populateCelestialTable();
         } else {
-            const errorMessage = await response.text();
-            alert(errorMessage);
+            const errorData = await response.json();
+            alert(errorData.message);
         }
     }
 
