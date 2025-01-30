@@ -193,7 +193,7 @@ public class MoonDaoImp implements MoonDao {
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0 ? Optional.of(moon) : Optional.empty();
         } catch (SQLException e) {
-            if (e.getMessage().contains("FOREIGN KEY")) throw new MoonFail("Invalid planet id");
+            if (e.getMessage().contains("moons_myplanetid_fkey")) throw new MoonFail("Invalid planet id");
             throw new MoonFail("Invalid moon name");
         }
     }
