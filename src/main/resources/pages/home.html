@@ -43,6 +43,58 @@
             color: rgba(3, 188, 255, 1);
         }
 
+        .styled-table tbody tr td button:nth-of-type(odd){
+            background-color: #66d9ff;
+            cursor:pointer;
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 5px;
+
+        }
+
+        .styled-table tbody tr td button:nth-of-type(even){
+            background-color: #e60000;
+            color:white;
+            cursor:pointer;
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 5px;
+
+        }
+
+        .styled-table tbody tr td button:hover{
+            background-color: white;
+            color:black;
+        }
+
+        .styled-table tbody tr td div form button:nth-of-type(odd){
+            background-color: #00ace6;
+            cursor:pointer;
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 5px;
+
+        }
+        .styled-table tbody tr td div form button:nth-of-type(odd):hover{
+            background-color: white;
+            color: black;
+
+        }
+        .styled-table tbody tr td div form button:nth-of-type(even){
+            background-color: white;
+            color:black;
+            cursor:pointer;
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 5px;
+
+        }
+        .styled-table tbody tr td div form button:nth-of-type(even):hover{
+            background-color: black;
+            color:white;
+
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -75,7 +127,21 @@
         }
 
         .submit-button {
-            margin-top: 10px;
+            margin-top: 5px;
+            background-color: #00ace6;
+            border: none;
+              color: black;
+              padding: 10px 10px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 12px;
+              cursor:pointer;
+              border-radius: 4px;
+        }
+        .submit-button:hover {
+            background-color: white;
+            color: black;
         }
         #deleteContainer {
             margin-top: 20px;
@@ -89,10 +155,25 @@
             margin-left: 10px;
             padding: 5px 10px;
         }
+
         .logout-button {
             position: fixed;
             top: 10px;
             right: 10px;
+            background-color: #e60000;
+              border: none;
+              color: white;
+              padding: 15px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              cursor:pointer;
+              border-radius: 50%;
+        }
+        .logout-button:hover {
+            background-color: white;
+            color: black;
         }
 
         .center{
@@ -105,8 +186,37 @@
 
         }
         .heading{
+            position: relative;
             display: inline-block;
         }
+        .heading select {
+            display: none;
+        }
+
+        select{
+            width: 100px;
+            padding: 5px;
+            border-radius: 4px;
+            background-color: #00ace6;
+            font-size: 16px;
+            cursor:pointer;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        option {
+            background-color: #dab3ff;
+            cursor:pointer;
+        }
+        input[type="file"]::file-selector-button {
+            background-color: #00ace6;
+            border-radius: 4px;
+            cursor:pointer;
+      }
+
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -295,6 +405,7 @@
 
             const deleteBtn = document.createElement('button');
             deleteBtn.innerText = 'Delete';
+            deleteBtn.name = 'deletebtns';
             deleteBtn.onclick = function () {
                 deletePlanet(planet.planetId);
             };
@@ -539,6 +650,7 @@
         orbitedPlanetInput.name = 'Orbited Planet';
         orbitedPlanetInput.placeholder = 'Enter Orbited Planet Id';
         inputContainer.appendChild(orbitedPlanetInput);
+
 
         let moonImageInput = document.createElement('input');
         moonImageInput.type = 'file';
