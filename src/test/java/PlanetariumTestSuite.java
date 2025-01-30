@@ -7,8 +7,7 @@ import testrunner.TestRunner;
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
         ServiceTestSuite.class,
-        RepositoryTestSuite.class,
-        TestRunner.class
+        RepositoryTestSuite.class
 })
 
 
